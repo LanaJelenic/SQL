@@ -1,45 +1,30 @@
+create database frizerski;
+use frizerski
 
-use LANA;
-
-create table DJELATNIK(
-ID_DJELATNIKA int NOT NULL PRIMARY KEY,
-IME varchar(50),
-PREZIME varchar(50),
-ADRESA varchar(50)
+create table djelatnik(
+djelatnikID int not null primary key identity(1,1),
+ime varchar(50),
+prezime varchar(50),
 );
 
-create table USLUGA(
-ID_USLUGE int NOT NULL PRIMARY KEY,
-NAZIV varchar(100),
-CIJENA int
+create table korisnik(
+korisnikID int not null primary key identity(1,1),
+ime varchar(50),
+prezime varchar(50),
+spol varchar(50),
+duzina_kose int
 );
 
-
-create table KORISNIK(
-ID_KORISNIKA int NOT NULL IDENTITY(1,1) PRIMARY KEY,
-IME varchar(50),
-PREZIME varchar(50),
-ADRESA varchar(50)
+create table usluga(
+uslugaID int not null primary key identity (1,1),
+cijena decimal(18,2),
+naziv varchar(50)
 );
 
-create table FRIZ_SALON(
-ID_FRIZ_SALON int NOT NULL PRIMARY KEY,
-NAZIV varchar(50),
-ID_DJELATNIKA int FOREIGN KEY REFERENCES DJELATNIK(ID_DJELATNIKA),
-ID_KORISNIKA int FOREIGN KEY REFERENCES KORISNIK(ID_KORISNIKA),
-ID_USLUGE int FOREIGN KEY REFERENCES USLUGA(ID_USLUGE),
-ADRESA varchar(100)
+create table termin(
+terminID int not null primary key identity(1,1),
+datum datetime,
+djelatnikID int foreign key references djelatnik(djelatnikID),
+korisnikID int foreign key references korisnik(korisnikID),
+uslugaID int foreign key references usluga(uslugaID)
 );
-
-INSERT INTO KORISNIK
-(IME)
-VALUES('Verica');
-
-INSERT INTO KORISNIK
-VALUES('Stjepan','Gotal','Savska 95');
-
-
-
-SELECT * FROM KORISNIK;
-
-SELECT * FROM KORISNIK WHERE IME = 'Lana';
