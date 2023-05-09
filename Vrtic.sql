@@ -1,40 +1,32 @@
-
-create database VRTIC;
-use VRTIC
-
-create table ODGOJNA_SKUPINA(
-ID_ODGOJNE_SKUPINE int NOT NULL PRIMARY KEY,
-ID_DIJETETA int FOREIGN KEY REFERENCES DIJETE(ID_DIJETETA),
-SOBA varchar(100)
-);
-
-create table DIJETE(
-ID_DIJETETA int NOT NULL PRIMARY KEY,
+CREATE database vrtic;
+USE vrtic
+create table dijete(
+dijeteID int NOT NULL PRIMARY KEY,
 IME varchar(100),
 PREZIME VARCHAR(50),
 DOB int
 );
 
-
-create table ODGAJATELJICA(
-ID_ODGAJATELJICE int NOT NULL PRIMARY KEY,
-ID_KVALIFIKACIJE int FOREIGN KEY REFERENCES KVALIFIKACIJA(ID_KVALIFIKACIJE),
-IME varchar(50),
-PREZIME varchar(50),
-
+create table odgojna_skupina(
+odgojna_skupinaID int NOT NULL PRIMARY KEY,
+dijeteID int FOREIGN KEY REFERENCES dijete(dijeteID),
+SOBA varchar(100)
 );
 
-create table KVALIFIKACIJA(
-ID_KVALIFIKACIJE int NOT NULL PRIMARY KEY,
+
+create table srucna_sprema(
+strucna_spremaID int NOT NULL PRIMARY KEY,
 NAZIV varchar(100)
 );
 
-create table VRTIC(
-ID_VRTICA int NOT NULL PRIMARY KEY,
-NAZIV varchar(50),
-ADRESA varchar(100),
-ID_ODGOJNE_SKUPINE int FOREIGN KEY REFERENCES ODGOJNA_SKUPINA(ID_ODGOJNE_SKUPINE),
-ID_DIJETETA int FOREIGN KEY REFERENCES DIJETE(ID_DIJETETA),
-ID_ODGAJATELJICE int FOREIGN KEY REFERENCES ODGAJATELJICA(ID_ODGAJATELJICE)
+
+create table odgajateljica(
+odgajateljicaID int NOT NULL PRIMARY KEY,
+strucna_spremaID int FOREIGN KEY REFERENCES srucna_sprema(strucna_spremaID),
+IME varchar(50),
+PREZIME varchar(50)
+
 );
 
+alter table odgojna_skupina 
+add odgajateljicaID int foreign key references odgajateljica(odgajateljicaID);
