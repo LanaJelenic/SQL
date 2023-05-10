@@ -1,41 +1,35 @@
 
-create database MUZEJ;
-use MUZEJ
+create database muzej;
 
-create table IZLOZBA(
-ID_IZLOZBE int NOT NULL PRIMARY KEY,
-ID_DJELA int FOREIGN KEY REFERENCES DJELA(ID_DJELA),
-NAZIV varchar(100)
+
+use muzej
+
+create table izlozba(
+izlozbaID int not null primary key identity(1,1),
+djeloID int foreign key references djelo(djeloID),
+sponzorID int foreign key references sponzor(sponzorID),
+naziv varchar(100)not null,
+datum_pocetka datetime not null,
 );
 
-create table DJELA(
-ID_DJELA int NOT NULL PRIMARY KEY,
-NAZIV varchar(100),
-IME_UMJETNIKA varchar(50),
-VRSTA_TEHNIKE varchar(50)
+create table djelo(
+djeloID int not null primary key,
+naziv varchar(50),
+ime_umjetnika varchar(60),
+vrsta_tehnike varchar(50)
 );
 
-
-create table KUSTOS(
-ID_KUSTOSA int NOT NULL PRIMARY KEY,
-ID_IZLOZBE int FOREIGN KEY REFERENCES IZLOZBA(ID_IZLOZBE),
-IME varchar(50),
-PREZIME varchar(50)
+create table kustos(
+kustosID int not null primary key,
+izlozbaID int foreign key references izlozba(izlozbaID),
+ime varchar(50),
+prezime varchar(50),
 );
 
-create table SPONZOR(
-ID_SPONZORA int NOT NULL PRIMARY KEY,
-ID_IZLOZBE int FOREIGN KEY REFERENCES IZLOZBA(ID_IZLOZBE),
-IME varchar(100),
-ADRESA varchar(100)
+create table sponzor(
+ime varchar(50),
+adresa varchar(50)
 );
 
-create table MUZEJ(
-ID_MUZEJA int NOT NULL PRIMARY KEY,
-NAZIV varchar(50),
-ADRESA varchar(100),
-ID_IZLOZBE int FOREIGN KEY REFERENCES IZLOZBA(ID_IZLOZBE),
-ID_DJELA int FOREIGN KEY REFERENCES DJELA(ID_DJELA),
-ID_KUSTOSA int FOREIGN KEY REFERENCES KUSTOS(ID_KUSTOSA)
-);
+alter table sponzor add sponzorID int not null primary key;
 
