@@ -2,7 +2,7 @@ create database Fakultet2;
 use Fakultet2
 
 create table Student(
-ID_studenta int NOT NULL PRIMARY KEY IDENTITY(1,1),
+ID_studenta int not null primary key identity(1,1),
 Ime varchar(50),
 Prezime varchar(50),
 oib char(11),
@@ -10,7 +10,7 @@ email varchar(100)
 );
 
 create table Rok(
-ID_rok int NOT NULL PRIMARY KEY IDENTITY(1,1),
+ID_rok int not null primary key identity(1,1),
 Datum datetime
 );
 
