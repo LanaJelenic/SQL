@@ -15,7 +15,7 @@ maks_broj int
 );
 
 create table sticenik_udruge (
-sticenikID int not null primary key identity(1,1),
+ID_sticenik int not null primary key identity(1,1),
 vrsta varchar(50),
 podvrsta varchar(100),
 tezina decimal(18,2),
