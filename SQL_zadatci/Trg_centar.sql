@@ -1,33 +1,49 @@
-create database trg_centar;
-use trg_centar
+create database trg_centar1;
+use trg_centar1
 
-create table Trgovina(
-ID_trgovine int NOT NULL PRIMARY KEY,
-Naziv varchar(50),
-ID_osobe int FOREIGN KEY REFERENCES Osoba(ID_osobe),
-ID_sefa int FOREIGN KEY REFERENCES Sef(ID_sefa)
+create table trgovina(
+ID_trgovine int not null primary key identity(1,1),
+Naziv varchar(50)
 );
 
-create table Sef(
-ID_sefa int NOT NULL PRIMARY KEY,
-ID_osobe int FOREIGN KEY REFERENCES Osoba(ID_osobe),
+create table osoba(
+ID_osobe int not null primary key identity(1,1),
 Ime varchar(50),
 Prezime varchar(50),
-Email varchar(50)
+sef int
+);
+alter table osoba add foreign key(sef)references osoba(ID_osobe);
+
+create table trg_osoba(
+ID_trgovine int foreign key references trgovina(ID_trgovine),
+ID_osobe int foreign key references osoba(ID_osobe)
 );
 
-create table Osoba(
-ID_osobe int NOT NULL PRIMARY KEY,
-Ime varchar(50),
-Prezime varchar(50)
-);
+insert into trgovina(Naziv)
+values
+('Zara'),
+('New Yorker'),
+('Konzum'),
+('Telemach');
 
-create table Trgovacki_centar(
-ID_centra int NOT NULL PRIMARY KEY,
-Naziv varchar(100),
-Adresa varchar(100),
-ID_trgovine int FOREIGN KEY REFERENCES Trgovina(ID_trgovine)
-);
+select*from trgovina;
 
-ALTER TABLE Osoba
-add ID_trgovine int FOREIGN KEY REFERENCES Trgovina(ID_trgovine);
+insert into osoba(Ime,Prezime)
+values
+('Iva','Dvojak'),
+('Ante','Bogović'),
+('Luka','Horvat'),
+('Kruno','Blažević');
+
+select*from osoba;
+
+insert into trg_osoba(ID_trgovine,ID_osobe)
+values
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(4,2);
+
+select*from trg_osoba;
+
