@@ -1,41 +1,78 @@
-create database Postolar;
-use Postolar
+create database postolar1;
+use postolar1
 
-create table Obuca(
-ID_OBUCE int NOT NULL PRIMARY KEY,
-ID_popravka int FOREIGN KEY REFERENCES Popravak(ID_popravka),
-Marka varchar(50),
-Boja varchar(50),
-Broj int
+create table obuca(
+ID_obuce int not null primary key identity(1,1),
+marka varchar(50),
+boja varchar(20),
+broj int
 );
 
-create table Korisnik(
-ID_korisnika int NOT NULL PRIMARY KEY,
-ID_OBUCE int FOREIGN KEY REFERENCES Obuca(ID_OBUCE),
+create table korisnik(
+ID_korisnika int not null primary key identity(1,1),
+ID_obuce int foreign key references obuca(ID_obuce),
 Ime varchar(50),
 Prezime varchar(50),
 Kontakt int
 );
 
-create table Popravak(
-ID_popravka int NOT NULL PRIMARY KEY,
+create table popravak(
+ID_popravka int not null primary key identity(1,1),
 Cijena decimal (18,2),
-Vrijeme_trajanja datetime
+poc_popravka datetime,
+zavrs_popravak datetime
 );
 
-create table Segrt(
-ID_segrta int NOT NULL PRIMARY KEY,
+create table segrt(
+ID_segrta int not null primary key identity (1,1),
+ID_popravka int foreign key references popravak(ID_popravka),
 Ime varchar(50),
 Prezime varchar(50),
 );
 
-create table Postolar(
-ID_postolara int NOT NULL PRIMARY KEY,
-Ime varchar(50),
-Adresa varchar(100),
-Br_mobitela int,
-ID_OBUCE int FOREIGN KEY REFERENCES Obuca(ID_OBUCE),
-ID_korisnika int FOREIGN KEY REFERENCES Korisnik(ID_korisnika),
-ID_popravka int FOREIGN KEY REFERENCES Popravak(ID_popravka),
-ID_segrta int FOREIGN KEY REFERENCES Segrt(ID_segrta)
+create table popravak_obuca(
+ID_popravka int foreign key references popravak(ID_popravka),
+ID_obuce int foreign key references obuca(ID_obuce)
 );
+
+insert into obuca(marka,boja,broj)
+values
+('Convers','crvena',39),
+('Rebook','crna',45),
+('nike','plava',40);
+
+select*from obuca;
+
+insert into korisnik(ID_obuce,Ime,Prezime,Kontakt)
+values
+(1,'Maja','Kraljik',0954645),
+(2,'Karlo','Dvojak',09732334),
+(3,'Eva','Lovrić',0957878);
+
+select*from korisnik
+
+insert into popravak(Cijena,poc_popravka,zavrs_popravak)
+values
+(1.99,'2023-05-15 13:00:00','2023-05-15 16:00:00'),
+(5.00,'2023-05-16','2023-05-20'),
+(4.30,'2023-05-17','2023-05-18');
+
+select*from popravak;
+
+insert into segrt(ID_popravka,Ime,Prezime)
+values
+(3,'0','0'),
+(2,'Marko','Markić'),
+(4,'Ivo','Ivanić');
+
+select*from segrt;
+
+insert into popravak_obuca(ID_popravka,ID_obuce)
+values
+(4,1),
+(3,2),
+(2,3),
+(3,1),
+(4,2);
+
+select*from popravak_obuca;
