@@ -1,36 +1,64 @@
-create database srednja;
-use srednja
+create database srednja1;
+use srednja1
 
-create table Razred(
-ID_razreda int NOT NULL PRIMARY KEY,
-ID_ucenika int FOREIGN KEY REFERENCES Ucenik(ID_ucenika),
-ID_profesora int FOREIGN KEY REFERENCES Profesor(ID_profesora),
+create table ucenik(
+ID_ucenika int not null primary key identity(1,1),
+Ime varchar(50),
+Prezime varchar(50),
+);
+
+create table razred(
+ID_razreda int not null primary key identity(1,1),
+ID_ucenika int foreign key references ucenik(ID_ucenika),
 Naziv varchar(50),
 Br_sobe int
 );
 
-create table Ucenik(
-ID_ucenika int NOT NULL PRIMARY KEY,
-Ime varchar(50),
-Prezime varchar(50),
-OIB varchar(50)
-
-);
-
-create table Profesor(
-ID_profesora int NOT NULL PRIMARY KEY,
+create table profesor(
+ID_profesora int not null primary key identity(1,1),
 Ime varchar(50),
 Prezime varchar(50)
 );
 
-create table Srednja_skola(
-ID_srednja int NOT NULL PRIMARY KEY,
-Naziv varchar(100),
-Adresa varchar(100),
-ID_razreda int FOREIGN KEY REFERENCES Razred(ID_razreda),
-ID_ucenika int FOREIGN KEY REFERENCES Ucenik(ID_ucenika),
-ID_profesora int FOREIGN KEY REFERENCES Profesor(ID_profesora)
+create table prof_raz(
+ID_profesora int foreign key references profesor(ID_profesora),
+ID_razreda int foreign key references razred(ID_razreda)
 );
 
-ALTER TABLE Profesor
-add ID_razreda int FOREIGN KEY REFERENCES Razred(ID_razreda);
+insert into ucenik(Ime,Prezime)
+values
+('Luka','Horvat'),
+('Maja','Prigl'),
+('Ante','Bogović'),
+('Iva','Dvojak');
+
+select*from ucenik;
+
+insert into razred(ID_ucenika,Naziv,Br_sobe)
+values
+(1,'1.b',24),
+(2,'2.c',26),
+(3,'3.k2',33),
+(4,'4.a',18);
+
+select*from razred;
+
+insert into profesor(Ime,Prezime)
+values
+('Ivo','Pospišil'),
+('Laura','Bogović'),
+('Kruno','Blažević'),
+('Petar','Perišić');
+
+select*from profesor;
+
+insert into prof_raz(ID_profesora,ID_razreda)
+values
+(1,4),
+(1,3),
+(2,1),
+(3,2),
+(4,4),
+(4,1);
+
+select*from prof_raz;
