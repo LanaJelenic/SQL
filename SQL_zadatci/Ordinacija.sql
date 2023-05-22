@@ -15,14 +15,6 @@ prezime varchar(20),
 zdravstvena int
 );
 
-create table med_sestra(
-ID_sestre int not null primary key identity(1,1),
-ID_pacijenta int foreign key references pacijent(ID_pacijenta),
-Ime varchar(50),
-Prezime varchar(50),
-kvalifikacija bit
-);
-
 
 insert into lijecenje(Naziv,Cijena)
 values
@@ -40,12 +32,6 @@ values
 
 select*from pacijent;
 
-insert into med_sestra(ID_pacijenta,Ime,Prezime,kvalifikacija)
-values
-(1,'Anja','Majić',1),
-(2,'Mara','Stević',0),
-(3,'Branka','Roso',1);
 
-select*from med_sestra;
 
 
