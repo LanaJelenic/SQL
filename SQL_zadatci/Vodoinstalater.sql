@@ -14,12 +14,6 @@ poc_popravka datetime,
 zavrs_popravak datetime
 );
 
-create table segrt(
-ID_segrta int not null primary key identity (1,1),
-ID_popravka int foreign key references popravak(ID_popravka),
-Ime varchar(50),
-Prezime varchar(50),
-);
 
 create table popravak_kvar(
 ID_popravka int foreign key references popravak(ID_popravka),
@@ -43,13 +37,7 @@ values
 
 select*from popravak;
 
-insert into segrt(ID_popravka,Ime,Prezime)
-values
-(3,'0','0'),
-(2,'Marko','Markiæ'),
-(1,'Ivo','Ivaniæ');
 
-select*from segrt;
 
 insert into popravak_kvar(ID_popravka,ID_kvara)
 values
