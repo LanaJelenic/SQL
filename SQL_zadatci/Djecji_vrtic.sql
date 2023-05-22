@@ -15,15 +15,8 @@ SOBA varchar(100)
 );
 
 
-create table strucna_sprema(
-strucna_spremaID int not null primary key identity(1,1),
-NAZIV varchar(100)
-);
-
-
 create table odgajateljica(
 odgajateljicaID int not null primary key identity(1,1),
-strucna_spremaID int foreign key references strucna_sprema(strucna_spremaID),
 dijeteID int foreign key references dijete(dijeteID),
 ome varchar(50),
 prezime varchar(50)
@@ -34,7 +27,7 @@ insert into dijete(ime,prezime,dob)
 values
 ('Luka','Horvat',5),
 ('Maja','Prigl',3),
-('Ante','BogoviÊ',2),
+('Ante','Bogovi√¶',2),
 ('Iva','Dvojak',4);
 
 select*from dijete;
@@ -48,16 +41,11 @@ values
 
 select*from odgojna_skupina;
 
-insert into strucna_sprema(NAZIV)
-values('Ëuvalica');
-
-select*from strucna_sprema;
-
-insert into odgajateljica(strucna_spremaID,dijeteID,ome,prezime)
+insert into odgajateljica(dijeteID,ome,prezime)
 values
-(1,1,'Ana','AniÊ'),
-(1,2,'Mila','BariöiÊ'),
-(1,3,'Antonela','IviÊ'),
-(1,4,'Iva','MilkoviÊ');
+(1,'Ana','Ani√¶'),
+(2,'Mila','Bari≈°i√¶'),
+(3,'Antonela','Ivi√¶'),
+(4,'Iva','Milkovi√¶');
 
 select*from odgajateljica;
