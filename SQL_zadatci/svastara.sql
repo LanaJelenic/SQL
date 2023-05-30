@@ -91,4 +91,9 @@ select * from mjesta where sifra=42633;
 select * from Opcine where sifra=5312;
 select * from Zupanije where sifra=18;
 
+select count(*)from Kupci where ime='Lana';
 
+alter table kupci add spol bit;
+
+update Kupci set spol=1 where trim(ime)like'%a';
+update Kupci set spol=0 where trim(ime)like'%a';
