@@ -69,3 +69,10 @@ WHERE birth_day BETWEEN '1970-01-01' AND '1975-01-01';
 SELECT *
 FROM employee
 WHERE first_name IN ('Jim', 'Michael', 'Johnny', 'David');
+
+
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+JOIN branch    -- LEFT JOIN, RIGHT JOIN
+ON employee.emp_id = branch.mgr_id;
