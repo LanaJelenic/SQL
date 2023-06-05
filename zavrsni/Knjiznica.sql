@@ -31,3 +31,57 @@ create table knjiga_posudba(
 ID_knjige int foreign key references knjiga(ID_knjige),
 ID_posudbe int foreign key references evidencija_posudbe(ID_posudbe)
 );
+
+INSERT INTO clan(ime,prezime,br_iskaznice,lozinka,status)
+VALUES
+('Luka','Horvat',123,'lhorvat555!!',1),
+('Maja','Prigl',124,'pmaja100++',1),
+('Ante','Bogović',125,'abogovic031',1),
+('Iva','Dvojak',126,'dvojak444I',1);
+
+SELECT*FROM clan;
+
+INSERT INTO evidencija_posudbe(ID_clan,datum_posudbe,datum_vracanja)
+VALUES
+(1,'2023-04-16','2023-04-30'),
+(2,'2023-05-05','2023-05-19'),
+(3,'2023-05-10','2023-05-24'),
+(4,'2023-05-20','2023-06-03'),
+(3,'2023-06-05','2023-06-19'),
+(2,'2023-02-14','2023-02-28');
+
+SELECT*FROM evidencija_posudbe;
+
+INSERT INTO knjiga(naslov,ime_autora,prezime_autora,sazetak,br_stranica)
+VALUES
+('Wayward pines','Blake','Crouch','Gradić Wayward Pines okružen je elektrificiranom ogradom s bodljikavom žicom na vrhu, koja je i pod danonoćnom prismotrom snajperista.
+ U gradu živi 461 stanovnik koji se tamo probudio nakon teške prometne nesreće.',335),
+ 
+ ('Mrtva priroda','Joy','Fielding','Od teških ozljeda Casey pada u komu. Cijelo je vrijeme svjesna svoje okolina, ali nije u stanju pomaknuti nijedan dio tijela i komunicirati. 
+Leži u bolničkom krevetu i sluša što govore njezini posjetitelji koji ne znaju da ih ona čuje.',328),
+
+('Institut','Stephen','King','Usred noći, u obiteljskoj kući u predgrađu Minneapolisa nepoznati provalnici ubijaju roditelje dvanaestogodišnjeg Lukea Ellisa, a njega omamljuju i odvode u nepoznatom smjeru.
+Luke će se probuditi u Institutu, u sobi koja izgleda posve jednako kao njegova soba, osim što nema prozor.',656).
+
+('Svijet poslije','Susan','EE','Kad Penryninu sestru Paige zarobe misleći da je čudovište, situacija završi masakrom. Paige nestane. Ljudi su prestravljeni.
+Potraga je vodi u središte anđeoskih tajnih planova u kojima uspijeva nazrijeti tračak njihove motivacije, i saznaje do koje su jezive mjere anđeli spremni otići.',368),
+
+('Djevojke koje sjaje','Lauren','Beukes','Godine 1931. Harper Curtis nakon počinjenog ubojstva bježi od podjednako nasilnih utjerivača pravde. 
+Spletom okolnosti uspijeva im uteći i sklonište pronalazi u napuštenoj kući u zabačenom dijelu Chicaga, koja mu otkriva paralelne svjetove i njegovu misiju',302).
+
+('Trkač','Patrick','Lee','Sam, koji je pet godina bio pripadnik elitnog tima za supertajne operacije, instinktivno pokušava spasiti djevojcicu koja se ne sjeca svoje prošlosti ni razloga zašto je ti ljudi pokušavaju ubiti.
+ Dok ih bijeg odvodi preko cijele države, Rachel se polako prisjeca zlokobnog tajnog vladinog projekta.Uvježbana da može citati misli i zahvaljujuci svojim drugim skrivenim vještinama,
+Rachel je zapravo smrtonosno oružje',330);
+
+SELECT*FROM knjiga;
+
+INSERT INTO knjiga_posudba(ID_knjige,ID_posudbe)
+VALUES
+(1,2),
+(2,4),
+(3,1),
+(4,6),
+(5,3),
+(6,5);
+
+SELECT*FROM knjiga_posudba;
