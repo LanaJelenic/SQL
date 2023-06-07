@@ -79,5 +79,31 @@ VALUES
 (25,4),
 (26,5),
 (27,6);
+insert into knjiga_posudba(ID_knjige,ID_posudbe)
+values
+(22,3),
+(24,2),
+(26,4);
+
+
 
 SELECT*FROM knjiga_posudba;
+
+
+select knj.naslov,cl.br_iskaznice,ep.datum_posudbe,ep.datum_vracanja
+from clan cl inner join evidencija_posudbe ep on cl.ID_clana=ep.ID_clana
+inner join knjiga_posudba kp on ep.ID_posudbe=kp.ID_posudbe
+inner join knjiga knj on kp.ID_knjige=knj.ID_knjige;
+
+select knj.naslov,cl.br_iskaznice,ep.datum_posudbe,ep.datum_vracanja
+from clan cl inner join evidencija_posudbe ep on cl.ID_clana=ep.ID_clana
+inner join knjiga_posudba kp on ep.ID_posudbe=kp.ID_posudbe
+inner join knjiga knj on kp.ID_knjige=knj.ID_knjige
+where cl.br_iskaznice=125;
+
+select knj.naslov,kp.ID_posudbe,ep.datum_posudbe,concat(knj.ime_autora,'',knj.prezime_autora)as autor
+from knjiga knj inner join knjiga_posudba kp on knj.ID_knjige=kp.ID_knjige
+inner join evidencija_posudbe ep on kp.ID_posudbe=ep.ID_posudbe;
+
+select cl.ime,ep.datum_posudbe
+from clan cl left join evidencija_posudbe ep on ep.ID_clana=cl.ID_clana;
