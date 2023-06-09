@@ -147,3 +147,7 @@ inner join neprijatelj ne on cu.ID_cure=ne.ID_cure
 inner join brat br on ne.ID_neprijatelja=br.ID_neprijatelja
 where de.vesta like'%ba%'
 order by ne.haljina desc;
+
+SELECT de.vesta,de.asocijalno
+FROM decko de
+LEFT JOIN decko_zarucnica dz ON de.ID_decka=dz.ID_decka;
