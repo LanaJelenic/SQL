@@ -1,0 +1,15 @@
+C:\Users\Lana\source\repos\firstproject\firstproject\bin\Debug\net6.0\firstproject.exe
+C:\Users\Lana\source\repos\firstproject\firstproject\bin\Debug\net6.0\firstproject.deps.json
+C:\Users\Lana\source\repos\firstproject\firstproject\bin\Debug\net6.0\firstproject.runtimeconfig.json
+C:\Users\Lana\source\repos\firstproject\firstproject\bin\Debug\net6.0\firstproject.dll
+C:\Users\Lana\source\repos\firstproject\firstproject\bin\Debug\net6.0\firstproject.pdb
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.csproj.AssemblyReference.cache
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.AssemblyInfoInputs.cache
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.AssemblyInfo.cs
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.csproj.CoreCompileInputs.cache
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.dll
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\refint\firstproject.dll
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.pdb
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\firstproject.genruntimeconfig.cache
+C:\Users\Lana\source\repos\firstproject\firstproject\obj\Debug\net6.0\ref\firstproject.dll

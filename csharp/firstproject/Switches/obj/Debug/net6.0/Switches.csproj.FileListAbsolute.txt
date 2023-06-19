@@ -1,0 +1,15 @@
+C:\Users\Lana\source\repos\firstproject\Switches\bin\Debug\net6.0\Switches.exe
+C:\Users\Lana\source\repos\firstproject\Switches\bin\Debug\net6.0\Switches.deps.json
+C:\Users\Lana\source\repos\firstproject\Switches\bin\Debug\net6.0\Switches.runtimeconfig.json
+C:\Users\Lana\source\repos\firstproject\Switches\bin\Debug\net6.0\Switches.dll
+C:\Users\Lana\source\repos\firstproject\Switches\bin\Debug\net6.0\Switches.pdb
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.csproj.AssemblyReference.cache
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.AssemblyInfoInputs.cache
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.AssemblyInfo.cs
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.csproj.CoreCompileInputs.cache
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.dll
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\refint\Switches.dll
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.pdb
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\Switches.genruntimeconfig.cache
+C:\Users\Lana\source\repos\firstproject\Switches\obj\Debug\net6.0\ref\Switches.dll
