@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\bin\Debug\net6.0\E01UvjetnoGrananje.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\bin\Debug\net6.0\E01UvjetnoGrananje.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\bin\Debug\net6.0\E01UvjetnoGrananje.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\bin\Debug\net6.0\E01UvjetnoGrananje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\bin\Debug\net6.0\E01UvjetnoGrananje.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\refint\E01UvjetnoGrananje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\E01UvjetnoGrananje.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananje\obj\Debug\net6.0\ref\E01UvjetnoGrananje.dll

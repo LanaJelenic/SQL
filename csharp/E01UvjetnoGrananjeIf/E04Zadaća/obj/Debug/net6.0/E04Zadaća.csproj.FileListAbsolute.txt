@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\bin\Debug\net6.0\E04Zadaća.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\bin\Debug\net6.0\E04Zadaća.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\bin\Debug\net6.0\E04Zadaća.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\bin\Debug\net6.0\E04Zadaća.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\bin\Debug\net6.0\E04Zadaća.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\refint\E04Zadaća.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\E04Zadaća.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E01UvjetnoGrananjeIf\E04Zadaća\obj\Debug\net6.0\ref\E04Zadaća.dll
