@@ -67,3 +67,70 @@ for(int i=0;i<niz.Length;i++)
 {
     Console.WriteLine(niz[i]);
 }
+
+Console.WriteLine("10.--------");
+Console.Write("Unesi koliko brojeva provjeravaš:");
+int brojevi = int.Parse(Console.ReadLine());
+int broj;
+int najveci = int.MinValue;
+for (int i = 0; i < brojevi; i++)
+{
+    Console.WriteLine("Unesi {0} .broj:", i + 1);
+    broj = int.Parse(Console.ReadLine());
+    if (broj > najveci)
+    {
+        najveci = broj;
+    }
+}
+Console.WriteLine("Najveci broj je {0} ", najveci);
+
+Console.WriteLine("11.--------");
+for (; ; )
+{
+
+    Console.WriteLine(new Random().NextDouble());
+    break;
+}
+Console.WriteLine("12.--------");
+for (int i = 0; i < 10; i++)
+{
+    if (i == 3)
+    {
+        Console.WriteLine(i);
+    }
+}
+
+Console.WriteLine("13.--------");
+for (int i = 0; i < 10; i++)
+{
+    if (i == 2 || i == 5)
+    {
+        continue;
+    }
+    Console.WriteLine(i);
+}
+
+Console.WriteLine("14.--------");
+
+string s;
+for (int i = 1; i < 10; i++)
+{
+    for (int k = 1; k <= 10; k++)
+    {
+        s = "  " + i * k;
+        Console.Write(s[^4..]);
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("15.--------");
+for (int i = 0; i < 10; i++)
+{
+    for (int k = 0; k < 10; k++)
+    {
+
+        goto labela;
+    }
+}
+
+labela:;
