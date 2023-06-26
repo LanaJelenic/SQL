@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\NumberGuessing.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\NumberGuessing.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\NumberGuessing.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\NumberGuessing.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\NumberGuessing.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\NumberGuessing.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\NumberGuessing.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\NumberGuessing.dll

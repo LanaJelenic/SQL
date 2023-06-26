@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\bin\Debug\net6.0\Zadaća03.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\bin\Debug\net6.0\Zadaća03.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\bin\Debug\net6.0\Zadaća03.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\bin\Debug\net6.0\Zadaća03.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\bin\Debug\net6.0\Zadaća03.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\refint\Zadaća03.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\Zadaća03.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\Zadaca03\obj\Debug\net6.0\ref\Zadaća03.dll

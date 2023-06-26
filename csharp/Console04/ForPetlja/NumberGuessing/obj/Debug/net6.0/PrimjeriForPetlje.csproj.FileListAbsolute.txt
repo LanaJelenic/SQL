@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\PrimjeriForPetlje.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\PrimjeriForPetlje.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\PrimjeriForPetlje.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\PrimjeriForPetlje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\PrimjeriForPetlje.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\PrimjeriForPetlje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\PrimjeriForPetlje.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\PrimjeriForPetlje.dll
