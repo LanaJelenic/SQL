@@ -105,3 +105,79 @@ else
 {
     Console.WriteLine("Edunova");
 }
+
+int i = 1;
+bool uvjet = i > 0;
+
+if(uvjet)
+{
+    Console.WriteLine("vece od 0");
+}
+
+if(i > 0)
+{
+    Console.WriteLine("vece od 0");
+}
+
+if(uvjet)
+{
+    Console.WriteLine("vece od 0");
+}
+else
+{
+    Console.WriteLine(" NIJE vece od 0");
+
+}
+
+if(uvjet)
+{
+    Console.WriteLine("vece od 0");
+}
+else if(i==-1)
+{
+    Console.WriteLine("-1");
+}
+else
+{
+    Console.WriteLine(" NIJE vece od 0");
+}
+
+if(i>0)
+{
+    if(x<0)
+    {
+        Console.WriteLine("Osijek");
+    }
+}
+
+if(i>0)
+{
+    Console.WriteLine("vece od 0");
+}
+else
+{
+    Console.WriteLine("NIJE vece od 0");
+}
+
+console.WriteLine(i > 0 ? "vece od 0" : "NIJE vece od 0");
+
+int x = 1, y = 0;
+if(x!= 1 & y>0)
+{
+    console.WriteLine("Osijek");
+}
+
+if(x != 1 && y>0)
+{
+    console.WriteLine("Osijek");
+}
+
+if(x==1|y==0)
+{
+    console.WriteLine("Osijek");
+}
+
+if(x==1||y==0)
+{
+    console.WriteLine("Osijek");
+}
