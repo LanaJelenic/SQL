@@ -134,3 +134,59 @@ for (int i = 0; i < 10; i++)
 }
 
 labela:;
+
+for(int i=0; i < 10; i++)
+{
+
+    Console.WriteLine("Osijek");
+}
+
+int j;
+for (j = 0; j < 10; j++)
+{
+    Console.WriteLine("Osijek");
+}
+
+for(j=10;j>0;j--)
+{
+    Console.WriteLine("Osijek");
+}
+
+for(int k=0;k<20;k+=2)
+{
+    Console.WriteLine("Osijek");
+}
+
+for(int x=0;x<10;x++)
+{
+    console.WriteLine(x + 1);
+}
+bool uvjet = true;
+for(int x=1;uvjet;x++)
+{
+    console.Write(x);
+    uvjet = x < 10;
+}
+
+for(int i=0;i<10;i++)
+{
+    for(int j=0;j<10;j++)
+    {
+        console.write("{0}",(i+1)*(j+1));
+    }
+    console.WriteLine();
+}
+
+string s;
+for(int i=0;i<10;i++)
+{
+    for(int k=0;k<10;k++)
+    {
+        var b=(i+1)*(k+1);
+        s = " " + b;
+        console.Write("{0}", s[^4..]);
+    }
+    console.WriteLine();
+}
+
+
