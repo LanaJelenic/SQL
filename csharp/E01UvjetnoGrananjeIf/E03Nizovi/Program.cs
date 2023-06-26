@@ -25,7 +25,27 @@ int[,] tablica = new int[3, 3];
 
 
 
-int[,,] kocka = new int[3, 3, 3]; 
+int[,,] kocka = new int[3, 3, 3];
+
+
+int[] sn = { 7, 11, 6, 55, 98, 45, 16, 96, 46 };
+
+Console.WriteLine(sn[0]);
+
+Console.WriteLine(sn[8]);
+
+Console.WriteLine(sn[^1]);
+
+Console.WriteLine(sn[^3]);
+
+int[,] tablica = new int[3, 3]
+{
+    {1,1,1 },
+    {1,2,4 },
+    {1,3,9 }
+};
+
+Console.WriteLine(tablica[1,1]);
 
 
 
