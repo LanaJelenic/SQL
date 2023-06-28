@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\bin\Debug\net6.0\E04Foreach.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\bin\Debug\net6.0\E04Foreach.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\bin\Debug\net6.0\E04Foreach.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\bin\Debug\net6.0\E04Foreach.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\bin\Debug\net6.0\E04Foreach.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\refint\E04Foreach.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\E04Foreach.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\E04Foreach\E04Foreach\obj\Debug\net6.0\ref\E04Foreach.dll
