@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\bin\Debug\net6.0\MatriceFinal.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\bin\Debug\net6.0\MatriceFinal.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\bin\Debug\net6.0\MatriceFinal.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\bin\Debug\net6.0\MatriceFinal.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\bin\Debug\net6.0\MatriceFinal.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\refint\MatriceFinal.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\MatriceFinal.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\MatriceFinal\MatriceFinal\obj\Debug\net6.0\ref\MatriceFinal.dll
