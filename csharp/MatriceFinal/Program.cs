@@ -34,10 +34,10 @@
     public static void popunjavanjeMatriceDesno(int[,] matrica)
     {
         int pocetniRed = 0, pocetniStupac = 0, broj = 1;
-        int zadnjiRed = matrica.GetLength(0) - 1; // 4 -1 
+        int zadnjiRed = matrica.GetLength(0) - 1; 
         int zadnjiStupac = matrica.GetLength(1) - 1;
 
-        // ****************** pocetak popunjavanja ********************"
+   
 
         while (pocetniRed <= zadnjiRed && pocetniStupac <= zadnjiStupac)
         {
@@ -46,7 +46,7 @@
             {
                 matrica[pocetniRed, i] = broj++;
             }
-            // prelazak na slijedeci red
+          
             pocetniRed++;
 
             // *************************** dolje ***********************************
@@ -57,17 +57,22 @@
             zadnjiStupac--;
 
             // *************************** lijevo ***********************************
-
-            for (int j = zadnjiStupac; j >= pocetniStupac; j--)
+            if (pocetniRed <= zadnjiRed)
             {
-                matrica[zadnjiRed, j] = broj++;
+                for (int j = zadnjiStupac; j >= pocetniStupac; j--)
+                {
+                    matrica[zadnjiRed, j] = broj++;
+                }
             }
             zadnjiRed--;
 
             // *************************** gore ***********************************
-            for (int i = zadnjiRed; i >= pocetniRed; i--)
+            if (pocetniStupac <= zadnjiStupac)
             {
-                matrica[i, pocetniStupac] = broj++;
+                for (int i = zadnjiRed; i >= pocetniRed; i--)
+                {
+                    matrica[i, pocetniStupac] = broj++;
+                }
             }
 
             pocetniStupac++;
@@ -104,16 +109,22 @@
             pocetniStupac++;
 
             // ****************************** desno **********************************
-            for (int i = pocetniStupac; i <= zadnjiStupac; i++)
+            if (pocetniRed <= zadnjiRed)
             {
-                matrica[pocetniRed, i] = broj++;
+                for (int i = pocetniStupac; i <= zadnjiStupac; i++)
+                {
+                    matrica[pocetniRed, i] = broj++;
+                }
             }
             pocetniRed++;
 
             // **************************** dolje ***********************************
-            for (int i = pocetniRed; i <= zadnjiRed; i++)
+            if (pocetniStupac <= zadnjiStupac)
             {
-                matrica[i, zadnjiStupac] = broj++;
+                for (int i = pocetniRed; i <= zadnjiRed; i++)
+                {
+                    matrica[i, zadnjiStupac] = broj++;
+                }
             }
             zadnjiStupac--;
 
@@ -126,7 +137,6 @@
 
 
 
-    // metoda za ispis matrice
     public static void ispisMatrice(int[,] matrica)
     {
         for (int i = 0; i < matrica.GetLength(0); i++)
