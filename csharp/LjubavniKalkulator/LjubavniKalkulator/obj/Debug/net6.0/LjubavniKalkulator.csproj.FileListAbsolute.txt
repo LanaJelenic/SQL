@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\bin\Debug\net6.0\LjubavniKalkulator.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\bin\Debug\net6.0\LjubavniKalkulator.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\bin\Debug\net6.0\LjubavniKalkulator.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\bin\Debug\net6.0\LjubavniKalkulator.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\bin\Debug\net6.0\LjubavniKalkulator.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\refint\LjubavniKalkulator.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\LjubavniKalkulator.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\LjubavniKalkulator\LjubavniKalkulator\obj\Debug\net6.0\ref\LjubavniKalkulator.dll
