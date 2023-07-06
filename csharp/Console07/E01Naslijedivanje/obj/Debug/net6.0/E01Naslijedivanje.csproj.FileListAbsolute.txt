@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\bin\Debug\net6.0\E01Naslijedivanje.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\bin\Debug\net6.0\E01Naslijedivanje.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\bin\Debug\net6.0\E01Naslijedivanje.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\bin\Debug\net6.0\E01Naslijedivanje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\bin\Debug\net6.0\E01Naslijedivanje.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\refint\E01Naslijedivanje.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\E01Naslijedivanje.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console07\E01Naslijedivanje\obj\Debug\net6.0\ref\E01Naslijedivanje.dll
