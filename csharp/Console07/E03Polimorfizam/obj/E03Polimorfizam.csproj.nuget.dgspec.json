@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj": {}
+    "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E03Polimorfizam\\E03Polimorfizam.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj": {
+    "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E03Polimorfizam\\E03Polimorfizam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj",
+        "projectUniqueName": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E03Polimorfizam\\E03Polimorfizam.csproj",
         "projectName": "E03Polimorfizam",
-        "projectPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E03Polimorfizam\\E03Polimorfizam.csproj",
+        "projectPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E03Polimorfizam\\E03Polimorfizam.csproj",
         "packagesPath": "C:\\Users\\Lana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E03Polimorfizam\\obj\\",
+        "outputPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E03Polimorfizam\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config",

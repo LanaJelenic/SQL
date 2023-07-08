@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda.csproj",
+      "projectUniqueName": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda.csproj",
       "projectName": "E02ApstraktnaKlasaIMetoda",
-      "projectPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda.csproj",
+      "projectPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda.csproj",
       "packagesPath": "C:\\Users\\Lana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console07\\E02ApstraktnaKlasaIMetoda\\obj\\",
+      "outputPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\E02ApstraktnaKlasaIMetoda\\E02ApstraktnaKlasaIMetoda\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config",
