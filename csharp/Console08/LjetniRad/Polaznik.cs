@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LjetniRad
 {
-    internal class Polaznik:Entitet
+    internal class Polaznik : Entitet
     {
         public string Ime { get; set; }
         public string Prezime { get; set; }

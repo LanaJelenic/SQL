@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LjetniRad", "LjetniRad\LjetniRad.csproj", "{C4BD1AFD-06EB-4BF7-95E3-6FD3BA36948D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LjetniRad", "LjetniRad\LjetniRad.csproj", "{8AF6912A-15F5-40D9-A36F-27DE4A19BECD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C4BD1AFD-06EB-4BF7-95E3-6FD3BA36948D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4BD1AFD-06EB-4BF7-95E3-6FD3BA36948D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4BD1AFD-06EB-4BF7-95E3-6FD3BA36948D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4BD1AFD-06EB-4BF7-95E3-6FD3BA36948D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF6912A-15F5-40D9-A36F-27DE4A19BECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF6912A-15F5-40D9-A36F-27DE4A19BECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF6912A-15F5-40D9-A36F-27DE4A19BECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF6912A-15F5-40D9-A36F-27DE4A19BECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A61E21DE-6C4B-4ADB-9783-BB201B400165}
+		SolutionGuid = {F31DDE31-17BC-4719-A5F8-17E6F37B8719}
 	EndGlobalSection
 EndGlobal

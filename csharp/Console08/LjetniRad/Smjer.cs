@@ -13,6 +13,5 @@ namespace LjetniRad
         public decimal Cijena { get; set; }
         public decimal Upisnina { get; set; }
         public bool Verificiran { get; set; }
-
     }
 }
