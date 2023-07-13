@@ -6,7 +6,6 @@ ID_clana int not null primary key identity(1,1),
 ime varchar(50),
 prezime varchar(50),
 br_iskaznice int,
-lozinka varchar(10),
 status bit
 );
 
@@ -31,12 +30,12 @@ ID_knjige int foreign key references knjiga(ID_knjige),
 ID_posudbe int foreign key references evidencija_posudbe(ID_posudbe)
 );
 
-INSERT INTO clan(ime,prezime,br_iskaznice,lozinka,status)
+INSERT INTO clan(ime,prezime,br_iskaznice,status)
 VALUES
-('Luka','Horvat',123,'lhorvat',1),
-('Maja','Prigl',124,'pmaja',1),
-('Ante','Bogović',125,'abogovic',1),
-('Iva','Dvojak',126,'dvojakI',1);
+('Luka','Horvat',123,1),
+('Maja','Prigl',124,1),
+('Ante','Bogović',125,1),
+('Iva','Dvojak',126,1);
 
 SELECT*FROM clan;
 
@@ -107,3 +106,5 @@ inner join evidencija_posudbe ep on kp.ID_posudbe=ep.ID_posudbe;
 
 select cl.ime,ep.datum_posudbe
 from clan cl left join evidencija_posudbe ep on ep.ID_clana=cl.ID_clana;
+
+DELETE lozinka FROM clan;
