@@ -1,5 +1,5 @@
-create database knjiznica1;
-use knjiznica1
+create database knjiznica2;
+use knjiznica2
 
 create table clan(
 ID_clana int not null primary key identity(1,1),
@@ -41,10 +41,10 @@ SELECT*FROM clan;
 
 INSERT INTO evidencija_posudbe(ID_clana,datum_posudbe,datum_vracanja)
 VALUES
-(2,'2023-04-16','2023-04-30'),
-(3,'2023-05-05','2023-05-19'),
-(4,'2023-05-10','2023-05-24'),
-(5,'2023-05-20','2023-06-03'),
+(1,'2023-04-16','2023-04-30'),
+(2,'2023-05-05','2023-05-19'),
+(3,'2023-05-10','2023-05-24'),
+(4,'2023-05-20','2023-06-03'),
 (4,'2023-06-05','2023-06-19'),
 (3,'2023-02-14','2023-02-28');
 
@@ -72,17 +72,17 @@ SELECT*FROM knjiga;
 
 INSERT INTO knjiga_posudba(ID_knjige,ID_posudbe)
 VALUES
-(22,1),
-(23,2),
-(24,3),
-(25,4),
-(26,5),
-(27,6);
+(1,5),
+(2,6),
+(3,7),
+(4,8),
+(5,9),
+(6,10);
 insert into knjiga_posudba(ID_knjige,ID_posudbe)
 values
-(22,3),
-(24,2),
-(26,4);
+(1,7),
+(3,6),
+(5,8);
 
 
 
@@ -106,8 +106,4 @@ inner join evidencija_posudbe ep on kp.ID_posudbe=ep.ID_posudbe;
 
 select cl.ime,ep.datum_posudbe
 from clan cl left join evidencija_posudbe ep on ep.ID_clana=cl.ID_clana;
-<<<<<<< HEAD
 
-DELETE lozinka FROM clan;
-=======
->>>>>>> b9f9b16decfe273ccf49b9c7a27dc84d59455add
