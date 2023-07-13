@@ -106,5 +106,8 @@ inner join evidencija_posudbe ep on kp.ID_posudbe=ep.ID_posudbe;
 
 select cl.ime,ep.datum_posudbe
 from clan cl left join evidencija_posudbe ep on ep.ID_clana=cl.ID_clana;
+<<<<<<< HEAD
 
 DELETE lozinka FROM clan;
+=======
+>>>>>>> b9f9b16decfe273ccf49b9c7a27dc84d59455add
