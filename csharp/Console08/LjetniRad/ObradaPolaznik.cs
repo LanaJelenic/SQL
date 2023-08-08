@@ -8,7 +8,7 @@ namespace LjetniRad
 {
     internal class ObradaPolaznik
     {
-        public List<Polaznik> Polaznici { get; }
+        public static List<Polaznik> Polaznici { get; set; }
 
         public ObradaPolaznik()
         {
@@ -44,7 +44,14 @@ namespace LjetniRad
                     PrikaziIzbornik();
                     break;
                 case 4:
-                    BrisanjePolaznika();
+                    if (Polaznici.Count == 0)
+                    {
+                        Console.WriteLine("Ne postoji niti jedan polaznik!");
+                    }
+                    else
+                    {
+                        BrisanjePolaznika();
+                    }
                     PrikaziIzbornik();
                     break;
                 case 5:
@@ -101,6 +108,7 @@ namespace LjetniRad
 
         }
 
+        
         private void TestniPodaci()
         {
             Polaznici.Add(new Polaznik
