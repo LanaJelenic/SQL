@@ -8,7 +8,7 @@ namespace LjetniRad
 {
     internal class ObradaSmjer
     {
-        public List<Smjer> Smjerovi { get; }
+        public static List<Smjer> Smjerovi { get; set; }
 
         public ObradaSmjer()
         {

@@ -101,6 +101,27 @@ namespace LjetniRad
 
             }
         }
+        internal static Smjer UcitajSmjerove()
+        {
+            Console.WriteLine("MOGUĆI SMJEROVI:");
+            Console.WriteLine("---------------");
+            // Učitavamo prikaz svih smjerova
+            int b = 1;
+            foreach (Smjer smjer in ObradaSmjer.Smjerovi)
+            {
+                Console.WriteLine("{0}. {1}", b++, smjer.Naziv);
+            }
+
+            while (true)
+            {
+                var smjer = ucitajCijeliBroj("Odaberite smjer za grupu: ", "Unos mora biti pozitivni cijeli broj");
+                if (smjer-1 < ObradaSmjer.Smjerovi.Count)
+                {
+                    // Vracamo smjer pod rednim brojem kojeg korisnik odabere
+                    return ObradaSmjer.Smjerovi[smjer];
+                }
+            }
+        }
 
         internal static DateTime ucitajDatum(string v1, string v2) 
         {
