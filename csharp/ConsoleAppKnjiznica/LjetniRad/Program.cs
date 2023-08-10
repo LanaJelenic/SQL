@@ -5,6 +5,6 @@ internal class Program
     private static void Main(string[] args)
     {
         Pomocno.dev = true;
-        new PocetnaStranica();
+         PocetnaStranica poc=new PocetnaStranica();
     }
 }
