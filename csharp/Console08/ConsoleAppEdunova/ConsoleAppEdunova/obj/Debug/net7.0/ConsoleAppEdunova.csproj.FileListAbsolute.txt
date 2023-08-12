@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\bin\Debug\net7.0\ConsoleAppEdunova.exe
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\bin\Debug\net7.0\ConsoleAppEdunova.deps.json
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\bin\Debug\net7.0\ConsoleAppEdunova.runtimeconfig.json
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\bin\Debug\net7.0\ConsoleAppEdunova.dll
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\bin\Debug\net7.0\ConsoleAppEdunova.pdb
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.AssemblyInfo.cs
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.dll
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\refint\ConsoleAppEdunova.dll
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.pdb
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ConsoleAppEdunova.genruntimeconfig.cache
+C:\Users\Lana\Desktop\Privremeni programi\ConsoleAppEdunova\ConsoleAppEdunova\obj\Debug\net7.0\ref\ConsoleAppEdunova.dll
