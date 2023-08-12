@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/7yfIPLdomeZ4iWkoofGLRYffxiouRKAS4W7uEXUWmRjSxGl2bAKpylXfqX+fMU5U4n44jgpwzaaYioGedMorw==",
+  "dgSpecHash": "kTUkCGlFzB2Heodawl0BX0Uoc24Q+ZSyF14aEpP/eL9Hqj8Q+KSXGmDJd1CgncbPBkU1zFwQYfj6rbVhgaqTAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\ConsoleAppKnjiznica\\LjetniRad\\LjetniRad.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Administrator\\Documents\\GitHub\\WP1\\csharp\\ConsoleAppKnjiznica\\LjetniRad\\LjetniRad.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.21\\microsoft.netcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.21\\microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.21\\microsoft.netcore.app.host.win-x64.6.0.21.nupkg.sha512"
+  ],
   "logs": []
 }
