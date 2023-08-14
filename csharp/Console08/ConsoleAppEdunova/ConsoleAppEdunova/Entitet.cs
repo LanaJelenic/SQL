@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppEdunova
 {
-    public class Entitet
+    internal abstract class Entitet
     {
         public int ID { get; set; }
     }

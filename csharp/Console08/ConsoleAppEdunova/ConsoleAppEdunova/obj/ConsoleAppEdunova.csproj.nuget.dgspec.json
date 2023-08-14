@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lana\\Desktop\\Privremeni programi\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj": {}
+    "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console08\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lana\\Desktop\\Privremeni programi\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj": {
+    "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console08\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lana\\Desktop\\Privremeni programi\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj",
+        "projectUniqueName": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console08\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj",
         "projectName": "ConsoleAppEdunova",
-        "projectPath": "C:\\Users\\Lana\\Desktop\\Privremeni programi\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj",
+        "projectPath": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console08\\ConsoleAppEdunova\\ConsoleAppEdunova\\ConsoleAppEdunova.csproj",
         "packagesPath": "C:\\Users\\Lana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lana\\Desktop\\Privremeni programi\\ConsoleAppEdunova\\ConsoleAppEdunova\\obj\\",
+        "outputPath": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console08\\ConsoleAppEdunova\\ConsoleAppEdunova\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config",
