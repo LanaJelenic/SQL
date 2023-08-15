@@ -68,7 +68,7 @@ internal class ObradaPolaznik
         
     }
 
-    private void pregledPolaznika()
+   public static void pregledPolaznika()
     {
         Console.WriteLine("------------------");
         Console.WriteLine("---- Polaznici ----");

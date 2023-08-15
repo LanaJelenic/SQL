@@ -147,7 +147,7 @@ namespace ConsoleAppEdunova
             return false;
         }
 
-        private void prikaziSmjerove()
+        public static void prikaziSmjerove()
         {
             Pomocno.dodajPrazanRed();
             Console.WriteLine("---- Smjerovi ----");
