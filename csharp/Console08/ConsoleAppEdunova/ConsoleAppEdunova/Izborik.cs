@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LjetniRad;
 
 namespace ConsoleAppEdunova
 {
@@ -46,7 +47,7 @@ namespace ConsoleAppEdunova
                    break;
                case 3:
                    Pomocno.obrisiEkran();
-                   obradaGrupa.prikaziIzbornik();
+                   obradaGrupa.PrikaziIzbornik();
                    prikaziIzbornik();
                    break;
                case 4:

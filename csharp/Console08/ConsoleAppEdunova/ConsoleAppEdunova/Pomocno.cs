@@ -87,6 +87,7 @@ namespace ConsoleAppEdunova
                 try
                 {
                     Console.Write(v1);
+                    return DateTime.Parse(Console.ReadLine());
                 }
                 catch (Exception ex)
                 {
