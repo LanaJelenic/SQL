@@ -102,6 +102,22 @@ namespace LjetniRad
             }
         }
 
+        public static void obrisiEkran()
+        {
+            
+            Console.Clear();
+        }
+
+        public static void dodajPrazanRed()
+        {
+            Console.Write(" ");
+        }
+
+        public static bool spremiPromjene()
+        {
+            return UcitajBool("Želite li spremiti promjene? (da ili bilo što drugo za ne):");
+        }
+
        
     }
 }

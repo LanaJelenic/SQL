@@ -8,9 +8,6 @@ namespace LjetniRad
 {
     internal class EvidencijaPosudbe:ID
     {
-        public DateTime DatumPosudbe { get; set; }
-        public DateTime DatumVracanja { get; set; }
-        public  List<Clan> Clanovi { get; set; }
-        public Knjiga knjiga{ get; set; }
+      // public List<Posudba> ListaPosudbi { get; }
     }
 }
