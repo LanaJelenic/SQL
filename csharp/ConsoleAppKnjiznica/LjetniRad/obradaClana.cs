@@ -14,8 +14,6 @@ namespace LjetniRad
           Clanovi = new List<Clan>();
            
                 TestniPodaci();
-               
-            
         }
 
         public void PrikaziIzbornik()
@@ -66,6 +64,11 @@ namespace LjetniRad
                 Console.WriteLine("{0}. {1} {2}, broj iskaznice - {3}",b++,clan.Ime, clan.Prezime, clan.BrojIskaznice);
             }
             Console.WriteLine("-----------------");
+        }
+
+        public static Clan pronadiClana(int idClana)
+        {
+            return Clanovi.Find(clan => clan.Id == idClana);
         }
 
         private void UnosClana()

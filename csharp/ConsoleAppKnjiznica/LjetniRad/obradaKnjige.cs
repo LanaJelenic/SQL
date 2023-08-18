@@ -99,6 +99,11 @@ namespace LjetniRad
             Knjige.RemoveAt(br - 1);
         }
 
+        public static List<Knjiga> SveKnjige()
+        {
+            return Knjige;
+        }
+
         private void TestniPodaci()
         {
             Knjige.Add(new Knjiga
