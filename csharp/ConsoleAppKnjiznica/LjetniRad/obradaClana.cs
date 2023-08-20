@@ -29,23 +29,32 @@ namespace LjetniRad
                 "Odabir treba biti od 1-5",1,5))
             {
                 case 1:
+                    Pomocno.obrisiEkran();
                     PregledClanova();
                     PrikaziIzbornik();
                     break;
                 case 2:
+                    Pomocno.obrisiEkran();
                     UnosClana();
+                    Pomocno.obrisiEkran();
                     PrikaziIzbornik();
                     break;
                 case 3:
+                    Pomocno.obrisiEkran();
                     PromjenaClana();
+                    Pomocno.obrisiEkran();
                     PrikaziIzbornik();
                     break;
                 case 4:
+                    Pomocno.obrisiEkran();
                     BrisanjeClana();
+                    Pomocno.obrisiEkran();
                     PrikaziIzbornik();
                     break;
                 case 5:
-                    Console.WriteLine("Zavrsen rad sa clanovima");
+                    Pomocno.obrisiEkran();
+                    PocetnaStranica.PrikaziPocetnu();
+                    Console.WriteLine("Završen rad s članovima");
                     break;
 
             }
@@ -73,6 +82,7 @@ namespace LjetniRad
 
         private void UnosClana()
         {
+            Pomocno.obrisiEkran();
             var c = new Clan();
             c.Id = Pomocno.UcitajBroj("Unesite ID clana:", "Unos bi trebao biti pozitivni cijeli broj");
             c.Ime = Pomocno.UcitajString("Unesite ime clana:", "Ime je obavezno!!");
@@ -80,11 +90,19 @@ namespace LjetniRad
             c.BrojIskaznice = Pomocno.UcitajBroj("Unesite broj iskaznice clana:", "Broj iskaznice treba biti pozitivni cijeli broj!");
             c.Status = Pomocno.UcitajBroj("Unesite status clana:", "Status clana treba biti 0 ili 1!");
             Clanovi.Add(c);
+            if (Pomocno.spremiPromjene())
+            {
+                Clanovi.Add(c);
+            }
         }
 
         private void PromjenaClana()
         {
             PregledClanova();
+            int index = Pomocno.ucitajBrojRaspon("Odaberite broj clana:", "Odabir bi trebao biti u rasponu od 1-" +
+                Clanovi.Count, 1, Clanovi.Count);
+            var stariPodatci = SacuvajPodatke();
+            Clanovi[index-1].Id=IskaznicaTrue(unosBrojaIsk(),Clanovi[index - 1].Id);
             int br= Pomocno.ucitajBrojRaspon("Odaberite ID clana:","Error",1,Clanovi.Count());
             var c = Clanovi[br - 1];
             c.Id = Pomocno.UcitajBroj("Unesite ID clana(" + c.Id + "):", "Unos bi trebao biti pozitivni cijeli broj");
@@ -92,14 +110,48 @@ namespace LjetniRad
             c.Prezime = Pomocno.UcitajString("Unesite prezime clana(" + c.Prezime + "):", "Prezime je obavezno!!");
             c.BrojIskaznice=Pomocno.UcitajBroj("Unesite broj iskaznice clana(" + c.BrojIskaznice + "):", "Broj iskaznice treba biti pozitivni cijeli broj!");
             c.Status=Pomocno.UcitajBroj("Unesite status clana(" + c.Status + "):", "Status clana treba biti 0 ili 1!");
-            
+            if (!Pomocno.spremiPromjene())
+            {
+                Clanovi[index - 1] = stariPodatci[0];
+            }
+        }
+
+        private int IskaznicaTrue(int unosIskaznice, int iD)
+        {
+            if (unosIskaznice==iD)
+            {
+                return unosIskaznice;
+            }
+
+            Console.WriteLine("Unešeni ID ne odgovara odabiru iz evidencije!");
+            return IskaznicaTrue(unosBrojaIsk(), iD);
+        }
+
+        private int unosBrojaIsk()
+        {
+            return Pomocno.UcitajBroj("Unesite broj iskaznice člana:", "Unos mora biti pozitivni cijeli broj");
+        }
+
+        private List<Clan> SacuvajPodatke()
+        {
+            List<Clan> podatci = new List<Clan>();
+            foreach (var clan in Clanovi)
+            {
+                podatci.Add(clan);
+            }
+
+            return podatci;
         }
 
         private void BrisanjeClana()
         {
             PregledClanova();
             int br = Pomocno.ucitajBrojRaspon("Odaberite ID clana:", "Error", 1, Clanovi.Count());
-            Clanovi.RemoveAt(br - 1);
+           
+            if (Pomocno.spremiPromjene())
+            {
+                Clanovi.RemoveAt(br-1);
+            }
         }
 
         private void TestniPodaci()

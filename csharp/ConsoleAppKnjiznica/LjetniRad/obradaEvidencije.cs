@@ -24,7 +24,7 @@ namespace LjetniRad
 
         public void PrikaziIzbornik()
         {
-            //Pomocno.ObrisiEkran();
+           
             Pomocno.dodajPrazanRed();
             Console.WriteLine(" 1. Pregled postojecih posudbi");
             Console.WriteLine(" 2. Promjena postojece posudbe");
