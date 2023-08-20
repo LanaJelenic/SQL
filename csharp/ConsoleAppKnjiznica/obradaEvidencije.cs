@@ -1,6 +1,4 @@
-﻿using LjetniRad;
-
-namespace LjetniRad
+﻿namespace LjetniRad
 {
     internal class ObradaEvidencije
     {
@@ -25,42 +23,42 @@ namespace LjetniRad
         public void PrikaziIzbornik()
         {
             //Pomocno.ObrisiEkran();
-            Pomocno.dodajPrazanRed();
+            Pomocno.DodajPrazanRed();
             Console.WriteLine(" 1. Pregled postojecih posudbi");
             Console.WriteLine(" 2. Promjena postojece posudbe");
             Console.WriteLine(" 3. Unos posudbe knjige:");
             Console.WriteLine(" 4. Brisanje evidencije posudbe");
             Console.WriteLine(" 5. Povratak na pocetnu stranicu");
-            Pomocno.dodajPrazanRed();
+            Pomocno.DodajPrazanRed();
             switch(Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika evidencije posudbe: ",
                 "Odabir treba biti od 1-5",1,5))
             {
 
                 case 1:
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     PregledEvidencije();
                     PrikaziIzbornik();
                     break;
                 case 2:
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     PromjenaEvidencije();
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     PrikaziIzbornik();
                     break;
                 case 3:
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     UnosPosudbe();
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     PrikaziIzbornik();
                         break;
                 case 4:
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     BrisanjeEvidencije();
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     PrikaziIzbornik();
                     break;
                 case 5:
-                    Pomocno.obrisiEkran();
+                    Pomocno.ObrisiEkran();
                     PocetnaStranica.PrikaziPocetnu();
                     Console.WriteLine("Zavrsen rad s evidencijama posudbe");
                     break;
@@ -99,22 +97,22 @@ namespace LjetniRad
 
         private Clan DohvatiPodatkeClana(int posudbaBrojIskazniceClana)
         {
-           return obradaClana.Clanovi.Find(clan => clan.BrojIskaznice == posudbaBrojIskazniceClana);
+           return ObradaClana.Clanovi.Find(clan => clan.BrojIskaznice == posudbaBrojIskazniceClana);
         }
 
         private void UnosPosudbe()
         {
-            Pomocno.obrisiEkran();
+            Pomocno.ObrisiEkran();
             // kreranje nove posudbe
             var pos = new Posudba();
             // popunjavanje posudbe podacima
-            obradaClana.PregledClanova();
+            ObradaClana.PregledClanova();
             pos.BrojIskazniceClana = provjerenBrojIskaznice(unosBrojaIskaznice());
-            obradaKnjige.PregledKnjiga();
+            ObradaKnjige.PregledKnjiga();
             pos.idKnjige = Pomocno.ucitajBrojRaspon(
                 "Unesite redni broj knjige:", 
-                "Unos bi trebao biti pozitivni cijeli broj u rasponu od 1 - " + obradaKnjige.SveKnjige().Count, 
-                1,obradaKnjige.SveKnjige().Count);
+                "Unos bi trebao biti pozitivni cijeli broj u rasponu od 1 - " + ObradaKnjige.SveKnjige().Count, 
+                1,ObradaKnjige.SveKnjige().Count);
             pos.DatumPosudbe = Pomocno.ucitajDatum("Unesite datum posudbe:", "Datum posudbe obavezan!!");
             pos.DatumVracanja= Pomocno.ucitajDatum("Unesite datum vracanja:", "Datum vracanja obavezan!!");
             // dodavanje posudbe u listu posudbi
@@ -124,7 +122,7 @@ namespace LjetniRad
         private int provjerenBrojIskaznice(int brojIskaznice)
         {
             // prođi kroz sve clanove
-            foreach (var clan in obradaClana.Clanovi)
+            foreach (var clan in ObradaClana.Clanovi)
             {
                 // ako nađeš clana sa datim brojem iskaznice
                 if (clan.BrojIskaznice == brojIskaznice)
@@ -161,7 +159,7 @@ namespace LjetniRad
         private Knjiga DohvatiPodatkeKnjige(int idKnjige)
         {
             // prođi kroz sve knjige
-            foreach (var knjiga in obradaKnjige.SveKnjige())
+            foreach (var knjiga in ObradaKnjige.SveKnjige())
             {
                 // ako nađeš knjigu sa datim id-em
                 if (knjiga.Id == idKnjige)
@@ -189,13 +187,13 @@ namespace LjetniRad
             EvidencijaPosudbe[index - 1].BrojIskazniceClana = brojIskazniceOdgovaraClanu(unosBrojaIskaznice(), EvidencijaPosudbe[index -1].BrojIskazniceClana);//provjerenBrojIskaznice(unosBrojaIskaznice());
             /***  Ovo je napravljeno ali prema nekoj logici bi trebalo mijenjati samo datum vracanja a ostalo bi se moglo zkoentirati
              */
-            obradaKnjige.PregledKnjiga();
-            EvidencijaPosudbe[index - 1].idKnjige = Pomocno.ucitajBrojRaspon("Unesite redni broj knjige:", "Unos bi trebao biti pozitivni cijeli broj u rasponu od 1 - " + obradaKnjige.SveKnjige().Count,1,obradaKnjige.SveKnjige().Count);
+            ObradaKnjige.PregledKnjiga();
+            EvidencijaPosudbe[index - 1].idKnjige = Pomocno.ucitajBrojRaspon("Unesite redni broj knjige:", "Unos bi trebao biti pozitivni cijeli broj u rasponu od 1 - " + ObradaKnjige.SveKnjige().Count,1,ObradaKnjige.SveKnjige().Count);
             EvidencijaPosudbe[index - 1].DatumPosudbe = Pomocno.ucitajDatum("Unesite datum posudbe:", "Datum posudbe obavezan!!");
             
             EvidencijaPosudbe[index - 1].DatumVracanja = Pomocno.ucitajDatum("Unesite datum vracanja:", "Datum vracanja je obavezan!!");
             // Upit da li želi spremiti izmjene
-            if (!Pomocno.spremiPromjene()) //Korisnik je odabrao da ne želi spremiti promjene
+            if (!Pomocno.SpremiPromjene()) //Korisnik je odabrao da ne želi spremiti promjene
             {
                 EvidencijaPosudbe[index - 1] = stariPodaci[0];  // vračamo stare podatke za odabranu grupu
             }
@@ -223,7 +221,7 @@ namespace LjetniRad
             
             int br=Pomocno.ucitajBrojRaspon("Odaberite redni broj evidencije: ","Odabir mora biti unutar raspona 1-" + EvidencijaPosudbe.Count() ,1,EvidencijaPosudbe.Count());
             // Ponudi izbor spremiti da ili ne 
-            if (Pomocno.spremiPromjene());
+            if (Pomocno.SpremiPromjene())
                 {
                     // Ako je odabrano da, brišemo
                     EvidencijaPosudbe.RemoveAt(br-1);
@@ -269,14 +267,4 @@ namespace LjetniRad
         }
     }
 }
-
-
-       
-
-       
-        
-       
-        
-    
-
 

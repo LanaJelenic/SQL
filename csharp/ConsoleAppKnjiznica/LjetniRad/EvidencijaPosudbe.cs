@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace LjetniRad
 {
-    internal class EvidencijaPosudbe:ID
+    internal class Posudba
     {
-      // public List<Posudba> ListaPosudbi { get; }
+        public int BrojIskazniceClana { get; set; }
+        public int idKnjige { get; set; }
+        public DateTime DatumPosudbe { get; set; }
+        public DateTime DatumVracanja { get; set; }
     }
 }
