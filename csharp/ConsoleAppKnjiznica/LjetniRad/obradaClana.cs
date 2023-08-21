@@ -84,7 +84,7 @@ namespace LjetniRad
         {
             Pomocno.obrisiEkran();
             var c = new Clan();
-            c.Id = Pomocno.UcitajBroj("Unesite ID clana:", "Unos bi trebao biti pozitivni cijeli broj");
+            int ID = Pomocno.UcitajBroj("Unesite ID clana:", "Unos bi trebao biti pozitivni cijeli broj");
             c.Ime = Pomocno.UcitajString("Unesite ime clana:", "Ime je obavezno!!");
             c.Prezime = Pomocno.UcitajString("Unesite prezime clana:", "Prezime je obavezno!!");
             c.BrojIskaznice = Pomocno.UcitajBroj("Unesite broj iskaznice clana:", "Broj iskaznice treba biti pozitivni cijeli broj!");
@@ -94,6 +94,28 @@ namespace LjetniRad
             {
                 Clanovi.Add(c);
             }
+
+            while (ProvjeriId(ID))
+            {
+                Console.WriteLine("ID: {0} već postoji u evidenciji!!",ID);
+                ID = Pomocno.UcitajBroj("Unesite id clana:", "Unos bi trebao biti pozitivni cijeli broj!");
+                c.Id = ID;
+            }
+            
+            
+        }
+
+        private bool ProvjeriId(int id)
+        {
+            foreach (var clan in Clanovi)
+            {
+                if (clan.Id==id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private void PromjenaClana()
