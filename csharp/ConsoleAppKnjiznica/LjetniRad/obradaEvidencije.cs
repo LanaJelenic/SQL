@@ -119,6 +119,10 @@ namespace LjetniRad
             pos.DatumVracanja= Pomocno.ucitajDatum("Unesite datum vracanja:", "Datum vracanja obavezan!!");
             // dodavanje posudbe u listu posudbi
             EvidencijaPosudbe.Add(pos);
+            if (Pomocno.spremiPromjene())
+            {
+               EvidencijaPosudbe.Add(pos);
+            }
         }
 
         private int provjerenBrojIskaznice(int brojIskaznice)
@@ -183,17 +187,16 @@ namespace LjetniRad
                 "Odaberi broj evidencije: ", "Odabir bi trebao biti u rasponu od 1- " + EvidencijaPosudbe.Count, 
                 1, 
                 EvidencijaPosudbe.Count());
+            var posudba = new Posudba();
 
             var stariPodaci = SacuvajPodatke();
 
-            EvidencijaPosudbe[index - 1].BrojIskazniceClana = brojIskazniceOdgovaraClanu(unosBrojaIskaznice(), EvidencijaPosudbe[index -1].BrojIskazniceClana);//provjerenBrojIskaznice(unosBrojaIskaznice());
-            /***  Ovo je napravljeno ali prema nekoj logici bi trebalo mijenjati samo datum vracanja a ostalo bi se moglo zkoentirati
-             */
+            posudba.BrojIskazniceClana = brojIskazniceOdgovaraClanu(unosBrojaIskaznice(), EvidencijaPosudbe[index -1].BrojIskazniceClana);
             obradaKnjige.PregledKnjiga();
-            EvidencijaPosudbe[index - 1].idKnjige = Pomocno.ucitajBrojRaspon("Unesite redni broj knjige:", "Unos bi trebao biti pozitivni cijeli broj u rasponu od 1 - " + obradaKnjige.SveKnjige().Count,1,obradaKnjige.SveKnjige().Count);
-            EvidencijaPosudbe[index - 1].DatumPosudbe = Pomocno.ucitajDatum("Unesite datum posudbe:", "Datum posudbe obavezan!!");
+            posudba.idKnjige = Pomocno.ucitajBrojRaspon("Unesite redni broj knjige:", "Unos bi trebao biti pozitivni cijeli broj u rasponu od 1 - " + obradaKnjige.SveKnjige().Count,1,obradaKnjige.SveKnjige().Count);
+            posudba.DatumPosudbe = Pomocno.ucitajDatum("Unesite datum posudbe:", "Datum posudbe obavezan!!");
             
-            EvidencijaPosudbe[index - 1].DatumVracanja = Pomocno.ucitajDatum("Unesite datum vracanja:", "Datum vracanja je obavezan!!");
+          posudba.DatumVracanja = Pomocno.ucitajDatum("Unesite datum vracanja:", "Datum vracanja je obavezan!!");
             // Upit da li želi spremiti izmjene
             if (!Pomocno.spremiPromjene()) //Korisnik je odabrao da ne želi spremiti promjene
             {
