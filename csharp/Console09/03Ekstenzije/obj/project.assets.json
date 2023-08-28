@@ -13,21 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console09\\03Ekstenzije\\03Ekstenzije.csproj",
+      "projectUniqueName": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console09\\03Ekstenzije\\03Ekstenzije.csproj",
       "projectName": "03Ekstenzije",
-      "projectPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console09\\03Ekstenzije\\03Ekstenzije.csproj",
+      "projectPath": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console09\\03Ekstenzije\\03Ekstenzije.csproj",
       "packagesPath": "C:\\Users\\Lana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console09\\03Ekstenzije\\obj\\",
+      "outputPath": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console09\\03Ekstenzije\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -56,12 +54,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.16, 6.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.16, 6.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.16, 6.0.16]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.16, 6.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

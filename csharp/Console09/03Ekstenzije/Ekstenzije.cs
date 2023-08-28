@@ -8,7 +8,7 @@ namespace _03Ekstenzije
 {
     public static class Ekstenzije
     {
-        public static int brojPonavljanja(this string s,char z)
+        public static int BrojPonavljanja(this string s,char z)
         {
             return s.Count(x => x == z);
         }

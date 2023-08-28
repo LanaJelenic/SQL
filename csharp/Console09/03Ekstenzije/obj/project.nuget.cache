@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JMVb06O4LUoFmqsjrU5OU+7q5YqOSaKe6464NuzZsw9lJ3cmmc4UUJij0YimHEENIorM3nN7luk1qY4DV7xUwg==",
+  "dgSpecHash": "weV+uVVd/GkbHonQEbgR/TNOmy6evM7rGHoKFYeS/T55YQHJ79yxo8223kktSv2G19xe89SV0xDqwyJShQBDUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console09\\03Ekstenzije\\03Ekstenzije.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console09\\03Ekstenzije\\03Ekstenzije.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

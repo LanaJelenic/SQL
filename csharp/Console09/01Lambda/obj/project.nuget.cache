@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GiDRY0O5Wtdtvbe4iM2Ax0olnKVMlkKsyP6/7xQEJYodSUnfgITZm3m6kXeXtXlfyVOCWKM6ZMebVtnNOMebmQ==",
+  "dgSpecHash": "beeWLfC583bOwtUCqZPDE6MhMjuq9fFsWy15N69fDleS/02WNbCuNiMnGHfcfieQOch0VLX8T+Knr/Ce42ohVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lana\\Desktop\\programiranje\\Csharp\\Console09\\01Lambda\\01Lambda.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Lana\\Desktop\\GitHub\\SQL\\csharp\\Console09\\01Lambda\\01Lambda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\Lana\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.16\\microsoft.netcore.app.host.win-x64.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }
