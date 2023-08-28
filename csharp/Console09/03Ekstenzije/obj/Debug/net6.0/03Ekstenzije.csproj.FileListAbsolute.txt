@@ -1,0 +1,15 @@
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\bin\Debug\net6.0\03Ekstenzije.exe
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\bin\Debug\net6.0\03Ekstenzije.deps.json
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\bin\Debug\net6.0\03Ekstenzije.runtimeconfig.json
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\bin\Debug\net6.0\03Ekstenzije.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\bin\Debug\net6.0\03Ekstenzije.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.csproj.AssemblyReference.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.AssemblyInfoInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.AssemblyInfo.cs
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.csproj.CoreCompileInputs.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\refint\03Ekstenzije.dll
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.pdb
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\03Ekstenzije.genruntimeconfig.cache
+C:\Users\Lana\Desktop\programiranje\Csharp\Console09\03Ekstenzije\obj\Debug\net6.0\ref\03Ekstenzije.dll
