@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-namespace HelloWorld.Controllers
+namespace HelloWorld.Controller
 {
     [ApiController]
     [Route("[controller]")]
@@ -41,27 +41,35 @@ namespace HelloWorld.Controllers
         {
             return x+ y;
         }
-        [HttpGet]
-        [Route("zad3")]
-        public string DrugaMetoda(int brojPonavljanja)
-        {
-             // DZ
+
+        // DZ
 
         //  Kreirajte rutu /HelloWorld/zad3
         //  koja prima parametar brojPonavljanja
         //  Ruta vraća niz znakova "Osijek" koji
         //  ima onoliko elemenata koliko smo primili u
         //  brojPonavljanja
+        [HttpGet]
+        [Route("zad3")]
+        public string DrugaMetoda(int brojPonavljanja)
+        {
+            string s = "";
+            for (int i = 0; i < brojPonavljanja; i++)
+            {
+                s += "Osijek ";
+            }
+
+            return s;
 
 
 
-        // Kreirati rutu /HelloWorld/ciklicna
-        // koja prima dva parametra (x i y) a vraća
-        // cikličnu matricu kao dvodimenzionalni niz brojeva
+            // Kreirati rutu /HelloWorld/ciklicna
+            // koja prima dva parametra (x i y) a vraća
+            // cikličnu matricu kao dvodimenzionalni niz brojeva
+
+
 
 
 
         }
-
-    }
 }
