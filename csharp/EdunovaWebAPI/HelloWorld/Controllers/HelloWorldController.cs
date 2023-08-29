@@ -45,7 +45,20 @@ namespace HelloWorld.Controllers
         [Route("zad3")]
         public string DrugaMetoda(int brojPonavljanja)
         {
-            
+             // DZ
+
+        //  Kreirajte rutu /HelloWorld/zad3
+        //  koja prima parametar brojPonavljanja
+        //  Ruta vraća niz znakova "Osijek" koji
+        //  ima onoliko elemenata koliko smo primili u
+        //  brojPonavljanja
+
+
+
+        // Kreirati rutu /HelloWorld/ciklicna
+        // koja prima dva parametra (x i y) a vraća
+        // cikličnu matricu kao dvodimenzionalni niz brojeva
+
 
 
         }
