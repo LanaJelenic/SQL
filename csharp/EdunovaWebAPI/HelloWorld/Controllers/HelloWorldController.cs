@@ -1,6 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
-namespace HelloWorld.Controller
+namespace HelloWorld.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -63,13 +63,66 @@ namespace HelloWorld.Controller
 
 
 
-            // Kreirati rutu /HelloWorld/ciklicna
-            // koja prima dva parametra (x i y) a vraća
-            // cikličnu matricu kao dvodimenzionalni niz brojeva
+            [HttpGet]
+            [Route("ciklicna")]
+            public int[,] DrugaMetoda(int x, int y)
+            {
+                // Kreirati rutu /HelloWorld/ciklicna
+                // koja prima dva parametra (x i y) a vraća
+                // cikličnu matricu kao dvodimenzionalni niz brojeva
+
+                int[,] matrica = new int[x, y];
+                int pocetniRed = 0, pocetniStupac = 0, broj = 1;
+                int zadnjiRed = matrica.GetLength(0) - 1;
+                int zadnjiStupac = matrica.GetLength(1) - 1;
+
+
+
+                while (pocetniRed <= zadnjiRed && pocetniStupac <= zadnjiStupac)
+                {
+                    // *************************** desno ***********************************
+                    for (int i = pocetniStupac; i <= zadnjiStupac; i++)
+                    {
+                        matrica[pocetniRed, i] = broj++;
+                    }
+
+                    pocetniRed++;
+
+                    // *************************** dolje ***********************************
+                    for (int j = pocetniRed; j <= zadnjiRed; j++)
+                    {
+                        matrica[j, zadnjiStupac] = broj++;
+                    }
+
+                    zadnjiStupac--;
+
+                    // *************************** lijevo ***********************************
+                    if (pocetniRed <= zadnjiRed)
+                    {
+                        for (int j = zadnjiStupac; j >= pocetniStupac; j--)
+                        {
+                            matrica[zadnjiRed, j] = broj++;
+                        }
+                    }
+
+                    zadnjiRed--;
+
+                    // *************************** gore ***********************************
+                    if (pocetniStupac <= zadnjiStupac)
+                    {
+                        for (int i = zadnjiRed; i >= pocetniRed; i--)
+                        {
+                            matrica[i, pocetniStupac] = broj++;
+                        }
+                    }
+
+                    pocetniStupac++;
+                }
+
+                return (matrica);
 
 
 
 
-
-        }
+            }
 }
