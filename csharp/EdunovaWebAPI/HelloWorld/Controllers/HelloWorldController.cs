@@ -51,7 +51,7 @@ namespace HelloWorld.Controllers
         //  brojPonavljanja
         [HttpGet]
         [Route("zad3")]
-        public string DrugaMetoda(int brojPonavljanja)
+        public string[] DrugaMetoda(int brojPonavljanja)
         { var bp = new string[brojPonavljanja];
             for (int i = 0; i < brojPonavljanja; i++)
             {
