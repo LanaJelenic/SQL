@@ -52,14 +52,13 @@ namespace HelloWorld.Controllers
         [HttpGet]
         [Route("zad3")]
         public string DrugaMetoda(int brojPonavljanja)
-        {
-            string s = "";
+        { var bp = new string[brojPonavljanja];
             for (int i = 0; i < brojPonavljanja; i++)
             {
-                s += "Osijek ";
+                bp[i] = "Osijek";
             }
 
-            return s;
+            return bp;
 
 
 
