@@ -65,7 +65,7 @@ namespace HelloWorld.Controllers
 
             [HttpGet]
             [Route("ciklicna")]
-            public int[,] DrugaMetoda(int x, int y)
+            public String DrugaMetoda(int x, int y)
             {
                 // Kreirati rutu /HelloWorld/ciklicna
                 // koja prima dva parametra (x i y) a vraća
@@ -119,7 +119,19 @@ namespace HelloWorld.Controllers
                     pocetniStupac++;
                 }
 
-                return (matrica);
+                String matricaString = "";
+
+                for (int i = 0; i < matrica.GetLength(0); i++)
+                {
+                    for (int j = 0; j < matrica.GetLength(1); j++)
+                    {
+                        Console.Write("{0,4}", (matrica[i, j] + "|"));
+                        matricaString += String.Format("{0,-2}|", (matrica[i, j]));
+                    }
+                    Console.WriteLine();
+                    matricaString += "\n";
+                }
+                return matricaString;
 
 
 
