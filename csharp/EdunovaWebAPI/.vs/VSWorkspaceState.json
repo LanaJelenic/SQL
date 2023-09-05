@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HelloWorld",
+    "\\EdunovaApp",
+    "\\EdunovaApp\\Models",
     "\\HelloWorld\\Controllers"
   ],
-  "SelectedNode": "\\HelloWorld\\Controllers\\HelloWorldController.cs",
+  "SelectedNode": "\\EdunovaApp\\Models\\Smjer.cs",
   "PreviewInSolutionExplorer": false
 }

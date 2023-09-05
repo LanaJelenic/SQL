@@ -1,7 +1,10 @@
-﻿namespace EdunovaApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EdunovaApp.Models
 {
     public abstract class Entitet
     {
-        public int sifra { get; set; }
+        [Key]
+        public int Sifra { get; set; }
     }
 }
