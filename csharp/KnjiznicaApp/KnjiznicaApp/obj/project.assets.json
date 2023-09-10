@@ -3682,19 +3682,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lana\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lana\\source\\repos\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
       "projectName": "KnjiznicaApp",
-      "projectPath": "C:\\Users\\Lana\\source\\repos\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
-      "packagesPath": "C:\\Users\\Lana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lana\\source\\repos\\KnjiznicaApp\\KnjiznicaApp\\obj\\",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3702,6 +3707,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
