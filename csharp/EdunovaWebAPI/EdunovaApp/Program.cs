@@ -9,10 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-// prilagodba za dokumentaciju, èitati https://medium.com/geekculture/customizing-swagger-in-asp-net-core-5-2c98d03cbe52
+// prilagodba za dokumentaciju, ?itati https://medium.com/geekculture/customizing-swagger-in-asp-net-core-5-2c98d03cbe52
 
 builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptions
-    // èitati https://devintxcontent.blob.core.windows.net/showcontent/Speaker%20Presentations%20Fall%202017/Web%20API%20Best%20Practices.pdf
+    // ?itati https://devintxcontent.blob.core.windows.net/showcontent/Speaker%20Presentations%20Fall%202017/Web%20API%20Best%20Practices.pdf
     var o = new Microsoft.OpenApi.Models.OpenApiInfo()
     {
         Title = "Edunova API",
@@ -29,8 +29,10 @@ builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptio
         }
     };
     sgo.SwaggerDoc("v1", o);
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    sgo.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
 
-  
 });
 
 
@@ -64,5 +66,5 @@ app.UseHttpsRedirection();
 
 
 app.MapControllers();
-
+app.UseStaticFiles();
 app.Run();
