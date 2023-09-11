@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\HelloWorld\\HelloWorld.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\EdunovaWebAPI\\HelloWorld\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,6 +48,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

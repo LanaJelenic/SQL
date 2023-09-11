@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lana\\source\\repos\\Bezveze\\EdunovaApp\\EdunovaApp.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\EdunovaApp\\EdunovaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lana\\source\\repos\\Bezveze\\EdunovaApp\\EdunovaApp.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\EdunovaApp\\EdunovaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lana\\source\\repos\\Bezveze\\EdunovaApp\\EdunovaApp.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\EdunovaApp\\EdunovaApp.csproj",
         "projectName": "EdunovaApp",
-        "projectPath": "C:\\Users\\Lana\\source\\repos\\Bezveze\\EdunovaApp\\EdunovaApp.csproj",
-        "packagesPath": "C:\\Users\\Lana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lana\\source\\repos\\Bezveze\\EdunovaApp\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\EdunovaApp\\EdunovaApp.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\EdunovaWebAPI\\EdunovaApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +46,14 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.10, )"
             },

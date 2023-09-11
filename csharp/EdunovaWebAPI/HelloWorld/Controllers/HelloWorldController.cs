@@ -1,46 +1,45 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
 namespace HelloWorld.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class HelloWorldController:ControllerBase
+    public class HelloWorldController : ControllerBase
     {
         [HttpGet]
         public string Hello()
         {
             return "Hello world";
         }
+
         [HttpGet]
         [Route("pozdrav")]
         public string DrugaMetoda()
         {
             return "Pozdrav svijetu";
         }
+
         [HttpGet]
         [Route("pozdravParametar")]
-        public string DrugbMetoda(string s) 
+        public string DrugaMetoda(string s)
         {
-            return "Hello" + s;
+            return "Hello " + s;
         }
+
         [HttpGet]
         [Route("pozdravViseParametara")]
         public string DrugaMetoda(string s="",int i=0)
         {
-            return "Hello" + s + " " + i;
+            return "Hello " + s + " " + i;
         }
-        [HttpGet]
-        [Route("zad1")]
-        public string Metoda()
-        {
-            return "Lana";
-        }
-        [HttpGet]
-        [Route("zad2")]
-        public int DrugaMetoda(int x,int y)
-        {
-            return x+ y;
-        }
+
+        //  Kreirajte rutu /HelloWorld/zad1
+        //  koja ne prima parametre i vraća Vaše ime
+
+        //  Kreirajte rutu /HelloWorld/zad2
+        //  koja prima dva broja i vraća njihov zbroj
+
 
         // DZ
 
@@ -49,91 +48,105 @@ namespace HelloWorld.Controllers
         //  Ruta vraća niz znakova "Osijek" koji
         //  ima onoliko elemenata koliko smo primili u
         //  brojPonavljanja
+
+
+
+        // Kreirati rutu /HelloWorld/ciklicna
+        // koja prima dva parametra (x i y) a vraća
+        // cikličnu matricu kao dvodimenzionalni niz brojeva
+
+
         [HttpGet]
-        [Route("zad3")]
-        public string[] DrugaMetoda(int brojPonavljanja)
-        { var bp = new string[brojPonavljanja];
-            for (int i = 0; i < brojPonavljanja; i++)
+        [Route("{sifra:int}")]
+        public string PozdravRuta(int sifra)
+        {
+            return "Hello " + sifra;
+        }
+
+        [HttpGet]
+        [Route("{sifra:int}/{kategorija}")]
+        public string PozdravRuta2(int sifra, string kategorija)
+        {
+            return "Hello " + sifra + " " + kategorija;
+        }
+
+        [HttpPost]
+        public string DodavanjeNovog(string ime)
+        {
+            return "Dodao " + ime;
+        }
+
+        [HttpPut]
+        public string Promjena(int sifra, string naziv)
+        {
+            return "Na šifri " + sifra + " postavljam " + naziv;
+        }
+
+        [HttpDelete]
+        public bool Obrisao(int sifra)
+        {
+            return true;
+        }
+
+
+
+
+
+        [HttpGet]
+        [Route("matrica")]
+        public IActionResult Matrica(int redaka, int stupaca)
+        {
+           // moj kod koji to napuni
+
+            int[,] matrica = new int[redaka, stupaca];
+
+            int b = 1;
+
+            int n = 0;
+
+            var nizRedaka = new string[redaka];
+
+
+
+            while (b < stupaca * redaka)
             {
-                bp[i] = "Osijek";
-            }
 
-            return bp;
-
-
-
-            [HttpGet]
-            [Route("ciklicna")]
-            public String DrugaMetoda(int x, int y)
-            {
-                // Kreirati rutu /HelloWorld/ciklicna
-                // koja prima dva parametra (x i y) a vraća
-                // cikličnu matricu kao dvodimenzionalni niz brojeva
-
-                int[,] matrica = new int[x, y];
-                int pocetniRed = 0, pocetniStupac = 0, broj = 1;
-                int zadnjiRed = matrica.GetLength(0) - 1;
-                int zadnjiStupac = matrica.GetLength(1) - 1;
-
-
-
-                while (pocetniRed <= zadnjiRed && pocetniStupac <= zadnjiStupac)
+                for (int i = n + 1; i <= stupaca - n; i++)      // s desna na lijevo
                 {
-                    // *************************** desno ***********************************
-                    for (int i = pocetniStupac; i <= zadnjiStupac; i++)
-                    {
-                        matrica[pocetniRed, i] = broj++;
-                    }
-
-                    pocetniRed++;
-
-                    // *************************** dolje ***********************************
-                    for (int j = pocetniRed; j <= zadnjiRed; j++)
-                    {
-                        matrica[j, zadnjiStupac] = broj++;
-                    }
-
-                    zadnjiStupac--;
-
-                    // *************************** lijevo ***********************************
-                    if (pocetniRed <= zadnjiRed)
-                    {
-                        for (int j = zadnjiStupac; j >= pocetniStupac; j--)
-                        {
-                            matrica[zadnjiRed, j] = broj++;
-                        }
-                    }
-
-                    zadnjiRed--;
-
-                    // *************************** gore ***********************************
-                    if (pocetniStupac <= zadnjiStupac)
-                    {
-                        for (int i = zadnjiRed; i >= pocetniRed; i--)
-                        {
-                            matrica[i, pocetniStupac] = broj++;
-                        }
-                    }
-
-                    pocetniStupac++;
+                    if (b <= stupaca * redaka)
+                        matrica[redaka - n - 1, stupaca - i] = b++;
+                    else break;
                 }
 
-                String matricaString = "";
-
-                for (int i = 0; i < matrica.GetLength(0); i++)
+                for (int i = redaka - n - 2; i >= n; i--)          // gore
                 {
-                    for (int j = 0; j < matrica.GetLength(1); j++)
-                    {
-                        Console.Write("{0,4}", (matrica[i, j] + "|"));
-                        matricaString += String.Format("{0,-2}|", (matrica[i, j]));
-                    }
-                    Console.WriteLine();
-                    matricaString += "\n";
+                    if (b <= stupaca * redaka)
+                        matrica[i, n] = b++;
+                    else break;
                 }
-                return matricaString;
 
 
+                for (int i = n + 1; i <= stupaca - n - 1; i++)    // s lijeva na desno
+                {
+                    if (b <= stupaca * redaka)
+                        matrica[n, i] = b++;
+                    else break;
+                }
 
+
+                for (int i = n + 1; i <= redaka - n - 2; i++)       // dolje
+                {
+                    if (b <= stupaca * redaka)
+                        matrica[i, stupaca - n - 1] = b++;
+                    else break;
+                }
+
+                n++;
 
             }
+
+            return new JsonResult(JsonConvert.SerializeObject(matrica));
+        }
+
+    }
 }
