@@ -12,6 +12,7 @@ namespace EdunovaApp.Data
 
         public DbSet<Smjer> Smjer { get; set; }
         public DbSet<Polaznik> Polaznik { get; set; }
+        public DbSet<Grupa> Grupa { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
