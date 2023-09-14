@@ -10,6 +10,8 @@ namespace KnjiznicaApp.Data
         }
 
         public DbSet<Clan> Clan { get; set; }
+        public DbSet<Knjiga>Knjiga { get; set; }
+        public DbSet<EvidencijaPosudbe> Evidencija {  get; set; }
 
     }
 }

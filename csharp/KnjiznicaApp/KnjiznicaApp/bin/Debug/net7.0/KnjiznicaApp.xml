@@ -11,7 +11,7 @@
         </member>
         <member name="M:KnjiznicaApp.Controllers.ClanController.Get">
              <summary>
-             Dohvaća sve clanove iz baze
+             Dohvaća sve clanove koji su pohranjeni u bazi
              </summary>
              <remarks>
              Primjer upita:
@@ -22,7 +22,7 @@
              <returns>Clanovi u bazi</returns>
              <response code="200">Sve je u redu</response>
              <response code="400">Zahtjev ne valja (BadRequest)</response> 
-             <response code="503">Na azure treba dodati IP u firewall</response> 
+             <response code="503">Error na serveru</response> 
         </member>
         <member name="M:KnjiznicaApp.Controllers.ClanController.Post(KnjiznicaApp.Models.Clan)">
              <summary>
@@ -83,6 +83,85 @@
              <response code="204">U bazi ne postoji clan kojeg zelimo obrisati</response>
              <response code="415">Nismo poslali JSON</response> 
              <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="T:KnjiznicaApp.Controllers.KnjigaController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetu knjiga u bazi
+            </summary>
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Get">
+             <summary>
+             Dohvaća sve knjige koje su pohranjene u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Knjiga
+            
+             </remarks>
+             <returns>Knjige u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev ne valja (BadRequest)</response> 
+             <response code="503">Error na serveru</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Post(KnjiznicaApp.Models.Knjiga)">
+             <summary>
+             Unosi novu knjigu u bazu podataka
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Knjiga
+                {Naslov:"",br_stranica:125}
+            
+             </remarks>
+             <returns>Knjiga je uspjesno kreirana</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Error na serveru</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Put(System.Int32,KnjiznicaApp.Models.Knjiga)">
+             <summary>
+             Mijenja podatke postojeće knjige u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/knjiga/1
+            
+             {
+              "sifra": 0,
+              "naslov": "",
+              "ime_autora": "Novi naziv",
+              "broj_stranica": 125,
+              
+              
+             }
+            
+             </remarks>
+             <param name="Id">Id knjige koja se mijenja</param>  
+             <returns>Svi poslani podaci knjige</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">U bazi ne postoji knjiga koju zelimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Error u serveru</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Delete(System.Int32)">
+             <summary>
+             Briše knjigu iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/knjiga/1
+                
+             </remarks>
+             <param name="Id">Id knjige koju zelimo obrisati</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">U bazi ne postoji knjiga koju zelimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Error na serveru</response> 
         </member>
     </members>
 </doc>
