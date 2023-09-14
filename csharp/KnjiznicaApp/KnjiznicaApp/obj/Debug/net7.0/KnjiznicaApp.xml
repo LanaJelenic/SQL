@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KnjiznicaApp</name>
+    </assembly>
+    <members>
+        <member name="T:KnjiznicaApp.Controllers.ClanController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetu clan u bazi
+            </summary>
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.ClanController.Get">
+             <summary>
+             Dohvaća sve clanove iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Clan
+            
+             </remarks>
+             <returns>Clanovi u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev ne valja (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.ClanController.Post(KnjiznicaApp.Models.Clan)">
+             <summary>
+             Dodaje clana u bazu
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Clan
+                {ime:"",br_iskaznice:125}
+            
+             </remarks>
+             <returns>Kreirani clan u bazi sa svim podacima</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+             
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.ClanController.Put(System.Int32,KnjiznicaApp.Models.Clan)">
+             <summary>
+             Mijenja podatke postojećeg clana u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/clan/1
+            
+             {
+              "sifra": 0,
+              "ime": "",
+              "prezime": "Novi naziv",
+              "broj iskaznice": 125,
+              "status": 1,
+              
+             }
+            
+             </remarks>
+             <param name="Id">Id clana koji se mijenja</param>  
+             <returns>Svi poslani podaci od clana</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">U bazi ne postoji clan kojega zelimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.ClanController.Delete(System.Int32)">
+             <summary>
+             Briše clana iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/clan/1
+                
+             </remarks>
+             <param name="Id">Id smjera koji se briše</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">U bazi ne postoji clan kojeg zelimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
+    </members>
+</doc>

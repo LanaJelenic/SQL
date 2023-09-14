@@ -1,26 +1,50 @@
 using KnjiznicaApp.Data;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
-
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// prilagodba za dokumentaciju, ?itati https://medium.com/geekculture/customizing-swagger-in-asp-net-core-5-2c98d03cbe52
 
-//builder.Services.AddControllersWithViews().AddJsonOptions( options => options.JsonSerializerOptions = ReferenceLoopHandling.Ignore);
+builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptions
+    // ?itati https://devintxcontent.blob.core.windows.net/showcontent/Speaker%20Presentations%20Fall%202017/Web%20API%20Best%20Practices.pdf
+    var o = new Microsoft.OpenApi.Models.OpenApiInfo()
+    {
+        Title = "Knjiznica API",
+        Version = "v1",
+        Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+        {
+            Email = "lana.jelenic@gmail.com",
+            Name = "Lana Jelenic"
+        },
+        Description = "Ovo je dokumentacija za Knjiznica API",
+        License = new Microsoft.OpenApi.Models.OpenApiLicense()
+        {
+            Name = "Edukacijska licenca"
+        }
+    };
+    sgo.SwaggerDoc("v1", o);
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    sgo.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
 
-//dodavanje baze podataka
+});
+
+
+// dodavanje baze podataka
 builder.Services.AddDbContext<KnjiznicaContext>(o =>
-o.UseSqlServer(
-    builder.Configuration.
-    GetConnectionString(name: "KnjiznicaContext")
-    )
-);
+    o.UseSqlServer(
+        builder.Configuration.
+        GetConnectionString(name: "KnjiznicaContext")
+        )
+    );
+
+
 
 var app = builder.Build();
 
@@ -30,20 +54,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger(opcije =>
     {
         opcije.SerializeAsV2 = true;
-
     });
     app.UseSwaggerUI(opcije =>
     {
         opcije.ConfigObject.
         AdditionalItems.Add("requestSnippetsEnabled", true);
     });
-
-
-    app.UseHttpsRedirection();
-
-
-
-    app.MapControllers();
-
-    app.Run();
 }
+
+app.UseHttpsRedirection();
+
+
+app.MapControllers();
+app.UseStaticFiles();
+app.Run();

@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 namespace KnjiznicaApp.Controllers
 {
+    /// <summary>
+    /// Namijenjeno za CRUD operacije na entitetu clan u bazi
+    /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
     public class ClanController:ControllerBase
@@ -25,7 +28,7 @@ namespace KnjiznicaApp.Controllers
         /// </remarks>
         /// <returns>Clanovi u bazi</returns>
         /// <response code="200">Sve je u redu</response>
-        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="400">Zahtjev ne valja (BadRequest)</response> 
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
 
         [HttpGet]
@@ -88,20 +91,29 @@ namespace KnjiznicaApp.Controllers
             }
         }
         /// <summary>
-        /// Mijenja clana u bazi
+        /// Mijenja podatke postojećeg clana u bazi
         /// </summary>
         /// <remarks>
         /// Primjer upita:
         ///
-        ///    PUT api/v1/Clan
-        ///    {ime:"",prezime:"Peric"(prijasnje),"Majic"(novo)}
+        ///    PUT api/v1/clan/1
+        ///
+        /// {
+        ///  "sifra": 0,
+        ///  "ime": "",
+        ///  "prezime": "Novi naziv",
+        ///  "broj iskaznice": 125,
+        ///  "status": 1,
+        ///  
+        /// }
         ///
         /// </remarks>
-        /// <returns>Kreirani clan u bazi sa svim podacima</returns>
+        /// <param name="Id">Id clana koji se mijenja</param>  
+        /// <returns>Svi poslani podaci od clana</returns>
         /// <response code="200">Sve je u redu</response>
-        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="204">U bazi ne postoji clan kojega zelimo promijeniti</response>
+        /// <response code="415">Nismo poslali JSON</response> 
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
-        /// 
         [HttpPut]
         public IActionResult Put(int Id_clana,Clan clan)
         {
@@ -134,56 +146,51 @@ namespace KnjiznicaApp.Controllers
             }
         }
         /// <summary>
-        /// Brise clana iz baze
+        /// Briše clana iz baze
         /// </summary>
         /// <remarks>
         /// Primjer upita:
         ///
-        ///   DELETE api/v1/Clan
-        ///    {id:int}
-        ///
+        ///    DELETE api/v1/clan/1
+        ///    
         /// </remarks>
-        /// <returns>Izbrisan ID clana iz baze</returns>
+        /// <param name="Id">Id smjera koji se briše</param>  
+        /// <returns>Odgovor da li je obrisano ili ne</returns>
         /// <response code="200">Sve je u redu</response>
-        /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+        /// <response code="204">U bazi ne postoji clan kojeg zelimo obrisati</response>
+        /// <response code="415">Nismo poslali JSON</response> 
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
-        /// 
 
         [HttpDelete]
-        //[Route("{Id_clana:int}")]
-        //[Route("{ID:int}")]
-        public IActionResult Delete(int Id_clana) 
-        {
         
-         if (Id_clana <=0)
+        [Produces("application/json")]
+        public IActionResult Delete(int Id_clana)
+        {
+            if (Id_clana <= 0)
             {
-               
                 return BadRequest();
             }
-            Console.WriteLine("Brišem clana : " + Id_clana);
+
+            var clanBaza = _context.Clan.Find(Id_clana);
+            if (clanBaza == null)
+            {
+                return BadRequest();
+            }
+
             try
             {
-                var clanBaza = _context.Clan.Find(Id_clana);
-                Console.WriteLine("Brišem clana : " + clanBaza.Ime + " " + clanBaza.Prezime);
-
-                if (clanBaza==null)
-                {
-                    return BadRequest();
-                }
-
                 _context.Clan.Remove(clanBaza);
                 _context.SaveChanges();
 
-                return new JsonResult("Clan uspjesno obrisan!!");
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
 
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+
+                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
 
             }
-
-
         }
     }
 }
