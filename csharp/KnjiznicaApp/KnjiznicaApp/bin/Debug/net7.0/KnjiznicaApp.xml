@@ -95,6 +95,80 @@
             </summary>
             <param name="context"></param>
         </member>
+        <member name="M:KnjiznicaApp.Controllers.EvidencijaController.Get">
+             <summary>
+             Dohvaća sve evidencije posudbe koje su pohranjene u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                GET api/v1/Evidencija
+            
+             </remarks>
+             <returns>Evidencije u bazi</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev ne valja (BadRequest)</response> 
+             <response code="503">Error na serveru</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.EvidencijaController.Post(KnjiznicaApp.Models.DTO.Evidencija_posudbeDTO)">
+             <summary>
+             Unosi novu evidenciju posudbe u bazu podataka
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                POST api/v1/Evidencija
+                {Id_clana:,Datum_posudbe:YY-MM-DD}
+            
+             </remarks>
+             <returns>Evidencija je uspjesno kreirana</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="400">Zahtjev nije valjan (BadRequest)</response> 
+             <response code="503">Error na serveru</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.EvidencijaController.Put(System.Int32,KnjiznicaApp.Models.DTO.Evidencija_posudbeDTO)">
+             <summary>
+             Mijenja podatke postojeće evidencije u bazi
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/Evidencija/1
+            
+             {
+              "Id": 0,
+              "Id_clana": ,
+              "Datum_posudbe": ,
+              "Datum_vracanja": "Novi datum",
+              
+              
+             }
+            
+             </remarks>
+             <param name="Id">Id posudbe koja se mijenja</param>  
+             <returns>Svi poslani podaci knjige</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">U bazi ne postoji knjiga koju zelimo promijeniti</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Error u serveru</response> 
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.EvidencijaController.Delete(System.Int32)">
+             <summary>
+             Briše evidenciju iz baze
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                DELETE api/v1/evidencija posudbe/1
+                
+             </remarks>
+             <param name="Id">Id posudbe koju zelimo obrisati</param>  
+             <returns>Odgovor da li je obrisano ili ne</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">U bazi ne postoji knjiga koju zelimo obrisati</response>
+             <response code="415">Nismo poslali JSON</response> 
+             <response code="503">Error na serveru</response>
+        </member>
         <member name="T:KnjiznicaApp.Controllers.KnjigaController">
             <summary>
             Namijenjeno za CRUD operacije na entitetu knjiga u bazi

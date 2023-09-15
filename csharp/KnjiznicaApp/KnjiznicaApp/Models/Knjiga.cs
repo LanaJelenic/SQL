@@ -12,7 +12,7 @@ namespace KnjiznicaApp.Models
         public string Prezime_Autora { get; set; }
         public string? Sazetak { get; set; }
         public int? Br_stranica { get; set; }
-        public ICollection<EvidencijaPosudbe> Evidencija { get; } = new List<EvidencijaPosudbe>();
+        public ICollection<Evidencija_posudbe> Evidencija { get; } = new List<Evidencija_posudbe>();
 
 
     }

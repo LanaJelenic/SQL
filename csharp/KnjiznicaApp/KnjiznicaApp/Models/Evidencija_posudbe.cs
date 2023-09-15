@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 
 namespace KnjiznicaApp.Models
 {
-    public class EvidencijaPosudbe
+    public class Evidencija_posudbe
     {
         [Key]
         public int Id_posudbe { get; set; }
