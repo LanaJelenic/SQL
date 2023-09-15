@@ -53,28 +53,29 @@ namespace KnjiznicaApp.Controllers
             try
             {
                 var posudbe = _context.Evidencija
-                    .Include(p => p.Clan)
-                    .Include(p => p.Knjige)
-                    .ToList();
-                if (posudbe==null || posudbe.Count== 0)
-                {
-                    return  new EmptyResult();
-                }
-                List<Evidencija_posudbeDTO> vrati = new();
-                posudbe.ForEach(p =>
-                {
-                    vrati.Add(new Evidencija_posudbeDTO()
-                    {
-                        Id_posudbe = p.Id_posudbe,
-                        Datum_posudbe = p.Datum_posudbe,
-                        Datum_vracanja = p.Datum_vracanja,
-                        Clan = p.Clan.Ime,
-                      
-                        BrojKnjiga = p.Knjige.Count
+                     //.Include(p => p.Clan)
+                     // .Include(p => p.Knjige)
+                     .ToList();
+                 if (posudbe==null || posudbe.Count== 0)
+                 {
+                     return  new EmptyResult();
+                 }
+                 List<Evidencija_posudbeDTO> evidencijaPosudbe = new();
+                 posudbe.ForEach(p =>
+                 {
+                     evidencijaPosudbe.Add(new Evidencija_posudbeDTO()
+                     {
+                         Id_posudbe = p.Id_posudbe,
+                         Datum_posudbe = p.Datum_posudbe,
+                         Datum_vracanja = p.Datum_vracanja,
+                         Clan = p.Clan.Ime,
 
-                    });
-                });
-                return Ok(vrati);
+                         BrojKnjiga = p.Knjige.Count
+
+                     });
+                 });
+                 return Ok(evidencijaPosudbe);
+              
             }
             catch (Exception ex)
             {

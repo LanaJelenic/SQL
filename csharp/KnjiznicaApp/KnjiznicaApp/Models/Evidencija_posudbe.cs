@@ -12,7 +12,7 @@ namespace KnjiznicaApp.Models
         public DateTime Datum_vracanja { get; set; }
 
         [ForeignKey("Id_clana")]
-        public Clan? Clan { get; set; }
+        public Clan Clan { get; set; }
         public List<Knjiga> Knjige { get; set; } = new();
     }
 }
