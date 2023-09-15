@@ -1,7 +1,7 @@
 ﻿using KnjiznicaApp.Data;
 using KnjiznicaApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+using KnjiznicaApp.Models.DTO;
 namespace KnjiznicaApp.Controllers
 {
 
@@ -37,19 +37,30 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-            try
+            var knjige = _context.Knjiga.ToList();
+            if (knjige==null ||   knjige.Count == 0)
             {
-                var knjige = _context.Knjiga.ToList();
-                if (knjige==null || knjige.Count==0)
+                return new EmptyResult();
+            }
+            List<KnjigaDTO> vrati = new();
+
+            knjige.ForEach (k =>
                 {
-                    return new EmptyResult();
-                }
-                return new JsonResult(_context.Knjiga.ToList());
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
-            }
+                    var dto = new KnjigaDTO()
+                    {
+                        Id_knjige = k.Id_knjige,
+                        Naslov = k.Naslov,
+                        Ime_Autora = k.Ime_Autora,
+                        Prezime_Autora = k.Prezime_Autora,
+                        Sazetak = k.Sazetak,
+                        Br_stranica = k.Br_stranica
+                    };
+                    vrati.Add(dto);
+
+
+                }) ;
+            return Ok(vrati);
+            
         }
         /// <summary>
         /// Unosi novu knjigu u bazu podataka
@@ -66,7 +77,7 @@ namespace KnjiznicaApp.Controllers
         /// <response code="400">Zahtjev nije valjan (BadRequest)</response> 
         /// <response code="503">Error na serveru</response> 
         [HttpPost]
-        public IActionResult Post(Knjiga knjiga)
+        public IActionResult Post(KnjigaDTO dto)
         {
             if (!ModelState.IsValid)
             {
@@ -74,15 +85,25 @@ namespace KnjiznicaApp.Controllers
             }
             try
             {
-                _context.Knjiga.Add(knjiga);
+                Knjiga k = new Knjiga()
+                {
+                    Naslov = dto.Naslov,
+                    Ime_Autora = dto.Ime_Autora,
+                    Prezime_Autora = dto.Prezime_Autora,
+                    Sazetak = dto.Sazetak,
+                    Br_stranica = dto.Br_stranica
+                };
+                _context.Knjiga.Add(k);
                 _context.SaveChanges();
-                return StatusCode(StatusCodes.Status201Created, knjiga);
+                dto.Id_knjige = k.Id_knjige;
 
+                return Ok(dto);
             }
             catch (Exception ex)
             {
 
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+                return StatusCode(StatusCodes.
+                    Status503ServiceUnavailable, ex.Message);
             }
         }
         /// <summary>
@@ -110,34 +131,37 @@ namespace KnjiznicaApp.Controllers
         /// <response code="415">Nismo poslali JSON</response> 
         /// <response code="503">Error u serveru</response> 
         [HttpPut]
-        public IActionResult Put(int Id_knjige,Knjiga knjiga)
+       
+        public IActionResult Put(int Id_knjige, KnjigaDTO dto)
         {
-            if (Id_knjige<=0 || knjiga==null)
+            if (Id_knjige <= 0 || dto== null)
             {
                 return BadRequest();
             }
             try
             {
                 var knjigaBaza = _context.Knjiga.Find(Id_knjige);
-                if (knjigaBaza==null)
+                if (knjigaBaza == null)
                 {
                     return BadRequest();
-
                 }
-                knjigaBaza.Ime_Autora = knjiga.Ime_Autora;
-                knjigaBaza.Prezime_Autora = knjiga.Prezime_Autora;
-                knjigaBaza.Sazetak = knjiga.Sazetak;
-                knjigaBaza.Br_stranica=knjiga.Br_stranica;
+                knjigaBaza.Naslov = dto.Naslov;
+                knjigaBaza.Ime_Autora=dto.Ime_Autora;
+                knjigaBaza.Prezime_Autora = dto.Prezime_Autora;
+                knjigaBaza.Sazetak = dto.Sazetak;
+                knjigaBaza.Br_stranica = dto.Br_stranica;
 
-                _context.Knjiga.Add(knjigaBaza);
+                _context.Knjiga.Update(knjigaBaza);
                 _context.SaveChanges();
+                dto.Id_knjige = knjigaBaza.Id_knjige;
 
-                return StatusCode(StatusCodes.Status200OK, knjigaBaza);
-
+                return StatusCode(StatusCodes.Status200OK, dto);
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex);
+                return StatusCode(StatusCodes.
+                    Status503ServiceUnavailable, ex);
+
 
             }
         }
@@ -173,6 +197,7 @@ namespace KnjiznicaApp.Controllers
             {
                 _context.Knjiga.Remove(knjigaBaza);
                 _context.SaveChanges();
+
                 return  new JsonResult("{\"poruka\":\"Obrisano\"}");
             }
             catch (Exception ex)

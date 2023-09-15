@@ -84,6 +84,17 @@
              <response code="415">Nismo poslali JSON</response> 
              <response code="503">Na azure treba dodati IP u firewall</response> 
         </member>
+        <member name="T:KnjiznicaApp.Controllers.EvidencijaController">
+            <summary>
+            Namijenjeno za CRUD operacije na entitetu evidencija_posudbe u bazi
+            </summary>
+        </member>
+        <member name="M:KnjiznicaApp.Controllers.EvidencijaController.#ctor(KnjiznicaApp.Data.KnjiznicaContext,Microsoft.Extensions.Logging.ILogger{KnjiznicaApp.Controllers.EvidencijaController})">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="context"></param>
+        </member>
         <member name="T:KnjiznicaApp.Controllers.KnjigaController">
             <summary>
             Namijenjeno za CRUD operacije na entitetu knjiga u bazi
@@ -104,7 +115,7 @@
              <response code="400">Zahtjev ne valja (BadRequest)</response> 
              <response code="503">Error na serveru</response> 
         </member>
-        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Post(KnjiznicaApp.Models.Knjiga)">
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Post(KnjiznicaApp.Models.DTO.KnjigaDTO)">
              <summary>
              Unosi novu knjigu u bazu podataka
              </summary>
@@ -120,7 +131,7 @@
              <response code="400">Zahtjev nije valjan (BadRequest)</response> 
              <response code="503">Error na serveru</response> 
         </member>
-        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Put(System.Int32,KnjiznicaApp.Models.Knjiga)">
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.Put(System.Int32,KnjiznicaApp.Models.DTO.KnjigaDTO)">
              <summary>
              Mijenja podatke postojeće knjige u bazi
              </summary>

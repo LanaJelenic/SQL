@@ -12,5 +12,7 @@ namespace KnjiznicaApp.Models
         public string? Prezime { get; set; }
         public int? Br_Iskaznice { get; set; }
         public bool Status { get; set; }
+
+        
     }
 }
