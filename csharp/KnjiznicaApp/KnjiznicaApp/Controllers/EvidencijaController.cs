@@ -2,6 +2,7 @@
 using KnjiznicaApp.Models;
 using KnjiznicaApp.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -52,29 +53,29 @@ namespace KnjiznicaApp.Controllers
             }
             try
             {
-                var posudbe = _context.Evidencija
-                     //.Include(p => p.Clan)
-                     // .Include(p => p.Knjige)
+                var posudbe = _context.Evidencija_posudba
+                     .Include(p => p.Clan)
+                      .Include(p => p.Knjige)
                      .ToList();
                  if (posudbe==null || posudbe.Count== 0)
                  {
                      return  new EmptyResult();
                  }
-                 List<Evidencija_posudbeDTO> evidencijaPosudbe = new();
+                 List<Evidencija_posudbeDTO> posudba = new();
                  posudbe.ForEach(p =>
                  {
-                     evidencijaPosudbe.Add(new Evidencija_posudbeDTO()
+                     posudba.Add(new Evidencija_posudbeDTO()
                      {
                          Id_posudbe = p.Id_posudbe,
                          Datum_posudbe = p.Datum_posudbe,
                          Datum_vracanja = p.Datum_vracanja,
                          Clan = p.Clan.Ime,
-
+                         SifraClana = (int)p.Clan.Id_clana,
                          BrojKnjiga = p.Knjige.Count
 
                      });
                  });
-                 return Ok(evidencijaPosudbe);
+                 return Ok(posudba);
               
             }
             catch (Exception ex)
@@ -122,7 +123,7 @@ namespace KnjiznicaApp.Controllers
                     Datum_posudbe = dto.Datum_posudbe,
                     Datum_vracanja = dto.Datum_vracanja
                 };
-                _context.Evidencija.Add(e);
+                _context.Evidencija_posudba.Add(e);
                 _context.SaveChanges();
 
                 dto.Id_posudbe = e.Id_posudbe;
@@ -178,7 +179,7 @@ namespace KnjiznicaApp.Controllers
                 {
                     return BadRequest();
                 }
-                var evidencija = _context.Evidencija.Find(Id_posudbe);
+                var evidencija = _context.Evidencija_posudba.Find(Id_posudbe);
                 if (evidencija==null)
                 {
                     return BadRequest();
@@ -186,7 +187,7 @@ namespace KnjiznicaApp.Controllers
                 evidencija.Clan = clan;
                 evidencija.Datum_posudbe=dto.Datum_posudbe;
                 evidencija.Datum_vracanja = dto.Datum_vracanja;
-                _context.Evidencija.Update(evidencija);
+                _context.Evidencija_posudba.Update(evidencija);
                 _context.SaveChanges();
 
                 dto.Id_posudbe = Id_posudbe;
@@ -225,14 +226,14 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest();
             }
-            var evidencijaBaza = _context.Evidencija.Find(Id_posudbe);
+            var evidencijaBaza = _context.Evidencija_posudba.Find(Id_posudbe);
             if (evidencijaBaza==null)
             {
                 return BadRequest();
             }
             try
             {
-                _context.Evidencija.Remove(evidencijaBaza);
+                _context.Evidencija_posudba.Remove(evidencijaBaza);
                 _context.SaveChanges();
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
 
