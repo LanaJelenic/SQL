@@ -7,6 +7,6 @@
         public DateTime Datum_vracanja { get; set; }
         public string? Clan { get; set; }
         public int BrojKnjiga { get; set; }
-        public int SifraClana { get; set; }
+        public int IdClana { get; set; }
     }
 }

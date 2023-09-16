@@ -70,7 +70,7 @@ namespace KnjiznicaApp.Controllers
                          Datum_posudbe = p.Datum_posudbe,
                          Datum_vracanja = p.Datum_vracanja,
                          Clan = p.Clan.Ime,
-                         SifraClana = (int)p.Clan.Id_clana,
+                         IdClana = (int)p.Clan.Id_clana,
                          BrojKnjiga = p.Knjige.Count
 
                      });
@@ -106,13 +106,13 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (dto.SifraClana<=0)
+            if (dto.IdClana<=0)
             {
                 return BadRequest(ModelState);
             }
             try
             {
-                var clan = _context.Clan.Find(dto.SifraClana);
+                var clan = _context.Clan.Find(dto.IdClana);
                 if (clan==null)
                 {
                     return BadRequest(ModelState);
@@ -174,7 +174,7 @@ namespace KnjiznicaApp.Controllers
             }
             try
             {
-                var clan = _context.Clan.Find(dto.SifraClana);
+                var clan = _context.Clan.Find(dto.IdClana);
                 if (clan==null)
                 {
                     return BadRequest();
