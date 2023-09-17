@@ -11,7 +11,7 @@ namespace KnjiznicaApp.Data
 
         public DbSet<Clan> Clan { get; set; }
         public DbSet<Knjiga>Knjiga { get; set; }
-        public DbSet<Evidencija_posudbe> Evidencija_posudba {  get; set; }
+        public DbSet<Evidencija_posudbe> Evidencija_posudbe {  get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace KnjiznicaApp.Data
             //implementacija n:n
             modelBuilder.Entity<Evidencija_posudbe>()
                 .HasMany(e => e.Knjige)
-                .WithMany(k => k.Evidencija_posudba)
+                .WithMany(k => k.Evidencija_posudbe)
                 .UsingEntity<Dictionary<string, object>>("knjiga_posudba",
                 k => k.HasOne<Knjiga>().WithMany().HasForeignKey("Id_knjige"),
                 k => k.HasOne<Evidencija_posudbe>().WithMany().HasForeignKey("Id_posudbe"),

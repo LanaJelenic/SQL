@@ -9,10 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-// prilagodba za dokumentaciju, ?itati https://medium.com/geekculture/customizing-swagger-in-asp-net-core-5-2c98d03cbe52
 
-builder.Services.AddSwaggerGen(sgo => { // sgo je instanca klase SwaggerGenOptions
-    // ?itati https://devintxcontent.blob.core.windows.net/showcontent/Speaker%20Presentations%20Fall%202017/Web%20API%20Best%20Practices.pdf
+
+builder.Services.AddSwaggerGen(sgo => { 
     var o = new Microsoft.OpenApi.Models.OpenApiInfo()
     {
         Title = "Knjiznica API",

@@ -53,7 +53,7 @@ namespace KnjiznicaApp.Controllers
             }
             try
             {
-                var posudbe = _context.Evidencija_posudba
+                var posudbe = _context.Evidencija_posudbe
                      .Include(p => p.Clan)
                       .Include(p => p.Knjige)
                      .ToList();
@@ -71,7 +71,7 @@ namespace KnjiznicaApp.Controllers
                          Datum_vracanja = p.Datum_vracanja,
                          Clan = p.Clan.Ime,
                          IdClana = (int)p.Clan.Id_clana,
-                         BrojKnjiga = p.Knjige.Count
+                         
 
                      });
                  });
@@ -123,7 +123,7 @@ namespace KnjiznicaApp.Controllers
                     Datum_posudbe = dto.Datum_posudbe,
                     Datum_vracanja = dto.Datum_vracanja
                 };
-                _context.Evidencija_posudba.Add(e);
+                _context.Evidencija_posudbe.Add(e);
                 _context.SaveChanges();
 
                 dto.Id_posudbe = e.Id_posudbe;
@@ -179,7 +179,7 @@ namespace KnjiznicaApp.Controllers
                 {
                     return BadRequest();
                 }
-                var evidencija = _context.Evidencija_posudba.Find(Id_posudbe);
+                var evidencija = _context.Evidencija_posudbe.Find(Id_posudbe);
                 if (evidencija==null)
                 {
                     return BadRequest();
@@ -187,7 +187,7 @@ namespace KnjiznicaApp.Controllers
                 evidencija.Clan = clan;
                 evidencija.Datum_posudbe=dto.Datum_posudbe;
                 evidencija.Datum_vracanja = dto.Datum_vracanja;
-                _context.Evidencija_posudba.Update(evidencija);
+                _context.Evidencija_posudbe.Update(evidencija);
                 _context.SaveChanges();
 
                 dto.Id_posudbe = Id_posudbe;
@@ -226,14 +226,14 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest();
             }
-            var evidencijaBaza = _context.Evidencija_posudba.Find(Id_posudbe);
+            var evidencijaBaza = _context.Evidencija_posudbe.Find(Id_posudbe);
             if (evidencijaBaza==null)
             {
                 return BadRequest();
             }
             try
             {
-                _context.Evidencija_posudba.Remove(evidencijaBaza);
+                _context.Evidencija_posudbe.Remove(evidencijaBaza);
                 _context.SaveChanges();
                 return new JsonResult("{\"poruka\":\"Obrisano\"}");
 
