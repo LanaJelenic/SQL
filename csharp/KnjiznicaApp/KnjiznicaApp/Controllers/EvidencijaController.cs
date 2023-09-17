@@ -69,7 +69,7 @@ namespace KnjiznicaApp.Controllers
                          Id_posudbe = p.Id_posudbe,
                          Datum_posudbe = p.Datum_posudbe,
                          Datum_vracanja = p.Datum_vracanja,
-                         Clan = p.Clan.Ime,
+                         Clan = (int)p.Clan.Br_Iskaznice,
                          IdClana = (int)p.Clan.Id_clana,
                          
 
@@ -127,7 +127,7 @@ namespace KnjiznicaApp.Controllers
                 _context.SaveChanges();
 
                 dto.Id_posudbe = e.Id_posudbe;
-                dto.Clan = clan.Ime;
+                dto.Clan = (int)clan.Br_Iskaznice;
                 return Ok(dto);
             }
             catch (Exception ex)
@@ -191,7 +191,7 @@ namespace KnjiznicaApp.Controllers
                 _context.SaveChanges();
 
                 dto.Id_posudbe = Id_posudbe;
-                dto.Clan = clan.Ime;
+                dto.Clan = (int)clan.Br_Iskaznice;
 
                 return Ok(dto);
 
