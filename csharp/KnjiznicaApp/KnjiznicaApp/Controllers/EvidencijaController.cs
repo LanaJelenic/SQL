@@ -4,7 +4,7 @@ using KnjiznicaApp.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-
+using System.Runtime;
 
 namespace KnjiznicaApp.Controllers
 {
@@ -243,6 +243,55 @@ namespace KnjiznicaApp.Controllers
             {
 
                 return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
+            }
+        }
+
+        [HttpGet]
+        [Route("Id:int/knjige")]
+        public IActionResult GetKnjige(int id_knjige)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (id_knjige<=0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var posudba= _context.Evidencija_posudbe
+                    .Include(e  => e.Knjige)
+                    .FirstOrDefault(e => e.Id_posudbe==id_knjige);
+                if (posudba==null)
+                {
+                    return BadRequest();
+                }
+                if (posudba.Knjige==null || posudba.Knjige.Count==0)
+                {
+                    return new EmptyResult();
+                }
+                List<KnjigaDTO> knjiga = new();
+                posudba.Knjige.ForEach(o =>
+                {
+                    knjiga.Add(new KnjigaDTO()
+                    {
+                        Id_knjige=o.Id_knjige,
+                        Ime_Autora=o.Ime_Autora,
+                        Prezime_Autora= o.Prezime_Autora,
+                        Naslov=o.Naslov,
+                        Sazetak=o.Sazetak,
+                        Br_stranica=o.Br_stranica
+                    }
+                        );
+                });
+                return Ok(knjiga);
+
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable,ex.Message);
             }
         }
 
