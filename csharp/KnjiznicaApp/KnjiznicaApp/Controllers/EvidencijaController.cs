@@ -294,6 +294,45 @@ namespace KnjiznicaApp.Controllers
                 return StatusCode(StatusCodes.Status503ServiceUnavailable,ex.Message);
             }
         }
+        [HttpPost]
+        [Route("{Id:int}/dodaj{Id_knjige:int}")]
+        public IActionResult DodajKnjigu(int Id,int Id_knjige)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (Id<=0 || Id_knjige<=0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var posudba= _context.Evidencija_posudbe
+                    .Include(p => p.Knjige)
+                    .FirstOrDefault(p => p.Id_posudbe==Id_knjige);
+                if (posudba==null)
+                {
+                    return BadRequest();
+                }
+                var knjiga = _context.Knjiga.Find(Id_knjige);
+                if (knjiga==null)
+                {
+                    return BadRequest();
+                }
+                posudba.Knjige.Add(knjiga);
+                _context.Evidencija_posudbe.Update(posudba);
+                _context.SaveChanges();
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(
+                       StatusCodes.Status503ServiceUnavailable,
+                       ex.Message);
+            }
+        }
 
         
 
