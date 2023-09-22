@@ -333,6 +333,45 @@ namespace KnjiznicaApp.Controllers
                        ex.Message);
             }
         }
+        [HttpDelete]
+        [Route("{Id:int}/obrisi/{Id_knjige:int}")]
+        public IActionResult ObrisiKnjigu(int id,int id_knjige)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+            if (id <=0 || id_knjige <=0)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var posudba = _context.Evidencija_posudbe
+                     .Include(p => p.Knjige)
+                     .FirstOrDefault(p => p.Id_posudbe == id);
+                if (posudba==null)
+                {
+                    return BadRequest();
+                }
+                var knjiga = _context.Knjiga.Find(id_knjige);
+                if (knjiga==null)
+                {
+                    return BadRequest();
+                }
+                posudba.Knjige.Remove(knjiga);
+                _context.Evidencija_posudbe.Update(posudba);
+                _context.SaveChanges();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(
+                       StatusCodes.Status503ServiceUnavailable,
+                       ex.Message);
+            }
+        }
 
         
 
