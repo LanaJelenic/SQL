@@ -33,6 +33,12 @@ builder.Services.AddSwaggerGen(sgo => {
     sgo.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
 
 });
+builder.Services.AddCors(opcije =>
+{
+    opcije.AddPolicy("CorsPolicy",
+        builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
 
 // dodavanje baze podataka
@@ -66,4 +72,5 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 app.UseStaticFiles();
+app.UseCors("CorsPolicy");
 app.Run();
