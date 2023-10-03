@@ -68,11 +68,11 @@ var app = builder.Build();
 //}
 
 app.UseHttpsRedirection();
-
-app.UseDefaultFiles();
-app.UseDeveloperExceptionPage();
-app.MapFallbackToFile("index.html");
 app.MapControllers();
 app.UseStaticFiles();
 app.UseCors("CorsPolicy");
+app.UseDefaultFiles();
+app.UseDeveloperExceptionPage();
+app.MapFallbackToFile("index.html");
+
 app.Run();
