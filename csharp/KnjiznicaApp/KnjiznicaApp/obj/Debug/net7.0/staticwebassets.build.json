@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "1Qcs3PWhsdc9h3AR88bKZb+PPI1hidC8u+ojB5+Dla8=",
+  "Hash": "JdiDacN+RlMNe3q3M6VwDYx1+7Q+pgGaTeFtkA6vm7s=",
   "Source": "KnjiznicaApp",
   "BasePath": "_content/KnjiznicaApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "KnjiznicaApp\\wwwroot",
+      "Source": "KnjiznicaApp",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
+      "BasePath": "_content/KnjiznicaApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\index.html",
+      "SourceId": "KnjiznicaApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
+      "BasePath": "_content/KnjiznicaApp",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
 }

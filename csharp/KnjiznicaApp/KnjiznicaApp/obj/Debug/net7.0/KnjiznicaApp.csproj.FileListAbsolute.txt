@@ -218,3 +218,4 @@ C:\Users\Lana\Desktop\GitHub\SQL\csharp\KnjiznicaApp\KnjiznicaApp\obj\Debug\net7
 C:\Users\Lana\Desktop\GitHub\SQL\csharp\KnjiznicaApp\KnjiznicaApp\obj\Debug\net7.0\KnjiznicaApp.pdb
 C:\Users\Lana\Desktop\GitHub\SQL\csharp\KnjiznicaApp\KnjiznicaApp\obj\Debug\net7.0\KnjiznicaApp.genruntimeconfig.cache
 C:\Users\Lana\Desktop\GitHub\SQL\csharp\KnjiznicaApp\KnjiznicaApp\obj\Debug\net7.0\ref\KnjiznicaApp.dll
+C:\Users\Administrator\Desktop\GitHub\WP1\WP1\csharp\KnjiznicaApp\KnjiznicaApp\bin\Debug\net7.0\KnjiznicaApp.staticwebassets.runtime.json

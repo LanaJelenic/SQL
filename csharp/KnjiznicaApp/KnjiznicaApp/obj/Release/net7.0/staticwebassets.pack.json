@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.KnjiznicaApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.KnjiznicaApp.props",
+      "PackagePath": "build\\KnjiznicaApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.KnjiznicaApp.props",
+      "PackagePath": "buildMultiTargeting\\KnjiznicaApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.KnjiznicaApp.props",
+      "PackagePath": "buildTransitive\\KnjiznicaApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -54,18 +54,18 @@ builder.Services.AddDbContext<KnjiznicaContext>(o =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger(opcije =>
-//    {
-//        opcije.SerializeAsV2 = true;
-//    });
-//    app.UseSwaggerUI(opcije =>
-//    {
-//        opcije.ConfigObject.
-//        AdditionalItems.Add("requestSnippetsEnabled", true);
-//    });
-//}
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger(opcije =>
+    {
+        opcije.SerializeAsV2 = true;
+    });
+    app.UseSwaggerUI(opcije =>
+    {
+        opcije.ConfigObject.
+        AdditionalItems.Add("requestSnippetsEnabled", true);
+    });
+}
 
 app.UseHttpsRedirection();
 app.MapControllers();
