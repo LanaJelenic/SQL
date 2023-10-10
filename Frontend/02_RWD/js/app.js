@@ -4,7 +4,7 @@ let podaci=[];
 let trenutniSmjer=0;
 
 function ucitajPodatke(){
-    $.ajax('http://localhost:5227/api/v1/Smjer',   // request url
+    $.ajax('https://localhost:7184/api/v1/Smjer',   // request url
     {
         success: function (data, status, xhr) {// success callback function
            // console.log(data);
@@ -33,7 +33,7 @@ function definirajDogadaje(){
         const sifra = element.attr('id').split('_')[1];
         console.log('Brišem: ' + sifra);
 
-        $.ajax('http://localhost:5227/api/v1/Smjer' + sifra, {
+        $.ajax('https://localhost:7184/api/v1/Smjer/' + sifra, {
         type: 'DELETE',  // http method
         success: function (data, status, xhr) {
            element.parent().remove();
@@ -101,7 +101,7 @@ $('#dodaj').click(function(){
         upisnina: upisnina,
         verificiran: verificiran};
 
-    $.ajax('http://localhost:5227/api/v1/Smjer', {
+    $.ajax('https://localhost:7184/api/v1/Smjer', {
         type: 'POST',  // http method
         dataType: 'json',
         contentType: 'application/json',
@@ -167,7 +167,7 @@ $('#promjeni').click(function(){
         upisnina: upisnina,
         verificiran: verificiran};
 
-    $.ajax('http://localhost:5227/api/v1/Smjer' + trenutniSmjer, {
+    $.ajax('https://localhost:7184/api/v1/Smjer/' + trenutniSmjer, {
         type: 'PUT',  // http method
         dataType: 'json',
         contentType: 'application/json',
