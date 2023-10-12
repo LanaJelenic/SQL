@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ja13n9JD1RNu/IviNca7br+HjMzkMJaxwne5FiE1HctOQ4GWYeitOwlJx/JyMSw7cbgpAUk4XHVT8VjZa3tMDA==",
+  "dgSpecHash": "B2EFx6DbjlwFYu5jDlh7YSZ7wYvPVCxMhN9Enm4h4iKmVgh7pkmPTln6LVfqNQG1yRq2Z3wdVuCiRs/b9XUKWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\csharp\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
