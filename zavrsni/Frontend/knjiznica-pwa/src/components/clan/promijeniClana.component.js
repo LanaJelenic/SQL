@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PolaznikDataService from "../../services/clan.service";
+import ClanDataService from "../../services/clan.service";
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -32,7 +32,7 @@ export default class PromjeniClana extends Component {
     // ovo mora bolje
     let href = window.location.href;
     let niz = href.split('/'); 
-    await ClanDataService.getByID(niz[niz.length-1])
+   await ClanDataService.getByID(niz[niz.length-1])
       .then(response => {
         this.setState({
           clan:response.data
@@ -48,7 +48,7 @@ export default class PromjeniClana extends Component {
     // ovo mora bolje
     let href = window.location.href;
     let niz = href.split('/'); 
-    const odgovor = await ClanDataService.put(niz[niz.length-1],clan);
+    const odgovor =  await ClanDataService.put(niz[niz.length-1],clan);
     if(odgovor.ok){
       window.location.href='/clanovi';
     }else{

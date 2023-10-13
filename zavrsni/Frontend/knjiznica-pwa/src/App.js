@@ -1,6 +1,8 @@
 import React from "react";
 import './App.css';
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,Route,Routes
+} from "react-router-dom";
 import Izbornik from './components/izbornik.component';
 import Pocetna from './components/pocetna.component';
 import NadzornaPloca from './components/nadzornaploca.component';
@@ -13,21 +15,19 @@ import PromijeniKnjigu from './components/knjiga/promijeniKnjigu.component';
 
 
 
-export default function App(){
-
-  return(
+export default function App() {
+  return (
     <Router>
       <Izbornik/>
       <Routes>
-        <Route path='/' element={<Pocetna/>}/>
-        <Route path='/nadzornaploca' element={<NadzornaPloca />}/>
+      <Route path='/' element={<Pocetna/>}/>
+      <Route path='/nadzornaploca' element={<NadzornaPloca />}/>
+        <Route path="/kjige" element={<Knjige />} />
+        <Route path="/knjige/dodaj" element={<DodajKnjigu />} />
+        <Route path="/knjige/:id_knjige" element={<PromijeniKnjigu />} />
         <Route path='/clanovi' element={<Clanovi />} />
         <Route path="/clanovi/dodaj" element={<DodajClana />} />
         <Route path="/clanovi/:id_clana" element={<PromijeniClana />} />
-        <Route path="/kjige" element={<Knjige />} />
-          <Route path="/knjige/dodaj" element={<DodajKnjigu />} />
-          <Route path="/knjige/:id_knjige" element={<PromijeniKnjigu />} />
-
       </Routes>
     </Router>
   );

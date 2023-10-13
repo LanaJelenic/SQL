@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PolaznikDataService from "../../services/clan.service";
+import ClanDataService from "../../services/clan.service";
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
 
 
-export default class DodajPolaznik extends Component {
+export default class DodajClana extends Component {
 
   constructor(props) {
     super(props);
