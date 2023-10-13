@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using KnjiznicaApp.Validations;
+using System.ComponentModel.DataAnnotations;
 
 namespace KnjiznicaApp.Models
 {
@@ -6,9 +7,11 @@ namespace KnjiznicaApp.Models
     {
         [Key]
         public int? Id_clana { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Ime obavezno")]
+        [ImeNeMozeBitiBroj]
         public string? Ime { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Prezime je obavezno")]
+        [PrezimeNeMozeBitiBrojcs]
         public string? Prezime { get; set; }
         public int? Br_Iskaznice { get; set; }
         public bool Status { get; set; }

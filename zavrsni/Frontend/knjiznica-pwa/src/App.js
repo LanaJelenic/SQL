@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import Izbornik from './components/izbornik.component';
+import Pocetna from './components/pocetna.component';
+import NadzornaPloca from './components/nadzornaploca.component';
+import Clanovi from './components/clan/clanovi.component';
+import DodajClana from './components/clan/dodajClana.component';
+import PromijeniClana from './components/clan/promijeniClana.component';
+import Knjige from './components/knjiga/knjige.component';
+import DodajKnjigu from './components/knjiga/dodajKnjigu.components';
+import PromijeniKnjigu from './components/knjiga/promijeniKnjigu.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+export default function App(){
+
+  return(
+    <Router>
+      <Izbornik/>
+      <Routes>
+        <Route path='/' element={<Pocetna/>}/>
+        <Route path='/nadzornaploca' element={<NadzornaPloca />}/>
+        <Route path='/clanovi' element={<Clanovi />} />
+        <Route path="/clanovi/dodaj" element={<DodajClana />} />
+        <Route path="/clanovi/:id_clana" element={<PromijeniClana />} />
+        <Route path="/kjige" element={<Knjige />} />
+          <Route path="/knjige/dodaj" element={<DodajKnjigu />} />
+          <Route path="/knjige/:id_knjige" element={<PromijeniKnjigu />} />
+
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

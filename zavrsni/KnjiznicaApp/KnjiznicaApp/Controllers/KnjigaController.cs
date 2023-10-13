@@ -62,6 +62,32 @@ namespace KnjiznicaApp.Controllers
             return Ok(vrati);
             
         }
+
+        [HttpGet]
+        [Route("{id_knjige:int}")]
+        public IActionResult GetByID(int id_knjige)
+        {
+            if (id_knjige<=0)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var i = _context.Knjiga.Find(id_knjige);
+                if (i==null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, i);
+
+                }
+                return new JsonResult(i);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+        
         /// <summary>
         /// Unosi novu knjigu u bazu podataka
         /// </summary>

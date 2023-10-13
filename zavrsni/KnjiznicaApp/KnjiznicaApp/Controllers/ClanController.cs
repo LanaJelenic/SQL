@@ -55,6 +55,29 @@ namespace KnjiznicaApp.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("{id_clana:int}")]
+        public IActionResult GetByID(int id_clana)
+        {
+            if (id_clana<=0) {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var i = _context.Clan.Find(id_clana);
+                if (i==null)
+                {
+                    return StatusCode(StatusCodes.Status204NoContent, i);
+                }
+                return new JsonResult(i);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
+            }
+        }
+
         /// <summary>
         /// Dodaje clana u bazu
         /// </summary>
