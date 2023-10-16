@@ -65,11 +65,11 @@ export default class PromjeniClana extends Component {
 
     // Read the form data
     const podaci = new FormData(e.target);
-    //Object.keys(formData).forEach(fieldName => {
-    // console.log(fieldName, formData[fieldName]);
+    ///Object.keys(formData).forEach(fieldName => {
+    //console.log(fieldName, formData[fieldName]);
     //})
     
-    //console.log(podaci.get('verificiran'));
+    //console.log(podaci.get('status'));
     // You can pass formData as a service body directly:
 
     this.promijeniClana({

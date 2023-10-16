@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "build": "react-scripts build && rmdir ..\\..\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot /s /q && move /y build ../../zavrsni/KnjiznicaApp/KnjiznicaApp/wwwroot",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build && rmdir ..\\..\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot /s /q && move /y build ../../zavrsni/KnjiznicaApp/KnjiznicaApp/wwwroot",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
