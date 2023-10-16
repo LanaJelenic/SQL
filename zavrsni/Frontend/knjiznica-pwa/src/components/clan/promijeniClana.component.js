@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 
 
 
-export default class PromjeniClana extends Component {
+export default class PromijeniClana extends Component {
 
   constructor(props) {
     super(props);
 
     this.clan = this.dohvatiClana();
-    this.promjeniClana= this.promjeniClana.bind(this);
+    this.PromijeniClana= this.PromijeniClana.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
     
@@ -44,7 +44,7 @@ export default class PromjeniClana extends Component {
       });
   }
 
-  async promijeniClana(clan) {
+  async PromijeniClana(clan) {
     // ovo mora bolje
     let href = window.location.href;
     let niz = href.split('/'); 
@@ -73,10 +73,10 @@ export default class PromjeniClana extends Component {
     // You can pass formData as a service body directly:
 
     this.promijeniClana({
-      ime: podaci.get('ime'),
-      prezime: podaci.get('prezime'),
-      br_iskaznice: podaci.get('br_iskaznice'),
-      status: podaci.get('status')
+      Ime: podaci.get('Ime'),
+      Prezime: podaci.get('Prezime'),
+      Br_Iskaznice: podaci.get('Br_Iskaznice'),
+      Status: podaci.get('Status')
     });
     
   }
@@ -91,26 +91,26 @@ export default class PromjeniClana extends Component {
         <Form onSubmit={this.handleSubmit}>
 
 
-        <Form.Group className="mb-3" controlId="ime">
+        <Form.Group className="mb-3" controlId="Ime">
             <Form.Label>Ime</Form.Label>
-            <Form.Control type="text" name="ime" placeholder="Josip" maxLength={255} defaultValue={clan.ime} required/>
+            <Form.Control type="text" name="Ime" placeholder="Josip" maxLength={255} defaultValue={clan.Ime} required/>
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="prezime">
+          <Form.Group className="mb-3" controlId="Prezime">
             <Form.Label>Prezime</Form.Label>
-            <Form.Control type="text" name="prezime" placeholder="" defaultValue={clan.prezime}  required />
+            <Form.Control type="text" name="Prezime" placeholder="" defaultValue={clan.Prezime}  required />
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="br_iskaznice">
-            <Form.Label>br_iskaznice</Form.Label>
-            <Form.Control type="text" name="br_iskaznice" placeholder="" defaultValue={clan.br_iskaznice}  />
+          <Form.Group className="mb-3" controlId="Br_Iskaznice">
+            <Form.Label>Br_Iskaznice</Form.Label>
+            <Form.Control type="text" name="Br_Iskaznice" placeholder="" defaultValue={clan.Br_iskaznice}  />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="status">
-            <Form.Label>status</Form.Label>
-            <Form.Control type="text" name="status" placeholder="" defaultValue={clan.status}  />
+          <Form.Group className="mb-3" controlId="Status">
+            <Form.Label>Status</Form.Label>
+            <Form.Control type="text" name="Status" placeholder="" defaultValue={clan.Status}  />
           </Form.Group>
 
         
@@ -121,7 +121,7 @@ export default class PromjeniClana extends Component {
             </Col>
             <Col>
             <Button variant="primary" className="gumb" type="submit">
-              Promjeni clana
+              Promijeni clana
             </Button>
             </Col>
           </Row>

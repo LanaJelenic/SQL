@@ -12,7 +12,7 @@ export default class DodajClana extends Component {
 
   constructor(props) {
     super(props);
-    this.dodajClana = this.dodajClana.bind(this);
+    this.DodajClana = this.dodajClana.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   async dodajClana(knjiga) {
@@ -33,10 +33,10 @@ export default class DodajClana extends Component {
     const podaci = new FormData(e.target);
 
     this.dodajClana({
-      ime: podaci.get('ime'),
-      prezime: podaci.get('prezime'),
-      br_iskaznic: podaci.get('br_iskaznice'),
-      status: podaci.get('status')
+      Ime: podaci.get('Ime'),
+      Prezime: podaci.get('Prezime'),
+      Br_Iskaznice: podaci.get('Br_Iskaznice'),
+      Status: podaci.get('Status')
     });
     
   }
@@ -48,26 +48,26 @@ export default class DodajClana extends Component {
         <Form onSubmit={this.handleSubmit}>
 
 
-          <Form.Group className="mb-3" controlId="ime">
+          <Form.Group className="mb-3" controlId="Ime">
             <Form.Label>Ime</Form.Label>
-            <Form.Control type="text" name="ime" placeholder="Josip" maxLength={255} required/>
+            <Form.Control type="text" name="Ime" placeholder="Josip" maxLength={255} required/>
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="prezime">
+          <Form.Group className="mb-3" controlId="Prezime">
             <Form.Label>Prezime</Form.Label>
-            <Form.Control type="text" name="prezime" placeholder="Horvat" required />
+            <Form.Control type="text" name="Prezime" placeholder="Horvat" required />
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="br_iskaznice">
-            <Form.Label>br_iskaznic</Form.Label>
-            <Form.Control type="text" name="br_iskaznice" placeholder=""/>
+          <Form.Group className="mb-3" controlId="Br_Iskaznice">
+            <Form.Label>Br_Iskaznice</Form.Label>
+            <Form.Control type="text" name="Br_Iskaznice" placeholder=""/>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="oib">
-            <Form.Label>status</Form.Label>
-            <Form.Control type="text" name="status" placeholder="" />
+          <Form.Group className="mb-3" controlId="Status">
+            <Form.Label>Status</Form.Label>
+            <Form.Control type="text" name="Status" placeholder="" />
           </Form.Group>
 
           <Row>

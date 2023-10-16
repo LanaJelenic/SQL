@@ -13,7 +13,7 @@ export default class Izbornik extends Component{
 
             <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-              <Navbar.Brand href="/"> <img className="App-logo" src={logo} alt="" /> Knjiznica App</Navbar.Brand>
+              <Navbar.Brand href="/"> <img className="App-logo" src={logo} alt=" " /> Knjižnica </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
@@ -25,7 +25,7 @@ export default class Izbornik extends Component{
                     </NavDropdown.Item>
                     <NavDropdown.Item href="/posudbe">Evidencija posudbe</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item target="_blank" href="/swagger/index.html">
+                    <NavDropdown.Item target="_blank" href="https://lanaaa-001-site1.ftempurl.com/swagger/index.html">
                       Swagger
                     </NavDropdown.Item>
                   </NavDropdown>

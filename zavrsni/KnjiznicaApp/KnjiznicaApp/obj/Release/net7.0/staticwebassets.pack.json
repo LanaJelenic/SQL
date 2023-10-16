@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
-    },
-    {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
@@ -29,12 +25,8 @@
       "PackagePath": "staticwebassets\\manifest.json"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.6bfdc07b0f91729827679f1732283474.js",
-      "PackagePath": "staticwebassets\\precache-manifest.6bfdc07b0f91729827679f1732283474.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.8c27cf3204ba693df5a2232829f1981d.js",
-      "PackagePath": "staticwebassets\\precache-manifest.8c27cf3204ba693df5a2232829f1981d.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js",
+      "PackagePath": "staticwebassets\\precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\robots.txt",
@@ -45,14 +37,6 @@
       "PackagePath": "staticwebassets\\service-worker.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\service-worker.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\service-worker.js.LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\service-worker.js.map",
-      "PackagePath": "staticwebassets\\service-worker.js.map"
-    },
-    {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\2.6f2db2d8.chunk.css",
       "PackagePath": "staticwebassets\\static\\css\\2.6f2db2d8.chunk.css"
     },
@@ -61,92 +45,44 @@
       "PackagePath": "staticwebassets\\static\\css\\2.6f2db2d8.chunk.css.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.073c9b0a.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.073c9b0a.css"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.d8af0f9d.chunk.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.d8af0f9d.chunk.css"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.073c9b0a.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.073c9b0a.css.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.d8af0f9d.chunk.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.d8af0f9d.chunk.css.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.caf1490c.chunk.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.caf1490c.chunk.css"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.245cb25c.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\2.245cb25c.chunk.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.caf1490c.chunk.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.caf1490c.chunk.css.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.245cb25c.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\2.245cb25c.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.3cd839e7.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\2.3cd839e7.chunk.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\3.bff9dbde.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\3.bff9dbde.chunk.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.3cd839e7.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\2.3cd839e7.chunk.js.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\3.bff9dbde.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\3.bff9dbde.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.7a9776b0.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\2.7a9776b0.chunk.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.63f7f990.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.63f7f990.chunk.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.7a9776b0.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\2.7a9776b0.chunk.js.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.63f7f990.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.63f7f990.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\3.d2768564.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\3.d2768564.chunk.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\runtime~main.e9827d5d.js",
+      "PackagePath": "staticwebassets\\static\\js\\runtime~main.e9827d5d.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\3.d2768564.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\3.d2768564.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\787.ea1a90ba.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\787.ea1a90ba.chunk.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\787.ea1a90ba.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\787.ea1a90ba.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.603a0780.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.603a0780.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.603a0780.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\static\\js\\main.603a0780.js.LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.603a0780.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.603a0780.js.map"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.8f8a0f90.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.8f8a0f90.chunk.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.8f8a0f90.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.8f8a0f90.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.a4ff9310.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.a4ff9310.chunk.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.a4ff9310.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.a4ff9310.chunk.js.map"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\runtime~main.25a4b290.js",
-      "PackagePath": "staticwebassets\\static\\js\\runtime~main.25a4b290.js"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\runtime~main.25a4b290.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\runtime~main.25a4b290.js.map"
-    },
-    {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg",
-      "PackagePath": "staticwebassets\\static\\media\\logo.103b5fa18196d5665a7e12318285c916.svg"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\runtime~main.e9827d5d.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\runtime~main.e9827d5d.js.map"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\media\\logo.5d5d9eef.svg",

@@ -37,11 +37,11 @@ export default class DodajKnjigu extends Component{
         const podaci= new FormData(e.target);
 
         this.dodajKnjigu({
-            naslov:podaci.get('Naslov'),
-            ime_Autora:podaci.get('Ime_Autora'),
-            prezime_Autora:podaci.get('Prezime_Autora'),
-            sazetak:podaci.get('Sazetak'),
-            br_stranica: parseFloat(podaci.get('Br_stranica'))
+            Naslov:podaci.get('Naslov'),
+            Ime_Autora:podaci.get('Ime_Autora'),
+            Prezime_Autora:podaci.get('Prezime_Autora'),
+            Sazetak:podaci.get('Sazetak'),
+            Br_stranica: parseInt(podaci.get('Br_stranica'))
 
         });
     }
@@ -49,9 +49,9 @@ export default class DodajKnjigu extends Component{
         return(
             <Container>
                 <Form onSubmit={this.handleSubmit}>
-                <Form.Group className="mb-3" controlId="naslov">
+                <Form.Group className="mb-3" controlId="Naslov">
             <Form.Label>Naslov</Form.Label>
-            <Form.Control type="text" name="naslov" placeholder="Naslov knjige" maxLength={255} required/>
+            <Form.Control type="text" name="Naslov" placeholder="Naslov knjige" maxLength={255} required/>
           </Form.Group>
 
 
@@ -61,11 +61,11 @@ export default class DodajKnjigu extends Component{
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="br_stranica">
+          <Form.Group className="mb-3" controlId="Br_stranica">
             <Form.Label>Br_stranica</Form.Label>
-            <Form.Control type="text" name="br_stranica" placeholder="500" />
+            <Form.Control type="text" name="Br_stranica" placeholder="500" />
             <Form.Text className="text-muted">
-             Ne smije biti negativna
+             Ne smije biti negativan
             </Form.Text>
           </Form.Group>
            <Form onSubmit={this.handleSubmit}></Form>

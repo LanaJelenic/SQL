@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import {
-  BrowserRouter as Router,Route,Routes
+  BrowserRouter as Router,Routes,Route
 } from "react-router-dom";
 import Izbornik from './components/izbornik.component';
 import Pocetna from './components/pocetna.component';

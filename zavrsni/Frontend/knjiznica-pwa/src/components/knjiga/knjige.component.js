@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Button, Container, Table } from "react-bootstrap";
 import KnjigaDataService from "../../services/knjiga.service";
-import { NumericFormat } from "react-number-format";
+import { 
+    NumericFormat } from "react-number-format";
 import { Link } from "react-router-dom";
 import {FaEdit, FaTrash} from "react-icons/fa"
 
@@ -35,8 +36,8 @@ export default class Knjige extends Component{
         });
     }
 
-    async obrisiKnjigu(id_knjige){
-        const odgovor = await KnjigaDataService.delete(id_knjige);
+    async obrisiKnjigu(Id_knjige){
+        const odgovor = await KnjigaDataService.delete(Id_knjige);
         if(odgovor.ok){
             this.dohvatiKnjige();
         }else{
@@ -69,20 +70,21 @@ export default class Knjige extends Component{
                    { knjige && knjige.map((knjiga,index) => (
 
                     <tr key={index}>
-                        <td>{knjiga.naslov}</td>
-                        <td>{knjiga.ime_Autora}</td>
-                        <td>{knjiga.prezime_Autora}</td>
-                        <td className="broj">{knjiga.br_stranica}</td>
+                        <td>{knjiga.Naslov}</td>
+                        <td>{knjiga.Ime_Autora}</td>
+                        <td>{knjiga.Prezime_Autora}</td>
+                        <td>{knjiga.Sazetak}</td>
+                        <td className="broj">{knjiga.Br_stranica}</td>
                         
                         
                         <td>
                             <Link className="btn btn-primary gumb"
-                            to={`/knjige/${knjiga.id_knjige}`}>
+                            to={`/knjige/${knjiga.Id_knjige}`}>
                                 <FaEdit />
                             </Link>
 
                             <Button variant="danger" className="gumb"
-                            onClick={()=>this.obrisiKnjigu(knjiga.id_knjige)}>
+                            onClick={()=>this.obrisiKnjigu(knjiga.Id_knjige)}>
                                 <FaTrash />
                             </Button>
                         </td>
