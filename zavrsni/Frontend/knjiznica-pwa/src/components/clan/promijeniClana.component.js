@@ -44,11 +44,8 @@ export default class PromijeniClana extends Component {
       });
   }
 
-  async PromijeniClana(clan) {
-    // ovo mora bolje
-    let href = window.location.href;
-    let niz = href.split('/'); 
-    const odgovor =  await ClanDataService.put(niz[niz.length-1],clan);
+  async PromijeniClana(id_clana, clan) {
+    const odgovor =  await ClanDataService.put(id_clana,clan);
     if(odgovor.ok){
       window.location.href='/clanovi';
     }else{
@@ -58,25 +55,19 @@ export default class PromijeniClana extends Component {
   }
 
 
-
   handleSubmit(e) {
     // Prevent the browser from reloading the page
     e.preventDefault();
 
     // Read the form data
     const podaci = new FormData(e.target);
-    ///Object.keys(formData).forEach(fieldName => {
-    //console.log(fieldName, formData[fieldName]);
-    //})
-    
-    //console.log(podaci.get('status'));
-    // You can pass formData as a service body directly:
+ 
 
-    this.promijeniClana({
-      Ime: podaci.get('Ime'),
-      Prezime: podaci.get('Prezime'),
-      Br_Iskaznice: podaci.get('Br_Iskaznice'),
-      Status: podaci.get('Status')
+    this.PromijeniClana(podaci.get('Id_clana'),{
+      ime: podaci.get('Ime'),
+      prezime: podaci.get('Prezime'),
+      br_Iskaznice: podaci.get('Br_Iskaznice'),
+      status: podaci.get('Status') == 1 ? true : false
     });
     
   }
@@ -90,31 +81,33 @@ export default class PromijeniClana extends Component {
     <Container>
         <Form onSubmit={this.handleSubmit}>
 
+        
+        <Form.Group >
+            <Form.Control type="text" name="Id_clana" defaultValue={clan.id_clana} hidden/>
+          </Form.Group>
 
         <Form.Group className="mb-3" controlId="Ime">
             <Form.Label>Ime</Form.Label>
-            <Form.Control type="text" name="Ime" placeholder="Josip" maxLength={255} defaultValue={clan.Ime} required/>
+            <Form.Control type="text" name="Ime" placeholder="Josip" maxLength={255} defaultValue={clan.ime} required/>
           </Form.Group>
 
 
           <Form.Group className="mb-3" controlId="Prezime">
             <Form.Label>Prezime</Form.Label>
-            <Form.Control type="text" name="Prezime" placeholder="" defaultValue={clan.Prezime}  required />
+            <Form.Control type="text" name="Prezime" placeholder="" defaultValue={clan.prezime}  required />
           </Form.Group>
 
 
           <Form.Group className="mb-3" controlId="Br_Iskaznice">
             <Form.Label>Br_Iskaznice</Form.Label>
-            <Form.Control type="text" name="Br_Iskaznice" placeholder="" defaultValue={clan.Br_iskaznice}  />
+            <Form.Control type="text" name="Br_Iskaznice" placeholder="" defaultValue={clan.br_Iskaznice}  />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="Status">
             <Form.Label>Status</Form.Label>
-            <Form.Control type="text" name="Status" placeholder="" defaultValue={clan.Status}  />
+            <Form.Control type="text" name="Status" placeholder="1" defaultValue={clan.status ? '1' : '0'} />
           </Form.Group>
 
-        
-         
           <Row>
             <Col>
               <Link className="btn btn-danger gumb" to={`/clanovi`}>Odustani</Link>

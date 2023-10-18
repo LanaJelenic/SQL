@@ -11,7 +11,7 @@ class ClanDataService{
     }
 
     async post(clan){
-        const odgovor=await http.post('/clan',clan)
+        const odgovor=await http.post('/Clan',clan)
         .then(response =>{
             return{ok:true, poruka:' Clan uspješno unesen!'};
         })
@@ -23,7 +23,7 @@ class ClanDataService{
     }
 
    async put(Id_clana,clan){
-    const odgovor= await http.put('/clan/'+ Id_clana,clan)
+    const odgovor= await http.put('/Clan?Id_clana='+ Id_clana,clan)
     .then(response =>{
         return{ok:true, poruka:'Član je uspješno promijenjen'};
     })
@@ -35,7 +35,7 @@ class ClanDataService{
    }
 
    async delete(Id_clana){
-    const odgovor=await http.delete('/clan/'+Id_clana)
+    const odgovor=await http.delete('/Clan?Id_clana='+Id_clana)
     .then(response=>{
         return{ok:true, poruka:'Obrisano uspjesno'};
     })

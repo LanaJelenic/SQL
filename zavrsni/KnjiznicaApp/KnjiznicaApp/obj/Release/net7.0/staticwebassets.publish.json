@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QjeS5iA1TdGHRrP1gsAR09a4WM+4Ivn0lgJky77CBrY=",
+  "Hash": "74V1IcAxfgyXSlJMKkizJpMKivggSZTGb+JaNO/LKn0=",
   "Source": "KnjiznicaApp",
   "BasePath": "_content/KnjiznicaApp",
   "Mode": "Default",
@@ -119,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.2f6e7f4e60835fe06df5b023054cb2ac.js",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js",
+      "RelativePath": "precache-manifest.2f6e7f4e60835fe06df5b023054cb2ac.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js"
+      "OriginalItemSpec": "wwwroot\\precache-manifest.2f6e7f4e60835fe06df5b023054cb2ac.js"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\robots.txt",
@@ -204,12 +204,12 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\2.6f2db2d8.chunk.css.map"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.d8af0f9d.chunk.css",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.289287fb.chunk.css",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "static/css/main.d8af0f9d.chunk.css",
+      "RelativePath": "static/css/main.289287fb.chunk.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d8af0f9d.chunk.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.289287fb.chunk.css"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.d8af0f9d.chunk.css.map",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.289287fb.chunk.css.map",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "static/css/main.d8af0f9d.chunk.css.map",
+      "RelativePath": "static/css/main.289287fb.chunk.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d8af0f9d.chunk.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.289287fb.chunk.css.map"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.245cb25c.chunk.js",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.aa266faf.chunk.js",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "static/js/2.245cb25c.chunk.js",
+      "RelativePath": "static/js/2.aa266faf.chunk.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\2.245cb25c.chunk.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\2.aa266faf.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.245cb25c.chunk.js.map",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.aa266faf.chunk.js.map",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "static/js/2.245cb25c.chunk.js.map",
+      "RelativePath": "static/js/2.aa266faf.chunk.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,7 +269,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\2.245cb25c.chunk.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\2.aa266faf.chunk.js.map"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\3.bff9dbde.chunk.js",
@@ -306,12 +306,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\3.bff9dbde.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.63f7f990.chunk.js",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.d72f256e.chunk.js",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "static/js/main.63f7f990.chunk.js",
+      "RelativePath": "static/js/main.d72f256e.chunk.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,15 +320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.63f7f990.chunk.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.d72f256e.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.63f7f990.chunk.js.map",
+      "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.d72f256e.chunk.js.map",
       "SourceId": "KnjiznicaApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\",
       "BasePath": "_content/KnjiznicaApp",
-      "RelativePath": "static/js/main.63f7f990.chunk.js.map",
+      "RelativePath": "static/js/main.d72f256e.chunk.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,7 +337,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.63f7f990.chunk.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.d72f256e.chunk.js.map"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\runtime~main.e9827d5d.js",

@@ -18,7 +18,8 @@ export default class Clanovi extends Component {
 
     this.state = {
       clanovi: [],
-      prikaziModal: false
+      prikaziModal: false,
+      zatvoriUspjesnoModal: false
     };
   }
 
@@ -26,6 +27,9 @@ export default class Clanovi extends Component {
 
   otvoriModal = () => this.setState({ prikaziModal: true });
   zatvoriModal = () => this.setState({ prikaziModal: false });
+  otvoriUspjesnoModal = () => this.setState({ prikaziUspjesnoModal: true });
+  zatvoriUspjesnoModal = () => this.setState({ prikaziUspjesnoModal: false });
+  
 
   componentDidMount() {
     this.dohvatiClanove();
@@ -47,6 +51,7 @@ export default class Clanovi extends Component {
     const odgovor = await ClanoviDataService.delete(id_clana);
     if(odgovor.ok){
      this.dohvatiClanove();
+     this.otvoriUspjesnoModal();
     }else{
      // alert(odgovor.poruka);
       this.otvoriModal();
@@ -56,6 +61,7 @@ export default class Clanovi extends Component {
 
   render() {
     const { clanovi} = this.state;
+
     return (
 
     <Container>
@@ -67,9 +73,9 @@ export default class Clanovi extends Component {
 
               <Card style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>{p.ime} {p.prezime}</Card.Title>
+                  <Card.Title>{p.ime} {p.prezime} {p.id_clana} </Card.Title>
                   <Card.Text>
-                    {p.br_iskaznice}
+                    {p.br_Iskaznice} - {p.status ? 'Aktivan' : 'Neaktivan'}
                   </Card.Text>
                   <Row>
                       <Col>
@@ -91,9 +97,24 @@ export default class Clanovi extends Component {
               <Modal.Header closeButton>
                 <Modal.Title>Greška prilikom brisanja</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Clan se nalazi u evidenciji posudbe.</Modal.Body>
+              <Modal.Body>Clan nije obrisan.</Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={this.zatvoriModal}>
+                  Zatvori
+                </Button>
+              </Modal.Footer>
+            </Modal>
+
+           
+
+            
+      <Modal show={this.state.prikaziUspjesnoModal} onHide={this.zatvoriUspjesnoModal}>
+              <Modal.Header closeButton>
+                <Modal.Title>Uspješno brisanje</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Clan uspjesno obrisan!!</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={this.zatvoriUspjesnoModal}>
                   Zatvori
                 </Button>
               </Modal.Footer>

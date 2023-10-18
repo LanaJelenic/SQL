@@ -13,7 +13,8 @@ export default class Izbornik extends Component{
 
             <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-              <Navbar.Brand href="/"> <img className="App-logo" src={logo} alt=" " /> Knjižnica </Navbar.Brand>
+              <img className="App-logo" src={logo} alt=" " />
+              <Navbar.Text href="/">  Knjižnica </Navbar.Text>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">

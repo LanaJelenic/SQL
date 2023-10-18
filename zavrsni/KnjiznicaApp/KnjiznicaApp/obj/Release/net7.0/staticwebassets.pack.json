@@ -25,8 +25,8 @@
       "PackagePath": "staticwebassets\\manifest.json"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js",
-      "PackagePath": "staticwebassets\\precache-manifest.f089667f4904ab671055ad02bcdb6ed4.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\precache-manifest.2f6e7f4e60835fe06df5b023054cb2ac.js",
+      "PackagePath": "staticwebassets\\precache-manifest.2f6e7f4e60835fe06df5b023054cb2ac.js"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\robots.txt",
@@ -45,20 +45,20 @@
       "PackagePath": "staticwebassets\\static\\css\\2.6f2db2d8.chunk.css.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.d8af0f9d.chunk.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.d8af0f9d.chunk.css"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.289287fb.chunk.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.289287fb.chunk.css"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.d8af0f9d.chunk.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.d8af0f9d.chunk.css.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\css\\main.289287fb.chunk.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.289287fb.chunk.css.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.245cb25c.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\2.245cb25c.chunk.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.aa266faf.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\2.aa266faf.chunk.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.245cb25c.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\2.245cb25c.chunk.js.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\2.aa266faf.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\2.aa266faf.chunk.js.map"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\3.bff9dbde.chunk.js",
@@ -69,12 +69,12 @@
       "PackagePath": "staticwebassets\\static\\js\\3.bff9dbde.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.63f7f990.chunk.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.63f7f990.chunk.js"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.d72f256e.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.d72f256e.chunk.js"
     },
     {
-      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.63f7f990.chunk.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.63f7f990.chunk.js.map"
+      "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\main.d72f256e.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.d72f256e.chunk.js.map"
     },
     {
       "Id": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\wwwroot\\static\\js\\runtime~main.e9827d5d.js",

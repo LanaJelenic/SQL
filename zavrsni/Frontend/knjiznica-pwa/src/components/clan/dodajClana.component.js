@@ -15,8 +15,8 @@ export default class DodajClana extends Component {
     this.DodajClana = this.dodajClana.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  async dodajClana(knjiga) {
-    const odgovor = await ClanDataService.post(knjiga);
+  async dodajClana(clan) {
+    const odgovor = await ClanDataService.post(clan);
     if(odgovor.ok){
       // routing na smjerovi
       window.location.href='/clanovi';
@@ -33,10 +33,10 @@ export default class DodajClana extends Component {
     const podaci = new FormData(e.target);
 
     this.dodajClana({
-      Ime: podaci.get('Ime'),
-      Prezime: podaci.get('Prezime'),
-      Br_Iskaznice: podaci.get('Br_Iskaznice'),
-      Status: podaci.get('Status')
+      ime: podaci.get('ime'),
+      prezime: podaci.get('prezime'),
+      br_Iskaznice: podaci.get('br_Iskaznice'),
+      status:  podaci.get('status') === 1 ? true : false
     });
     
   }
@@ -48,26 +48,26 @@ export default class DodajClana extends Component {
         <Form onSubmit={this.handleSubmit}>
 
 
-          <Form.Group className="mb-3" controlId="Ime">
+          <Form.Group className="mb-3" controlId="ime">
             <Form.Label>Ime</Form.Label>
-            <Form.Control type="text" name="Ime" placeholder="Josip" maxLength={255} required/>
+            <Form.Control type="text" name="ime" placeholder="Josip" maxLength={255} required/>
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="Prezime">
+          <Form.Group className="mb-3" controlId="prezime">
             <Form.Label>Prezime</Form.Label>
-            <Form.Control type="text" name="Prezime" placeholder="Horvat" required />
+            <Form.Control type="text" name="prezime" placeholder="Horvat" required />
           </Form.Group>
 
 
-          <Form.Group className="mb-3" controlId="Br_Iskaznice">
-            <Form.Label>Br_Iskaznice</Form.Label>
-            <Form.Control type="text" name="Br_Iskaznice" placeholder=""/>
+          <Form.Group className="mb-3" controlId="br_Iskaznice">
+            <Form.Label>br_Iskaznice</Form.Label>
+            <Form.Control type="text" name="br_Iskaznice" placeholder=""/>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="Status">
-            <Form.Label>Status</Form.Label>
-            <Form.Control type="text" name="Status" placeholder="" />
+            <Form.Label>status</Form.Label>
+            <Form.Control type="text" name="status" placeholder="" />
           </Form.Group>
 
           <Row>
