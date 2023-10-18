@@ -73,9 +73,10 @@ export default class Clanovi extends Component {
 
               <Card style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title>{p.ime} {p.prezime} {p.id_clana} </Card.Title>
+                  <Card.Title>{p.ime} {p.prezime}  </Card.Title>
+                  <Card.Text>ID:{p.id_clana}</Card.Text>
                   <Card.Text>
-                    {p.br_Iskaznice} - {p.status ? 'Aktivan' : 'Neaktivan'}
+                    Broj iskaznice:{p.br_Iskaznice} - {p.status ? 'Aktivan' : 'Neaktivan'}
                   </Card.Text>
                   <Row>
                       <Col>
