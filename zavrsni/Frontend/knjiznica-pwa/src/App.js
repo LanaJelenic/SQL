@@ -22,7 +22,7 @@ export default function App() {
       <Routes>
       <Route path='/' element={<Pocetna/>}/>
       <Route path='/nadzornaploca' element={<NadzornaPloca />}/>
-        <Route path="/kjige" element={<Knjige />} />
+        <Route path="/knjige" element={<Knjige />} />
         <Route path="/knjige/dodaj" element={<DodajKnjigu />} />
         <Route path="/knjige/:id_knjige" element={<PromijeniKnjigu />} />
         <Route path='/clanovi' element={<Clanovi />} />

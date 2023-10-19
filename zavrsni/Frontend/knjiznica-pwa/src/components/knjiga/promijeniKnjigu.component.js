@@ -75,11 +75,11 @@ export default class PromijeniKnjigu extends Component {
     // You can pass formData as a service body directly:
 
     this.promijeniKnjigu({
-      Naslov: podaci.get('Naslov'),
-      Ime_Autora: podaci.get('Ime_Autora'),
-      Br_stranica: parseInt(podaci.get('Br_stranica')),
-      Prezime_Autora: podaci.get('Prezime_Autora'),
-      Sazetak:podaci.get('Sazetak')
+      naslov: podaci.get('Naslov'),
+      ime_Autora: podaci.get('Ime_Autora'),
+      br_stranica: podaci.get('Br_stranica'),
+      prezime_Autora: podaci.get('Prezime_Autora'),
+      sazetak:podaci.get('Sazetak')
     });
     
   }
@@ -108,13 +108,13 @@ export default class PromijeniKnjigu extends Component {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="Ime_Autora">
-            <Form.Label>Ime_Autora</Form.Label>
+            <Form.Label>Ime autora</Form.Label>
             <Form.Control type="text" name="Ime autora" placeholder="Ime autora"
             maxLength={255} defaultValue={knjiga.ime_autora} required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="Prezime_Autora">
-            <Form.Label>Prezime_autora</Form.Label>
+            <Form.Label>Prezime autora</Form.Label>
             <Form.Control type="text" name="Prezime autora" placeholder="Prezime autora"
             maxLength={255} defaultValue={knjiga.prezime_autora} required />
           </Form.Group>

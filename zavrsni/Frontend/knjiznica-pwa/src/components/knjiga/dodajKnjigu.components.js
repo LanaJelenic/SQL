@@ -37,11 +37,11 @@ export default class DodajKnjigu extends Component{
         const podaci= new FormData(e.target);
 
         this.dodajKnjigu({
-            Naslov:podaci.get('Naslov'),
-            Ime_Autora:podaci.get('Ime_Autora'),
-            Prezime_Autora:podaci.get('Prezime_Autora'),
-            Sazetak:podaci.get('Sazetak'),
-            Br_stranica: parseInt(podaci.get('Br_stranica'))
+            naslov:podaci.get('Naslov'),
+            ime_Autora:podaci.get('Ime_Autora'),
+            prezime_Autora:podaci.get('Prezime_Autora'),
+            sazetak:podaci.get('Sazetak'),
+            br_stranica:podaci.get('Br_stranica')
 
         });
     }
@@ -70,12 +70,12 @@ export default class DodajKnjigu extends Component{
           </Form.Group>
            <Form onSubmit={this.handleSubmit}></Form>
           <Form.Group className="mb-3" controlId="Ime_Autora">
-            <Form.Label>Ime_Autora</Form.Label>
+            <Form.Label>Ime autora</Form.Label>
             <Form.Control type="text" name="Ime autora" placeholder="Ime autora" maxLength={200} required />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="Prezime_Autora">
-            <Form.Label>Prezime_Autora</Form.Label>
+            <Form.Label>Prezime autora</Form.Label>
             <Form.Control type="text" name="Prezime autora" placeholder="Prezime autora" maxLength={200} required
           />
           </Form.Group>

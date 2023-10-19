@@ -3,16 +3,16 @@ import http from "../http-common";
 class KnjigaDataService{
 
     async get(){
-        return await http.get('/Knjiga');
+        return await http.get('/knjiga');
     }
     async getByID(id_knjige){
         return await http.get('/knjiga/'+ id_knjige);
     }
 
     async delete(id_knjige){
-        const odgovor=await http.delete('/Knjiga/'+ id_knjige)
+        const odgovor=await http.delete('/Knjiga?Id_knjige='+ id_knjige)
         .then(response=>{
-            return{ok:true, poruka:'Obrisano uspjesno'};
+            return{ok:true, poruka:'Obrisano uspješno!'};
         })
         .catch(e=>{
             return{ok:false, poruka:e.response.data};
@@ -21,9 +21,9 @@ class KnjigaDataService{
     }
 
     async post(knjiga){
-        const odgovor=await http.post('/knjiga',knjiga)
+        const odgovor=await http.post('/Knjiga',knjiga)
         .then(response=>{
-            return{ok:true, poruka:'Uspjesno unesena knjiga'};
+            return{ok:true, poruka:'Uspješno unesena knjiga'};
         })
         .catch(error=>{
             return{ok:false, poruka:error.response.data};
@@ -32,9 +32,9 @@ class KnjigaDataService{
     }
 
     async put(id_knjige,knjiga){
-        const odgovor=await http.put('/knjiga/'+id_knjige,knjiga)
+        const odgovor=await http.put('/Knjiga?Id_knjige='+id_knjige,knjiga)
         .then(response=>{
-            return{ok:true, poruka:'Knjiga uspjesno promijenjena'};
+            return{ok:true, poruka:'Knjiga uspješno promijenjena!!'};
 
         })
         .catch(error=>{
