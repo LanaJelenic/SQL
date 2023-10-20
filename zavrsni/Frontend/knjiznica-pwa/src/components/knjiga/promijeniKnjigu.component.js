@@ -83,6 +83,7 @@ export default class PromijeniKnjigu extends Component {
       prezime_Autora: podaci.get('prezime_Autora'),
       sazetak:podaci.get('sazetak')
       
+      
     });
     
   }
@@ -129,6 +130,7 @@ async spremiSliku(id_knjige,slika)
 {
   let base64=slika;
   base64=base64.replace('data:image/png;base64,', '');
+
   const odgovor=await KnjigaDataService.postaviSliku(id_knjige,{
     base64:base64
   });

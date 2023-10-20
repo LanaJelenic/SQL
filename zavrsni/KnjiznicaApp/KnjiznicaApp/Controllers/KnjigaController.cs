@@ -2,6 +2,7 @@
 using KnjiznicaApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using KnjiznicaApp.Models.DTO;
+using Microsoft.EntityFrameworkCore;
 namespace KnjiznicaApp.Controllers
 {
 
@@ -253,43 +254,64 @@ namespace KnjiznicaApp.Controllers
         /// <response code="503">Na azure treba dodati IP u firewall</response> 
         [HttpPut]
         [Route("postaviSliku/{id_knjige:int}")]
-        public IActionResult PostaviSliku(int id_knjige, SlikaDTO slikaDTO)
+        public IActionResult PostaviSliku(int Id_knjige, SlikaDTO slikaDTO)
         {
-            if (id_knjige == 0)
+            if (Id_knjige == 0)
             {
                 return BadRequest(); //400
             }
+
             if (slikaDTO == null || slikaDTO?.Base64?.Length == 0)
             {
-                return BadRequest();
+                return BadRequest(); //400
             }
-            var k = _context.Knjiga.Find(id_knjige);
-            if (k == null)
+
+            var p = _context.Knjiga.Find(Id_knjige);
+            if (p == null)
             {
-                return BadRequest();
+                return BadRequest(); //400
             }
+
+
+
             try
             {
                 var ds = Path.DirectorySeparatorChar;
+
+
+
+
                 string dir = Path.Combine(Directory.GetCurrentDirectory()
                     + ds + "wwwroot" + ds + "slike" + ds + "knjige");
+
+
                 if (!System.IO.Directory.Exists(dir))
                 {
                     System.IO.Directory.CreateDirectory(dir);
                 }
-                var path = Path.Combine(dir + ds + id_knjige + ".png");
-                System.IO.File.WriteAllBytes(path, Convert.FromBase64String(slikaDTO?.Base64));
+
+
+                var putanja = Path.Combine(dir + ds + Id_knjige + ".png");
+
+
+
+                System.IO.File.WriteAllBytes(putanja, Convert.FromBase64String(slikaDTO?.Base64));
 
                 return new JsonResult("{\"poruka\": \"Uspješno pohranjena slika\"}");
             }
             catch (Exception e)
             {
-
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, e.Message); //204
             }
         }
+
+
+
+
+
     }
 }
+
 
 
 
