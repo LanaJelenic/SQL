@@ -12,6 +12,9 @@ import PromijeniClana from './components/clan/promijeniClana.component';
 import Knjige from './components/knjiga/knjige.component';
 import DodajKnjigu from './components/knjiga/dodajKnjigu.components';
 import PromijeniKnjigu from './components/knjiga/promijeniKnjigu.component';
+import Evidencija  from './components/evidencijaPosudbe/evidencije.component';
+import DodajEvidenciju from "./components/evidencijaPosudbe/dodajEvidenciju.component";
+
 
 
 
@@ -28,6 +31,8 @@ export default function App() {
         <Route path='/clanovi' element={<Clanovi />} />
         <Route path="/clanovi/dodaj" element={<DodajClana />} />
         <Route path="/clanovi/:id_clana" element={<PromijeniClana />} />
+        <Route path="/evidencije" element={<Evidencija />} />
+        <Route path="/evidencija/dodaj" element={<DodajEvidenciju />} />
       </Routes>
     </Router>
   );

@@ -52,8 +52,8 @@ export default class PromijeniKnjigu extends Component {
   }
 
   async PromijeniKnjigu(id_knjige, knjiga) {
-    let href = window.location.href;
-    let niz = href.split('/'); 
+    //let href = window.location.href;
+    //let niz = href.split('/'); 
     const odgovor = await KnjigaDataService.put(id_knjige,knjiga);
     if(odgovor.ok){
      

@@ -7,5 +7,7 @@
         public DateTime Datum_vracanja { get; set; }
         public int Clan { get; set; }
         public int IdClana { get; set; }
+       
+       
     }
 }

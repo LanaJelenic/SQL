@@ -67,7 +67,7 @@ export default class PromijeniClana extends Component {
       ime: podaci.get('Ime'),
       prezime: podaci.get('Prezime'),
       br_Iskaznice: podaci.get('Br_Iskaznice'),
-      status: podaci.get('Status') == 1 ? true : false
+      status: podaci.get('Status') === 1 ? true : false
     });
     
   }

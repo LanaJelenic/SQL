@@ -70,7 +70,8 @@ namespace KnjiznicaApp.Controllers
                          Datum_posudbe = p.Datum_posudbe,
                          Datum_vracanja = p.Datum_vracanja,
                          Clan = (int)p.Clan.Br_Iskaznice,
-                         IdClana = (int)p.Clan.Id_clana,
+                         IdClana = (int)p.Clan.Id_clana
+                         
                          
 
                      });
@@ -85,6 +86,44 @@ namespace KnjiznicaApp.Controllers
                     Status503ServiceUnavailable, ex);
             }
         }
+        [HttpGet]
+        [Route("{id_posudbe:int}")]
+        public IActionResult GetById(int id_posudbe)
+        {
+            // ovdje će ići dohvaćanje u bazi
+
+
+            if (id_posudbe == 0)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var e = _context.Evidencija_posudbe.Include(i => i.Clan)
+              .FirstOrDefault(x => x.Id_posudbe ==id_posudbe);
+
+            if (e == null)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, e); //204
+            }
+
+            try
+            {
+                return new JsonResult(new Evidencija_posudbeDTO()
+                {
+                    Id_posudbe = e.Id_posudbe,
+                    Datum_posudbe = e.Datum_posudbe,
+                    Datum_vracanja = e.Datum_vracanja,
+                    IdClana = (int)(e.Clan == null ? 0 : e.Clan.Id_clana),
+                    Clan = (int)e.Clan.Br_Iskaznice
+                }); //200
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message); //204
+            }
+        }
+
         /// <summary>
         /// Unosi novu evidenciju posudbe u bazu podataka
         /// </summary>
@@ -241,8 +280,9 @@ namespace KnjiznicaApp.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
+                return StatusCode(StatusCodes.Status406NotAcceptable, "Ne može se obrisati evidencija posudbe, clan se nalazi u knjiga posudba");
 
-                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
             }
         }
 
@@ -295,14 +335,14 @@ namespace KnjiznicaApp.Controllers
             }
         }
         [HttpPost]
-        [Route("{Id:int}/dodaj{Id_knjige:int}")]
-        public IActionResult DodajKnjigu(int Id,int Id_knjige)
+        [Route("/dodaj{Id_knjige:int}")]
+        public IActionResult DodajKnjigu(int Id_posudbe,int Id_knjige)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (Id<=0 || Id_knjige<=0)
+            if (Id_posudbe<=0 || Id_knjige<=0)
             {
                 return BadRequest();
             }
@@ -310,7 +350,7 @@ namespace KnjiznicaApp.Controllers
             {
                 var posudba= _context.Evidencija_posudbe
                     .Include(p => p.Knjige)
-                    .FirstOrDefault(p => p.Id_posudbe==Id_knjige);
+                    .FirstOrDefault(p => p.Id_posudbe==Id_posudbe);
                 if (posudba==null)
                 {
                     return BadRequest();
@@ -334,14 +374,14 @@ namespace KnjiznicaApp.Controllers
             }
         }
         [HttpDelete]
-        [Route("{Id:int}/obrisi/{Id_knjige:int}")]
-        public IActionResult ObrisiKnjigu(int id,int id_knjige)
+        [Route("/obrisi/{Id_knjige:int}")]
+        public IActionResult ObrisiKnjigu(int id_posudbe,int id_knjige)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (id <=0 || id_knjige <=0)
+            if (id_posudbe <=0 || id_knjige <=0)
             {
                 return BadRequest();
             }
@@ -349,7 +389,7 @@ namespace KnjiznicaApp.Controllers
             {
                 var posudba = _context.Evidencija_posudbe
                      .Include(p => p.Knjige)
-                     .FirstOrDefault(p => p.Id_posudbe == id);
+                     .FirstOrDefault(p => p.Id_posudbe == id_posudbe);
                 if (posudba==null)
                 {
                     return BadRequest();

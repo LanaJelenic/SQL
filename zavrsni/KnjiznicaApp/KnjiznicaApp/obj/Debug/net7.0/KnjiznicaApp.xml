@@ -248,5 +248,23 @@
              <response code="415">Nismo poslali JSON</response> 
              <response code="503">Error na serveru</response> 
         </member>
+        <member name="M:KnjiznicaApp.Controllers.KnjigaController.PostaviSliku(System.Int32,KnjiznicaApp.Models.DTO.SlikaDTO)">
+             <summary>
+             Postavlja sliku polaznika na server
+             </summary>
+             <remarks>
+             Primjer upita:
+            
+                PUT api/v1/knjiga/postaviSliku/1
+            
+                 "BASE64 string knjige"
+                
+             </remarks>
+             <param name="Id_knjige">ID knjige za koji se postavlja slika</param>  
+             <returns>Poruku o uspješnosti pohrane slike na server</returns>
+             <response code="200">Sve je u redu</response>
+             <response code="204">Nema u bazi knjige za postaviti sliku</response>
+             <response code="503">Na azure treba dodati IP u firewall</response> 
+        </member>
     </members>
 </doc>

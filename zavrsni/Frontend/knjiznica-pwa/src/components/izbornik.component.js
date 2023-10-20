@@ -24,7 +24,7 @@ export default class Izbornik extends Component{
                     <NavDropdown.Item href="/clanovi">
                       Clanovi
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/posudbe">Evidencija posudbe</NavDropdown.Item>
+                    <NavDropdown.Item href="/evidencije">Evidencija posudbe</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item target="_blank" href="https://lanaaa-001-site1.ftempurl.com/swagger/index.html">
                       Swagger

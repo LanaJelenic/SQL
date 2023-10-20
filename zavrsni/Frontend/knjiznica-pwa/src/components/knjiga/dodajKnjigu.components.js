@@ -24,7 +24,7 @@ export default class DodajKnjigu extends Component{
             let poruke='';
             for(const key in odgovor.poruka.errors){
                 if(odgovor.poruka.errors.hasOwnProperty(key)){
-                    poruke +=`${odgovor.poruka.errors[key]}` + '\n';
+                    poruke +=`${odgovor.poruka.errors[key]}`;
                 }
             }
             alert(poruke);
