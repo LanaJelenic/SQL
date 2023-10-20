@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -54,7 +53,7 @@ export default class Knjige extends Component {
      this.dohvatiKnjigu();
      this.otvoriUspjesnoModal();
     }else{
-     // alert(odgovor.poruka);
+    
       this.otvoriModal();
     }
     
@@ -73,13 +72,15 @@ export default class Knjige extends Component {
            <Col key={p.id_knjige} sm={12} lg={3} md={3}>
 
               <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={p.slika} />
                 <Card.Body>
                   <Card.Title>{p.naslov}   </Card.Title>
-                  <Card.Text>Autor:{p.ime_autora} {p.prezime_autora}</Card.Text>
+                  <Card.Text>Autor: {p.ime_Autora} {p.prezime_Autora}</Card.Text>
                   <Card.Text>Sažetak:{p.sazetak}</Card.Text>
                   <Card.Text>
                     Broj stranica:{p.br_stranica} 
                   </Card.Text>
+                 
                   <Row>
                       <Col>
                       <Link className="btn btn-primary gumb" to={`/knjige/${p.id_knjige}`}><FaEdit /></Link>
@@ -100,7 +101,7 @@ export default class Knjige extends Component {
               <Modal.Header closeButton>
                 <Modal.Title>Greška prilikom brisanja</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Knjiga nije obrisana.</Modal.Body>
+              <Modal.Body>Knjigu nije moguce obrisati jer se nalazi u evidenciji posudbe.</Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={this.zatvoriModal}>
                   Zatvori

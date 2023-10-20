@@ -10,7 +10,7 @@ namespace KnjiznicaApp.Controllers
     /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class KnjigaController:ControllerBase
+    public class KnjigaController : ControllerBase
     {
         private readonly KnjiznicaContext _context;
         public KnjigaController(KnjiznicaContext context)
@@ -38,13 +38,13 @@ namespace KnjiznicaApp.Controllers
                 return BadRequest(ModelState);
             }
             var knjige = _context.Knjiga.ToList();
-            if (knjige==null ||   knjige.Count == 0)
+            if (knjige == null || knjige.Count == 0)
             {
                 return new EmptyResult();
             }
             List<KnjigaDTO> vrati = new();
 
-            knjige.ForEach (k =>
+            knjige.ForEach(k =>
                 {
                     var dto = new KnjigaDTO()
                     {
@@ -58,23 +58,23 @@ namespace KnjiznicaApp.Controllers
                     vrati.Add(dto);
 
 
-                }) ;
+                });
             return Ok(vrati);
-            
+
         }
 
         [HttpGet]
         [Route("{id_knjige:int}")]
         public IActionResult GetByID(int id_knjige)
         {
-            if (id_knjige<=0)
+            if (id_knjige <= 0)
             {
                 return BadRequest(ModelState);
             }
             try
             {
                 var i = _context.Knjiga.Find(id_knjige);
-                if (i==null)
+                if (i == null)
                 {
                     return StatusCode(StatusCodes.Status204NoContent, i);
 
@@ -87,7 +87,7 @@ namespace KnjiznicaApp.Controllers
                 return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
             }
         }
-        
+
         /// <summary>
         /// Unosi novu knjigu u bazu podataka
         /// </summary>
@@ -157,10 +157,10 @@ namespace KnjiznicaApp.Controllers
         /// <response code="415">Nismo poslali JSON</response> 
         /// <response code="503">Error u serveru</response> 
         [HttpPut]
-       
+
         public IActionResult Put(int Id_knjige, KnjigaDTO dto)
         {
-            if (Id_knjige <= 0 || dto== null)
+            if (Id_knjige <= 0 || dto == null)
             {
                 return BadRequest();
             }
@@ -172,7 +172,7 @@ namespace KnjiznicaApp.Controllers
                     return BadRequest();
                 }
                 knjigaBaza.Naslov = dto.Naslov;
-                knjigaBaza.Ime_Autora=dto.Ime_Autora;
+                knjigaBaza.Ime_Autora = dto.Ime_Autora;
                 knjigaBaza.Prezime_Autora = dto.Prezime_Autora;
                 knjigaBaza.Sazetak = dto.Sazetak;
                 knjigaBaza.Br_stranica = dto.Br_stranica;
@@ -210,12 +210,12 @@ namespace KnjiznicaApp.Controllers
         [Produces("application/json")]
         public IActionResult Delete(int Id_knjige)
         {
-            if (Id_knjige<=0)
+            if (Id_knjige <= 0)
             {
                 return BadRequest();
             }
             var knjigaBaza = _context.Knjiga.Find(Id_knjige);
-            if (knjigaBaza==null)
+            if (knjigaBaza == null)
             {
                 return BadRequest();
             }
@@ -224,16 +224,70 @@ namespace KnjiznicaApp.Controllers
                 _context.Knjiga.Remove(knjigaBaza);
                 _context.SaveChanges();
 
-                return  new JsonResult("{\"poruka\":\"Obrisano\"}");
+                return new JsonResult("{\"poruka\":\"Obrisano\"}");
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
+                return StatusCode(StatusCodes.Status406NotAcceptable, "Ne može se obrisati, polaznik se nalazi na nekoj grupi");
+            }
+        }
 
-                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
+        /// <summary>
+        /// Postavlja sliku polaznika na server
+        /// </summary>
+        /// <remarks>
+        /// Primjer upita:
+        ///
+        ///    PUT api/v1/knjiga/postaviSliku/1
+        ///
+        ///     "BASE64 string knjige"
+        ///    
+        /// </remarks>
+        /// <param name="Id_knjige">ID knjige za koji se postavlja slika</param>  
+        /// <returns>Poruku o uspješnosti pohrane slike na server</returns>
+        /// <response code="200">Sve je u redu</response>
+        /// <response code="204">Nema u bazi knjige za postaviti sliku</response>
+        /// <response code="503">Na azure treba dodati IP u firewall</response> 
+        [HttpPut]
+        [Route("postaviSliku/{id_knjige:int}")]
+        public IActionResult PostaviSliku(int id_knjige, SlikaDTO slikaDTO)
+        {
+            if (id_knjige == 0)
+            {
+                return BadRequest(); //400
+            }
+            if (slikaDTO == null || slikaDTO?.Base64?.Length == 0)
+            {
+                return BadRequest();
+            }
+            var k = _context.Knjiga.Find(id_knjige);
+            if (k == null)
+            {
+                return BadRequest();
+            }
+            try
+            {
+                var ds = Path.DirectorySeparatorChar;
+                string dir = Path.Combine(Directory.GetCurrentDirectory()
+                    + ds + "wwwroot" + ds + "slike" + ds + "knjige");
+                if (!System.IO.Directory.Exists(dir))
+                {
+                    System.IO.Directory.CreateDirectory(dir);
+                }
+                var path = Path.Combine(dir + ds + id_knjige + ".png");
+                System.IO.File.WriteAllBytes(path, Convert.FromBase64String(slikaDTO?.Base64));
 
+                return new JsonResult("{\"poruka\": \"Uspješno pohranjena slika\"}");
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, e.Message); //204
             }
         }
     }
-
-
 }
+
+
+

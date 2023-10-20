@@ -49,6 +49,7 @@ export default class Clanovi extends Component {
   async obrisiClana(id_clana){
     
     const odgovor = await ClanoviDataService.delete(id_clana);
+    
     if(odgovor.ok){
      this.dohvatiClanove();
      this.otvoriUspjesnoModal();
@@ -98,7 +99,7 @@ export default class Clanovi extends Component {
               <Modal.Header closeButton>
                 <Modal.Title>Greška prilikom brisanja</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Clan nije obrisan.</Modal.Body>
+              <Modal.Body>Clana nije moguce obrisati jer postoji u evidenciji posudbe!</Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={this.zatvoriModal}>
                   Zatvori

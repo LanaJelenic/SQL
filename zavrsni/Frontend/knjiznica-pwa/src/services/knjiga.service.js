@@ -2,7 +2,7 @@ import http from "../http-common";
 
 class KnjigaDataService{
 
-    async get(){
+    async getAll(){
         return await http.get('/knjiga');
     }
     async getByID(id_knjige){
@@ -40,6 +40,18 @@ class KnjigaDataService{
         .catch(error=>{
             return{ok:false, poruka:error.response.data};
         });
+        return odgovor;
+    }
+    async postaviSliku(id_knjige,slika)
+    {
+        const odgovor= await http.put('/Knjiga/postaviSliku/'+id_knjige,slika)
+        .then(response =>{
+            return{ok:true,poruka:'Postavi sliku'};
+        })
+        .catch(error =>{
+            console.log(error);
+            return{ok:false,poruka:error.response.data};
+        })
         return odgovor;
     }
 

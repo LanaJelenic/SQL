@@ -210,9 +210,8 @@ namespace KnjiznicaApp.Controllers
             }
             catch (Exception ex)
             {
-
-                return new JsonResult("{\"poruka\":\"Ne može se obrisati\"}");
-
+                Console.WriteLine(ex.Message);
+                return StatusCode(StatusCodes.Status406NotAcceptable, "Ne može se obrisati, polaznik se nalazi na nekoj grupi");
             }
         }
     }
