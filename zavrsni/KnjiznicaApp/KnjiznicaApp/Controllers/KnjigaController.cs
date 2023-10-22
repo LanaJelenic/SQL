@@ -38,29 +38,48 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var knjige = _context.Knjiga.ToList();
-            if (knjige == null || knjige.Count == 0)
+            try
             {
-                return new EmptyResult();
-            }
-            List<KnjigaDTO> vrati = new();
-
-            knjige.ForEach(k =>
+                var knjige = _context.Knjiga.ToList();
+                if (knjige == null || knjige.Count == 0)
                 {
-                    var dto = new KnjigaDTO()
+                    return new EmptyResult();
+                }
+                List<KnjigaDTO> vrati = new();
+                var ds = Path.DirectorySeparatorChar;
+                string dir = Path.Combine(Directory.GetCurrentDirectory() + ds + "wwwroot" + ds + "slike" + ds + "knjige" + ds);
+
+                knjige.ForEach(k =>
+                {
+                    var dto = new KnjigaDTO();
+                    var putanja = "/slike/prazno.png";
+                    if (System.IO.File.Exists(dir + k.Id_knjige + ".png"))
+                    {
+                        putanja = "/slike/knjige/" + k.Id_knjige + ".png";
+                    }
+
+                    vrati.Add(new KnjigaDTO
                     {
                         Id_knjige = k.Id_knjige,
                         Naslov = k.Naslov,
                         Ime_Autora = k.Ime_Autora,
                         Prezime_Autora = k.Prezime_Autora,
                         Sazetak = k.Sazetak,
-                        Br_stranica = k.Br_stranica
-                    };
-                    vrati.Add(dto);
+                        Br_stranica = k.Br_stranica,
+                        Slika = putanja
+                    });
+
 
 
                 });
-            return Ok(vrati);
+                return new JsonResult(vrati);
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, e.Message); //204
+            }
+           
 
         }
 
@@ -72,15 +91,35 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest(ModelState);
             }
+            var i = _context.Knjiga.Find(id_knjige);
+            if (i == null)
+            {
+                return StatusCode(StatusCodes.Status204NoContent, i);
+
+            }
             try
             {
-                var i = _context.Knjiga.Find(id_knjige);
-                if (i == null)
+                var ds = Path.DirectorySeparatorChar;
+                string dir = Path.Combine(Directory.GetCurrentDirectory()
+                    + ds + "wwwroot" + ds + "slike" + ds + "knjige" + ds);
+                var putanja = "/slike/prazno.png";
+                if (System.IO.File.Exists(dir + i.Id_knjige + ".png"))
                 {
-                    return StatusCode(StatusCodes.Status204NoContent, i);
-
+                    putanja = "/slike/knjige/" + i.Id_knjige + ".png";
                 }
-                return new JsonResult(i);
+
+                var dto = new KnjigaDTO()
+                {
+                    Id_knjige=i.Id_knjige,
+                    Naslov=i.Naslov,
+                    Ime_Autora=i.Ime_Autora,
+                    Prezime_Autora=i.Prezime_Autora,
+                    Sazetak=i.Sazetak,
+                    Br_stranica=i.Br_stranica,
+                    Slika=putanja
+                };
+                return new JsonResult(dto);
+              
             }
             catch (Exception ex)
             {

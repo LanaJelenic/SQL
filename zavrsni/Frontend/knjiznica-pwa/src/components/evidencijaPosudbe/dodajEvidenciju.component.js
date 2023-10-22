@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-//import GrupaDataService from "../../services/grupa.service";
-//import SmjerDataService from "../../services/smjer.service";
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
