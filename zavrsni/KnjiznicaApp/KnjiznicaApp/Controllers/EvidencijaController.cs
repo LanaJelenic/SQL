@@ -71,10 +71,14 @@ namespace KnjiznicaApp.Controllers
                          Datum_vracanja = p.Datum_vracanja,
                          Clan = (int)p.Clan.Br_Iskaznice,
                          IdClana = (int)p.Clan.Id_clana
+
+
+                     });
+                     
+                     
                          
                          
 
-                     });
                  });
                  return Ok(posudba);
               
