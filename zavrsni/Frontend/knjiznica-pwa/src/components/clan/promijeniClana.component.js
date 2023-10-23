@@ -114,7 +114,7 @@ export default class PromijeniClana extends Component {
             </Col>
             <Col>
             <Button variant="primary" className="gumb" type="submit">
-              Promijeni clana
+              Promijeni člana
             </Button>
             </Col>
           </Row>

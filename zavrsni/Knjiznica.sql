@@ -1,6 +1,12 @@
 create database knjiznica2;
 use knjiznica2
 
+create table operater(
+sifra int not null primary key identity(1,1),
+email varchar(50) not null,
+lozinka varchar(200) not null
+);
+
 create table clan(
 ID_clana int not null primary key identity(1,1),
 ime varchar(50),

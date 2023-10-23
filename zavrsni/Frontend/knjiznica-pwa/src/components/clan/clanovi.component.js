@@ -99,7 +99,7 @@ export default class Clanovi extends Component {
               <Modal.Header closeButton>
                 <Modal.Title>Greška prilikom brisanja</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Clana nije moguce obrisati jer postoji u evidenciji posudbe!</Modal.Body>
+              <Modal.Body>Člana nije moguće obrisati jer postoji u evidenciji posudbe!</Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={this.zatvoriModal}>
                   Zatvori
@@ -114,7 +114,7 @@ export default class Clanovi extends Component {
               <Modal.Header closeButton>
                 <Modal.Title>Uspješno brisanje</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Clan uspjesno obrisan!!</Modal.Body>
+              <Modal.Body>Član uspješno obrisan!!</Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={this.zatvoriUspjesnoModal}>
                   Zatvori

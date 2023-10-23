@@ -7,10 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
 import moment from 'moment';
-import Table from 'react-bootstrap/Table';
-import { FaTrash } from 'react-icons/fa';
 
-import { AsyncTypeahead } from 'react-bootstrap-typeahead';
 
 
 export default class PromijeniEvidenciju extends Component {
@@ -86,125 +83,41 @@ export default class PromijeniEvidenciju extends Component {
 
 
   render() { 
-   
-    const { evidencija} = this.state;
-    
-    
-
-
-    const obradiTrazenje = (uvjet) => {
-      this.traziPolaznik( uvjet);
-    };
-
-    const odabraniPolaznik = (polaznik) => {
-      //console.log(grupa.sifra + ' - ' + polaznik[0].sifra);
-      if(polaznik.length>0){
-        this.dodajPolaznika(grupa.sifra, polaznik[0].sifra);
-      }
-     
-    };
-
+    const formattedDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+    console.log(formattedDate.to);  // e.g., "September 25th 2023, 12:53:05 pm"
     return (
     <Container>
-       
         <Form onSubmit={this.handleSubmit}>
-          <Row>
-          <Col key="1" sm={12} lg={6} md={6}>
-              <Form.Group className="mb-3" controlId="naziv">
-                <Form.Label>Naziv</Form.Label>
-                <Form.Control type="text" name="naziv" placeholder="" maxLength={255} defaultValue={grupa.naziv}  required/>
-              </Form.Group>
 
-              <Form.Group className="mb-3" controlId="smjer">
-                <Form.Label>Smjer</Form.Label>
-                <Form.Select defaultValue={grupa.sifraSmjer}  onChange={e => {
-                  this.setState({ sifraSmjer: e.target.value});
-                }}>
-                {smjerovi && smjerovi.map((smjer,index) => (
-                      <option key={index} value={smjer.sifra}>{smjer.naziv}</option>
 
-                ))}
-                </Form.Select>
-              </Form.Group>
+          <Form.Group className="mb-3" controlId="idClana">
+            <Form.Label>Id clana</Form.Label>
+            <Form.Control type="nuber" name="idClana" placeholder="" maxLength={255} required/>
+          </Form.Group>
 
-              <Form.Group className="mb-3" controlId="datumPocetka">
-                <Form.Label>Datum početka</Form.Label>
-                <Form.Control type="date" name="datumPocetka" placeholder="" defaultValue={grupa.datumPocetka}  />
-              </Form.Group>
+          <Form.Group className="mb-3" controlId="datum_posudbe">
+            <Form.Label>Datum posudbe</Form.Label>
+            <Form.Control type="date" name="datum_posudbe" placeholder=""  />
+          </Form.Group>
 
-              <Form.Group className="mb-3" controlId="vrijeme">
-                <Form.Label>Vrijeme</Form.Label>
-                <Form.Control type="time" name="vrijeme" placeholder="" defaultValue={grupa.vrijemePocetka}  />
-              </Form.Group>
-
+          <Form.Group className="mb-3" controlId="datum_vracanja">
+            <Form.Label>Datum vračanja</Form.Label>
+            <Form.Control type="date" name="datum_vracanja" placeholder=""  />
+          </Form.Group>       
             
 
 
-
-              <Row>
-                <Col>
-                  <Link className="btn btn-danger gumb" to={`/grupe`}>Odustani</Link>
-                </Col>
-                <Col>
-                <Button variant="primary" className="gumb" type="submit">
-                  Promjeni grupu
-                </Button>
-                </Col>
-              </Row>
-          </Col>
-          <Col key="2" sm={12} lg={6} md={6} className="polazniciGrupa">
-          <Form.Group className="mb-3" controlId="uvjet">
-                <Form.Label>Traži polaznika</Form.Label>
-                
-          <AsyncTypeahead
-            className="autocomplete"
-            id="uvjet"
-            emptyLabel="Nema rezultata"
-            searchText="Tražim..."
-            labelKey={(polaznik) => `${polaznik.prezime} ${polaznik.ime}`}
-            minLength={3}
-            options={pronadeniPolaznici}
-            onSearch={obradiTrazenje}
-            placeholder="dio imena ili prezimena"
-            renderMenuItemChildren={(polaznik) => (
-              <>
-                <span>{polaznik.prezime} {polaznik.ime}</span>
-              </>
-            )}
-            onChange={odabraniPolaznik}
-          />
-          </Form.Group>
-          <Table striped bordered hover responsive>
-              <thead>
-                <tr>
-                  <th>Polaznik</th>
-                  <th>Akcija</th>
-                </tr>
-              </thead>
-              <tbody>
-              {polaznici && polaznici.map((polaznik,index) => (
-                
-                <tr key={index}>
-                  <td > {polaznik.ime} {polaznik.prezime}</td>
-                  <td>
-                  <Button variant="danger"   onClick={() => this.obrisiPolaznika(grupa.sifra, polaznik.sifra)}><FaTrash /></Button>
-                    
-                  </td>
-                </tr>
-                ))
-              }
-              </tbody>
-            </Table>    
-          </Col>
+          <Row>
+            <Col>
+              <Link className="btn btn-danger gumb" to={`/evidencije`}>Odustani</Link>
+            </Col>
+            <Col>
+            <Button variant="primary" className="gumb" type="submit">
+              Dodaj evidenciju
+            </Button>
+            </Col>
           </Row>
-
-          
-         
-          
         </Form>
-
-
-      
     </Container>
     );
   }
