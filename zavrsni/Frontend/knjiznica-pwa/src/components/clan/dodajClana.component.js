@@ -76,7 +76,7 @@ export default class DodajClana extends Component {
             </Col>
             <Col>
             <Button variant="primary" className="gumb" type="submit">
-              Dodaj clana
+              Dodaj člana
             </Button>
             </Col>
           </Row>

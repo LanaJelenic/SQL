@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using KnjiznicaApp.Models.DTO;
+using System.ComponentModel.DataAnnotations;
 
 namespace KnjiznicaApp.Models
 {

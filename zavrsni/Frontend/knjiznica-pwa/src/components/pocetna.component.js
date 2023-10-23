@@ -7,7 +7,7 @@ export default class Pocetna extends Component{
         return(
             <Container>
                 <p>
-                    Dobrodosli u virtualnu knjiznicu!!
+                    Dobrodošli u virtualnu knjižnicu!!
                 </p>
             </Container>
         )

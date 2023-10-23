@@ -14,6 +14,7 @@ import DodajKnjigu from './components/knjiga/dodajKnjigu.components';
 import PromijeniKnjigu from './components/knjiga/promijeniKnjigu.component';
 import Evidencija  from './components/evidencijaPosudbe/evidencije.component';
 import DodajEvidenciju from "./components/evidencijaPosudbe/dodajEvidenciju.component";
+import PromijeniEvidenciju from "./components/evidencijaPosudbe/promijeniEvidenciju.component";
 
 
 
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/clanovi/:id_clana" element={<PromijeniClana />} />
         <Route path="/evidencije" element={<Evidencija />} />
         <Route path="/evidencija/dodaj" element={<DodajEvidenciju />} />
+        <Route path="/evidencije/:id_posudbe" element={<PromijeniEvidenciju />} />
       </Routes>
     </Router>
   );
