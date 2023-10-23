@@ -12,13 +12,12 @@ export default class Izbornik extends Component{
         return (
 
             <Navbar expand="lg" className="bg-body-tertiary">
-            <Container>
+            <Container className="containerIzbornika">
               <img className="App-logo" src={logo} alt=" " />
-              <Navbar.Text href="/">  Knjižnica </Navbar.Text>
+              <Nav.Link href="/"><h4>Virtualna knjižnica </h4> </Nav.Link>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="/nadzornaploca">Nadzorna ploča</Nav.Link>
                   <NavDropdown title="Programi" id="basic-nav-dropdown">
                     <NavDropdown.Item href="/knjige">Knjige</NavDropdown.Item>
                     <NavDropdown.Item href="/clanovi">

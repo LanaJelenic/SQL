@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Polaznik\\Documents\\GitHub\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj": {}
+    "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Polaznik\\Documents\\GitHub\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj": {
+    "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Polaznik\\Documents\\GitHub\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
         "projectName": "KnjiznicaApp",
-        "projectPath": "C:\\Users\\Polaznik\\Documents\\GitHub\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
-        "packagesPath": "C:\\Users\\Polaznik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Polaznik\\Documents\\GitHub\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\KnjiznicaApp.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Desktop\\GitHub\\WP1\\WP1\\zavrsni\\KnjiznicaApp\\KnjiznicaApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Polaznik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

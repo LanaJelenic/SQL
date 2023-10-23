@@ -15,6 +15,19 @@ class EvidencijaDataService{
         return await http.get('/Evidencija/Id:int/knjige?id_knjige='+id_knjige)
     }
 
+   
+    async put(id_posudbe,evidencija){
+        const odgovor= await http.put('/Evidencija?Id_posudbe='+ id_posudbe,evidencija)
+        .then(response =>{
+            return{ok:true, poruka:'Evidencija je uspješno promijenjen'};
+        })
+        .catch(error=>{
+            console.log(error.response);
+            return{ok:false, poruka:error.response.data};
+        });
+        return odgovor;
+       }
+
     async post(evidencija){
         console.log('Dodajem u bazu' + evidencija);
         const odgovor=await http.post('/Evidencija',evidencija)

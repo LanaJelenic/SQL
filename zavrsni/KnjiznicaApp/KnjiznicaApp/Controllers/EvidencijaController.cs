@@ -14,7 +14,7 @@ namespace KnjiznicaApp.Controllers
     /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class EvidencijaController:ControllerBase
+    public class EvidencijaController : ControllerBase
     {
 
         private readonly KnjiznicaContext _context;
@@ -57,31 +57,31 @@ namespace KnjiznicaApp.Controllers
                      .Include(p => p.Clan)
                       .Include(p => p.Knjige)
                      .ToList();
-                 if (posudbe==null || posudbe.Count== 0)
-                 {
-                     return  new EmptyResult();
-                 }
-                 List<Evidencija_posudbeDTO> posudba = new();
-                 posudbe.ForEach(p =>
-                 {
-                     posudba.Add(new Evidencija_posudbeDTO()
-                     {
-                         Id_posudbe = p.Id_posudbe,
-                         Datum_posudbe = p.Datum_posudbe,
-                         Datum_vracanja = p.Datum_vracanja,
-                         Clan = (int)p.Clan.Br_Iskaznice,
-                         IdClana = (int)p.Clan.Id_clana
+                if (posudbe == null || posudbe.Count == 0)
+                {
+                    return new EmptyResult();
+                }
+                List<Evidencija_posudbeDTO> posudba = new();
+                posudbe.ForEach(p =>
+                {
+                    posudba.Add(new Evidencija_posudbeDTO()
+                    {
+                        Id_posudbe = p.Id_posudbe,
+                        Datum_posudbe = p.Datum_posudbe,
+                        Datum_vracanja = p.Datum_vracanja,
+                        Clan = (int)p.Clan.Br_Iskaznice,
+                        IdClana = (int)p.Clan.Id_clana
 
 
-                     });
-                     
-                     
-                         
-                         
+                    });
 
-                 });
-                 return Ok(posudba);
-              
+
+
+
+
+                });
+                return Ok(posudba);
+
             }
             catch (Exception ex)
             {
@@ -103,7 +103,7 @@ namespace KnjiznicaApp.Controllers
             }
 
             var e = _context.Evidencija_posudbe.Include(i => i.Clan)
-              .FirstOrDefault(x => x.Id_posudbe ==id_posudbe);
+              .FirstOrDefault(x => x.Id_posudbe == id_posudbe);
 
             if (e == null)
             {
@@ -149,14 +149,14 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-            if (dto.IdClana<=0)
+            if (dto.IdClana <= 0)
             {
                 return BadRequest(ModelState);
             }
             try
             {
                 var clan = _context.Clan.Find(dto.IdClana);
-                if (clan==null)
+                if (clan == null)
                 {
                     return BadRequest(ModelState);
                 }
@@ -211,24 +211,24 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest();
             }
-            if (Id_posudbe<=0 || dto==null)
+            if (Id_posudbe <= 0 || dto == null)
             {
                 return BadRequest();
             }
             try
             {
                 var clan = _context.Clan.Find(dto.IdClana);
-                if (clan==null)
+                if (clan == null)
                 {
                     return BadRequest();
                 }
                 var evidencija = _context.Evidencija_posudbe.Find(Id_posudbe);
-                if (evidencija==null)
+                if (evidencija == null)
                 {
                     return BadRequest();
                 }
                 evidencija.Clan = clan;
-                evidencija.Datum_posudbe=dto.Datum_posudbe;
+                evidencija.Datum_posudbe = dto.Datum_posudbe;
                 evidencija.Datum_vracanja = dto.Datum_vracanja;
                 _context.Evidencija_posudbe.Update(evidencija);
                 _context.SaveChanges();
@@ -265,12 +265,12 @@ namespace KnjiznicaApp.Controllers
         [HttpDelete]
         public IActionResult Delete(int Id_posudbe)
         {
-            if (Id_posudbe<=0)
+            if (Id_posudbe <= 0)
             {
                 return BadRequest();
             }
             var evidencijaBaza = _context.Evidencija_posudbe.Find(Id_posudbe);
-            if (evidencijaBaza==null)
+            if (evidencijaBaza == null)
             {
                 return BadRequest();
             }
@@ -298,20 +298,20 @@ namespace KnjiznicaApp.Controllers
             {
                 return BadRequest();
             }
-            if (id_knjige<=0)
+            if (id_knjige <= 0)
             {
                 return BadRequest();
             }
             try
             {
-                var posudba= _context.Evidencija_posudbe
-                    .Include(e  => e.Knjige)
-                    .FirstOrDefault(e => e.Id_posudbe==id_knjige);
-                if (posudba==null)
+                var posudba = _context.Evidencija_posudbe
+                    .Include(e => e.Knjige)
+                    .FirstOrDefault(e => e.Id_posudbe == id_knjige);
+                if (posudba == null)
                 {
                     return BadRequest();
                 }
-                if (posudba.Knjige==null || posudba.Knjige.Count==0)
+                if (posudba.Knjige == null || posudba.Knjige.Count == 0)
                 {
                     return new EmptyResult();
                 }
@@ -320,12 +320,12 @@ namespace KnjiznicaApp.Controllers
                 {
                     knjiga.Add(new KnjigaDTO()
                     {
-                        Id_knjige=o.Id_knjige,
-                        Ime_Autora=o.Ime_Autora,
-                        Prezime_Autora= o.Prezime_Autora,
-                        Naslov=o.Naslov,
-                        Sazetak=o.Sazetak,
-                        Br_stranica=o.Br_stranica
+                        Id_knjige = o.Id_knjige,
+                        Ime_Autora = o.Ime_Autora,
+                        Prezime_Autora = o.Prezime_Autora,
+                        Naslov = o.Naslov,
+                        Sazetak = o.Sazetak,
+                        Br_stranica = o.Br_stranica
                     }
                         );
                 });
@@ -335,32 +335,32 @@ namespace KnjiznicaApp.Controllers
             catch (Exception ex)
             {
 
-                return StatusCode(StatusCodes.Status503ServiceUnavailable,ex.Message);
+                return StatusCode(StatusCodes.Status503ServiceUnavailable, ex.Message);
             }
         }
         [HttpPost]
         [Route("/dodaj{Id_knjige:int}")]
-        public IActionResult DodajKnjigu(int Id_posudbe,int Id_knjige)
+        public IActionResult DodajKnjigu(int Id_posudbe, int Id_knjige)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (Id_posudbe<=0 || Id_knjige<=0)
+            if (Id_posudbe <= 0 || Id_knjige <= 0)
             {
                 return BadRequest();
             }
             try
             {
-                var posudba= _context.Evidencija_posudbe
+                var posudba = _context.Evidencija_posudbe
                     .Include(p => p.Knjige)
-                    .FirstOrDefault(p => p.Id_posudbe==Id_posudbe);
-                if (posudba==null)
+                    .FirstOrDefault(p => p.Id_posudbe == Id_posudbe);
+                if (posudba == null)
                 {
                     return BadRequest();
                 }
                 var knjiga = _context.Knjiga.Find(Id_knjige);
-                if (knjiga==null)
+                if (knjiga == null)
                 {
                     return BadRequest();
                 }
@@ -379,13 +379,13 @@ namespace KnjiznicaApp.Controllers
         }
         [HttpDelete]
         [Route("/obrisi/{Id_knjige:int}")]
-        public IActionResult ObrisiKnjigu(int id_posudbe,int id_knjige)
+        public IActionResult ObrisiKnjigu(int id_posudbe, int id_knjige)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            if (id_posudbe <=0 || id_knjige <=0)
+            if (id_posudbe <= 0 || id_knjige <= 0)
             {
                 return BadRequest();
             }
@@ -394,12 +394,12 @@ namespace KnjiznicaApp.Controllers
                 var posudba = _context.Evidencija_posudbe
                      .Include(p => p.Knjige)
                      .FirstOrDefault(p => p.Id_posudbe == id_posudbe);
-                if (posudba==null)
+                if (posudba == null)
                 {
                     return BadRequest();
                 }
                 var knjiga = _context.Knjiga.Find(id_knjige);
-                if (knjiga==null)
+                if (knjiga == null)
                 {
                     return BadRequest();
                 }
@@ -417,10 +417,9 @@ namespace KnjiznicaApp.Controllers
             }
         }
 
-        
+
 
 
     }
 }
-
 
