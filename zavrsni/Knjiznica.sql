@@ -6,6 +6,8 @@ sifra int not null primary key identity(1,1),
 email varchar(50) not null,
 lozinka varchar(200) not null
 );
+insert into operater values ('lana.jelenic@gmail.ccom',
+'$2a$12$gPVvIdo.mTZZQZKn4Am6S.AyKestX0VdQ2LhPyQ7PJpM5ZVLaV2IG');
 
 create table clan(
 ID_clana int not null primary key identity(1,1),

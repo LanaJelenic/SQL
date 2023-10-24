@@ -14,6 +14,14 @@ import { Modal } from 'react-bootstrap';
 export default class Clanovi extends Component {
   constructor(props) {
     super(props);
+
+    // provjeri da li postoji token
+    const token = localStorage.getItem('token');
+    if(token === null || token===''){
+      // preusmjeri korisnika na login stranicu
+      window.location.replace('/');
+    }
+
     this.dohvatiClanove = this.dohvatiClanove.bind(this);
 
     this.state = {
@@ -65,8 +73,7 @@ export default class Clanovi extends Component {
 
     return (
 
-    <Container>
-      <a href="/clanovi/dodaj" className="btn btn-success gumb">Dodaj novog clana</a>
+    <Container className='mt-5'>
     <Row>
       { clanovi && clanovi.map((p) => (
            
@@ -93,6 +100,7 @@ export default class Clanovi extends Component {
           ))
       }
       </Row>
+      <a href="/clanovi/dodaj" className="btn btn-success gumb">Dodaj novog clana</a>
 
 
       <Modal show={this.state.prikaziModal} onHide={this.zatvoriModal}>

@@ -15,10 +15,12 @@ import { Modal } from 'react-bootstrap';
 export default class Evidencije extends Component {
   constructor(props) {
     super(props);
-    /*const token = localStorage.getItem('Bearer');
-    if(token=='null' || token===''){
-      window.location.href='/';
-    }*/
+    // provjeri da li postoji token
+    const token = localStorage.getItem('token');
+    if(token === null || token===''){
+      // preusmjeri korisnika na login stranicu
+      window.location.replace('/');
+    }
     this.dohvatiEvidencije = this.dohvatiEvidencije.bind(this);
 
     this.state = {
@@ -65,9 +67,8 @@ export default class Evidencije extends Component {
   render() {
     const { evidencije} = this.state;
     return (
-
-    <Container>
-      <a href="/evidencija/dodaj" className="btn btn-success gumb">Dodaj novu evidenciju</a>
+      <Container className='mt-5'>
+      
       <Table striped bordered hover responsive>
               <thead>
                 <tr>
@@ -106,7 +107,7 @@ export default class Evidencije extends Component {
               }
               </tbody>
             </Table>     
-
+            <a href="/evidencija/dodaj" className="btn btn-success gumb">Dodaj novu evidenciju</a>
              <Modal show={this.state.prikaziModal} onHide={this.zatvoriModal}>
               <Modal.Header closeButton>
                 <Modal.Title>Greška prilikom brisanja</Modal.Title>

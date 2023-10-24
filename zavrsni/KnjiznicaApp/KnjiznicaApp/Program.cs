@@ -28,11 +28,15 @@ builder.Services.AddSwaggerGen(sgo => {
         }
     };
     sgo.SwaggerDoc("v1", o);
+
+    
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     sgo.IncludeXmlComments(xmlPath, includeControllerXmlComments: true);
 
 });
+
+
 builder.Services.AddCors(opcije =>
 {
     opcije.AddPolicy("CorsPolicy",
@@ -48,6 +52,8 @@ builder.Services.AddDbContext<KnjiznicaContext>(o =>
         GetConnectionString(name: "KnjiznicaContext")
         )
     );
+
+
 
 
 
@@ -68,6 +74,7 @@ var app = builder.Build();
 //}
 
 app.UseHttpsRedirection();
+
 app.MapControllers();
 app.UseStaticFiles();
 app.UseCors("CorsPolicy");

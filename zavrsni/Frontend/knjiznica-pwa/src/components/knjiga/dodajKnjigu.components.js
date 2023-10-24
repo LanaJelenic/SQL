@@ -11,6 +11,12 @@ export default class DodajKnjigu extends Component{
 
     constructor(props){
         super(props);
+        // provjeri da li postoji token
+    const token = localStorage.getItem('token');
+    if(token === null || token===''){
+      // preusmjeri korisnika na login stranicu
+      window.location.replace('/');
+    }
         this.dodajKnjigu= this.dodajKnjigu.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
     }
@@ -48,7 +54,7 @@ export default class DodajKnjigu extends Component{
     }
     render(){
         return(
-            <Container>
+          <Container className='mt-5'>
                 <Form onSubmit={this.handleSubmit}>
                 <Form.Group className="mb-3" controlId="Naslov">
             <Form.Label>Naslov</Form.Label>

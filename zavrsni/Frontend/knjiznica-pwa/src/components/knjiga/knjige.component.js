@@ -14,8 +14,14 @@ import KnjigaDataService from "../../services/knjiga.service";
 export default class Knjige extends Component {
   constructor(props) {
     super(props);
-    this.dohvatiKnjigu = this.dohvatiKnjigu.bind(this);
+    // provjeri da li postoji token
+    const token = localStorage.getItem('token');
+    if(token === null || token===''){
+      // preusmjeri korisnika na login stranicu
+      window.location.replace('/');
+    }
 
+    this.dohvatiKnjigu = this.dohvatiKnjigu.bind(this);
     this.state = {
       knjige: [],
       prikaziModal: false,
@@ -29,6 +35,7 @@ export default class Knjige extends Component {
   zatvoriModal = () => this.setState({ prikaziModal: false });
   otvoriUspjesnoModal = () => this.setState({ prikaziUspjesnoModal: true });
   zatvoriUspjesnoModal = () => this.setState({ prikaziUspjesnoModal: false });
+
   
 
   componentDidMount() {
@@ -64,8 +71,8 @@ export default class Knjige extends Component {
 
     return (
 
-    <Container>
-      <a href="/knjige/dodaj" className="btn btn-success gumb">Dodaj novu knjigu</a>
+      <Container className='mt-5'>
+      
     <Row>
       { knjige &&knjige.map((p) => (
            
@@ -95,6 +102,7 @@ export default class Knjige extends Component {
           ))
       }
       </Row>
+      <a href="/knjige/dodaj" className="btn btn-success gumb">Dodaj novu knjigu</a>
 
 
       <Modal show={this.state.prikaziModal} onHide={this.zatvoriModal}>

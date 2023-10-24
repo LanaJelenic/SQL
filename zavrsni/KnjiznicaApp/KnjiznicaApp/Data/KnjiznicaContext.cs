@@ -12,6 +12,7 @@ namespace KnjiznicaApp.Data
         public DbSet<Clan> Clan { get; set; }
         public DbSet<Knjiga>Knjiga { get; set; }
         public DbSet<Evidencija_posudbe> Evidencija_posudbe {  get; set; }
+ 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

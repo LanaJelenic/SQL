@@ -12,6 +12,14 @@ export default class DodajClana extends Component {
 
   constructor(props) {
     super(props);
+
+    // provjeri da li postoji token
+    const token = localStorage.getItem('token');
+    if(token === null || token===''){
+      // preusmjeri korisnika na login stranicu
+      window.location.replace('/');
+    }
+
     this.DodajClana = this.dodajClana.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -44,7 +52,7 @@ export default class DodajClana extends Component {
 
   render() { 
     return (
-    <Container>
+     <Container className='mt-5'>
         <Form onSubmit={this.handleSubmit}>
 
 

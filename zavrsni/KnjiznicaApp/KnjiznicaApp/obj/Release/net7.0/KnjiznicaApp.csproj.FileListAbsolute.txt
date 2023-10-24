@@ -148,3 +148,5 @@ C:\Users\Administrator\Desktop\GitHub\WP1\WP1\zavrsni\KnjiznicaApp\KnjiznicaApp\
 C:\Users\Administrator\Desktop\GitHub\WP1\WP1\zavrsni\KnjiznicaApp\KnjiznicaApp\obj\Release\net7.0\KnjiznicaApp.pdb
 C:\Users\Administrator\Desktop\GitHub\WP1\WP1\zavrsni\KnjiznicaApp\KnjiznicaApp\obj\Release\net7.0\KnjiznicaApp.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\GitHub\WP1\WP1\zavrsni\KnjiznicaApp\KnjiznicaApp\obj\Release\net7.0\ref\KnjiznicaApp.dll
+C:\Users\Administrator\Desktop\GitHub\WP1\WP1\zavrsni\KnjiznicaApp\KnjiznicaApp\bin\Release\net7.0\BCrypt.Net-Core.dll
+C:\Users\Administrator\Desktop\GitHub\WP1\WP1\zavrsni\KnjiznicaApp\KnjiznicaApp\bin\Release\net7.0\BCrypt.Net-Next.dll

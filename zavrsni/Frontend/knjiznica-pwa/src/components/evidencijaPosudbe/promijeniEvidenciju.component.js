@@ -14,9 +14,11 @@ export default class PromijeniEvidenciju extends Component {
 
   constructor(props) {
     super(props);
-    const token = localStorage.getItem('Bearer');
-    if(token ==='null' || token===''){
-      window.location.href='/';
+    // provjeri da li postoji token
+    const token = localStorage.getItem('token');
+    if(token === null || token===''){
+      // preusmjeri korisnika na login stranicu
+      window.location.replace('/');
     }
 
     this.evidencija = this.dohvatiEvidenciju();
@@ -74,7 +76,7 @@ export default class PromijeniEvidenciju extends Component {
     const {evidencija} = this.state;
 
     return (
-    <Container>
+      <Container className='mt-5'>
         <Form onSubmit={this.handleSubmit}>
 
 
